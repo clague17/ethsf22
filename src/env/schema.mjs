@@ -8,6 +8,10 @@ import { z } from "zod";
 export const serverSchema = z.object({
   DATABASE_URL: z.string().url(),
   NODE_ENV: z.enum(["development", "test", "production"]),
+  ETHEREUM_RPC_URL: z.string().url(),
+  POLYGON_RPC_URL: z.string().url(),
+  GOERLI_RPC_URL: z.string().url(),
+  MUMBAI_RPC_URL: z.string().url(),
 });
 
 /**
