@@ -589,7 +589,7 @@
             "type": "uint256"
           }
         ],
-        "stateMutability": "view",
+        "stateMutability": "pure",
         "type": "function"
       },
       {
@@ -866,6 +866,7 @@
       ":@hyperlane-monorepo/=lib/hyperlane-monorepo/",
       ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
       ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+      ":OffsetHelper/=lib/OffsetHelper/contracts/",
       ":ds-test/=lib/forge-std/lib/ds-test/src/",
       ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
       ":forge-std/=lib/forge-std/src/",
@@ -988,11 +989,11 @@
       ]
     },
     "src/celo/xcUSD.sol": {
-      "keccak256": "0x34f3d01588cc94c29493c02f7c465499f19facdf22b5fb74868299eb769d94a8",
+      "keccak256": "0x14109138d0e3433e39dffe81271554e0fc673587ad85ccc248925fb8d1967e69",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://26ddc16245cdd5fcd2e1b925b18cd9ecfbccb8e210f90a80cb2413d376afdf60",
-        "dweb:/ipfs/QmUncKVZobAt9tq8C58tk8GmG3msUbR1Zn1UbG2p9AEx1U"
+        "bzz-raw://a8926c6e1ac50b29e88f53d4c79ad2092adfa087df37e9ba87fd77ba510de341",
+        "dweb:/ipfs/QmYSnMtwKmfQMf6a8rjucRyVJxH3Dm1oTCCZySvz17abXY"
       ]
     },
     "src/interfaces/xCO2.sol": {

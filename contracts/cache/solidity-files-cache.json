@@ -11,6 +11,169 @@
     ]
   },
   "files": {
+    "lib/OffsetHelper/contracts/interfaces/IToucanCarbonOffsets.sol": {
+      "lastModificationDate": 1667668896497,
+      "contentHash": "7b88998d3e28b5630b939130229d03e5",
+      "sourceName": "lib/OffsetHelper/contracts/interfaces/IToucanCarbonOffsets.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/OffsetHelper/contracts/types/CarbonProjectTypes.sol",
+        "lib/OffsetHelper/contracts/types/CarbonProjectVintageTypes.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IToucanCarbonOffsets": {
+          "0.8.11+commit.d7f03943.Darwin.appleclang": "IToucanCarbonOffsets.sol/IToucanCarbonOffsets.json"
+        }
+      }
+    },
+    "lib/OffsetHelper/contracts/interfaces/IToucanPoolToken.sol": {
+      "lastModificationDate": 1667668896498,
+      "contentHash": "8257427e236d3724ff7eda98bcc06f98",
+      "sourceName": "lib/OffsetHelper/contracts/interfaces/IToucanPoolToken.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IToucanPoolToken": {
+          "0.8.11+commit.d7f03943.Darwin.appleclang": "IToucanPoolToken.sol/IToucanPoolToken.json"
+        }
+      }
+    },
+    "lib/OffsetHelper/contracts/types/CarbonProjectTypes.sol": {
+      "lastModificationDate": 1667668896498,
+      "contentHash": "c287c2decafa693a4aa57003ab7e24e5",
+      "sourceName": "lib/OffsetHelper/contracts/types/CarbonProjectTypes.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.4, <0.9.0",
+      "artifacts": {
+        "CarbonProjectTypes": {
+          "0.8.11+commit.d7f03943.Darwin.appleclang": "CarbonProjectTypes.sol/CarbonProjectTypes.json"
+        }
+      }
+    },
+    "lib/OffsetHelper/contracts/types/CarbonProjectVintageTypes.sol": {
+      "lastModificationDate": 1667668896498,
+      "contentHash": "b28d2fedae6f95f7cfdd80e69b840c36",
+      "sourceName": "lib/OffsetHelper/contracts/types/CarbonProjectVintageTypes.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.4, <0.9.0",
+      "artifacts": {
+        "CarbonProjectVintageTypes": {
+          "0.8.11+commit.d7f03943.Darwin.appleclang": "CarbonProjectVintageTypes.sol/CarbonProjectVintageTypes.json"
+        }
+      }
+    },
     "lib/forge-std/lib/ds-test/src/test.sol": {
       "lastModificationDate": 1667626129193,
       "contentHash": "962996f0e05d5218857a538a62d7c47e",
@@ -1263,6 +1426,45 @@
         }
       }
     },
+    "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol": {
+      "lastModificationDate": 1667627575432,
+      "contentHash": "c22d4395e33763de693fd440c6fd10e1",
+      "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IERC721Receiver": {
+          "0.8.11+commit.d7f03943.Darwin.appleclang": "IERC721Receiver.sol/IERC721Receiver.json"
+        }
+      }
+    },
     "lib/openzeppelin-contracts/contracts/utils/Address.sol": {
       "lastModificationDate": 1667627575444,
       "contentHash": "1ded8fed2186fa6599c2aeb962009262",
@@ -1702,6 +1904,10 @@
         }
       },
       "imports": [
+        "lib/OffsetHelper/contracts/interfaces/IToucanCarbonOffsets.sol",
+        "lib/OffsetHelper/contracts/interfaces/IToucanPoolToken.sol",
+        "lib/OffsetHelper/contracts/types/CarbonProjectTypes.sol",
+        "lib/OffsetHelper/contracts/types/CarbonProjectVintageTypes.sol",
         "lib/forge-std/lib/ds-test/src/test.sol",
         "lib/forge-std/src/Common.sol",
         "lib/forge-std/src/Components.sol",
@@ -1731,6 +1937,7 @@
         "lib/openzeppelin-contracts/contracts/proxy/beacon/IBeacon.sol",
         "lib/openzeppelin-contracts/contracts/proxy/transparent/ProxyAdmin.sol",
         "lib/openzeppelin-contracts/contracts/proxy/transparent/TransparentUpgradeableProxy.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
         "lib/openzeppelin-contracts/contracts/utils/Address.sol",
         "lib/openzeppelin-contracts/contracts/utils/Context.sol",
         "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
@@ -1743,6 +1950,7 @@
         "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
         "src/celo/xCelo.sol",
         "src/celo/xcUSD.sol",
+        "src/interfaces/IUniswapV2Router02.sol",
         "src/interfaces/xCO2.sol",
         "src/interfaces/xERC20.sol",
         "src/interfaces/xNative.sol",
@@ -1816,8 +2024,8 @@
       }
     },
     "src/celo/xcUSD.sol": {
-      "lastModificationDate": 1667632348665,
-      "contentHash": "1f527d7206b41c2d47ae85bf4e02c1f6",
+      "lastModificationDate": 1667632720233,
+      "contentHash": "cca52d27f581524de1d4b1859b8a3743",
       "sourceName": "src/celo/xcUSD.sol",
       "solcConfig": {
         "settings": {
@@ -1868,6 +2076,45 @@
       "artifacts": {
         "xcUSD": {
           "0.8.11+commit.d7f03943.Darwin.appleclang": "xcUSD.sol/xcUSD.json"
+        }
+      }
+    },
+    "src/interfaces/IUniswapV2Router02.sol": {
+      "lastModificationDate": 1667669319391,
+      "contentHash": "c3bec693b55dc0f712e6c4fae0fea8ba",
+      "sourceName": "src/interfaces/IUniswapV2Router02.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IUniswapV2Router02": {
+          "0.8.11+commit.d7f03943.Darwin.appleclang": "IUniswapV2Router02.sol/IUniswapV2Router02.json"
         }
       }
     },
@@ -2171,8 +2418,8 @@
       }
     },
     "src/polygon/xUSDC.sol": {
-      "lastModificationDate": 1667632344117,
-      "contentHash": "0466bf0cc8fa9c89e6b33be474e9b58a",
+      "lastModificationDate": 1667670681703,
+      "contentHash": "9b299c34cfb037c9c9a9d4e73edfb3c6",
       "sourceName": "src/polygon/xUSDC.sol",
       "solcConfig": {
         "settings": {
@@ -2202,6 +2449,10 @@
         }
       },
       "imports": [
+        "lib/OffsetHelper/contracts/interfaces/IToucanCarbonOffsets.sol",
+        "lib/OffsetHelper/contracts/interfaces/IToucanPoolToken.sol",
+        "lib/OffsetHelper/contracts/types/CarbonProjectTypes.sol",
+        "lib/OffsetHelper/contracts/types/CarbonProjectVintageTypes.sol",
         "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol",
         "lib/hyperlane-monorepo/solidity/contracts/Router.sol",
         "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
@@ -2209,6 +2460,7 @@
         "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol",
         "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol",
         "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/ERC20Upgradeable.sol",
@@ -2216,6 +2468,7 @@
         "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/IERC20MetadataUpgradeable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "src/interfaces/IUniswapV2Router02.sol",
         "src/interfaces/xCO2.sol",
         "src/interfaces/xERC20.sol"
       ],

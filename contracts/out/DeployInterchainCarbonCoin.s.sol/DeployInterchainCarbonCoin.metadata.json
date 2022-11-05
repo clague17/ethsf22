@@ -54,6 +54,7 @@
       ":@hyperlane-monorepo/=lib/hyperlane-monorepo/",
       ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
       ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+      ":OffsetHelper/=lib/OffsetHelper/contracts/",
       ":ds-test/=lib/forge-std/lib/ds-test/src/",
       ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
       ":forge-std/=lib/forge-std/src/",
@@ -63,6 +64,38 @@
     ]
   },
   "sources": {
+    "lib/OffsetHelper/contracts/interfaces/IToucanCarbonOffsets.sol": {
+      "keccak256": "0x46c4ed2acd84764d0dd68c9c475e2c6ec3229a686046db48aca77ccd298d4b48",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://45c5bdeb82205a521d8f44be34773f9dd5b2b2d3a5fed5c3b7a1107b74d44587",
+        "dweb:/ipfs/QmWq1phybjBpwdpt2K7RMRS74jhFZKUKFqxLiRJrBagecV"
+      ]
+    },
+    "lib/OffsetHelper/contracts/interfaces/IToucanPoolToken.sol": {
+      "keccak256": "0xef39949a81cf4ed78d789a1aac5c5860de1582be70de7435f1671931091d43a7",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://f4e46d08158ecc85af3604f6fcb4032d0a6efcadaddb3a575c96c08a71f40a6b",
+        "dweb:/ipfs/QmaE4i1UNB2z2uW4KD6bb5sbTsy3KSUgLNhmuDxjekZ1AU"
+      ]
+    },
+    "lib/OffsetHelper/contracts/types/CarbonProjectTypes.sol": {
+      "keccak256": "0x10d52f79d4bb8dbfe0abbb1662059d6d0193fe5794977b66aacf741451e25401",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://1b64316b89c599bf4ea530715ad57eaeb96f2426c818dc52fbff5aa423a75d5a",
+        "dweb:/ipfs/QmWFVHeBKrh6Zau5hVwhJKFNKWQtkyjePLkbv46d9QG5tq"
+      ]
+    },
+    "lib/OffsetHelper/contracts/types/CarbonProjectVintageTypes.sol": {
+      "keccak256": "0x3a52e88a48b87f1ca3992c201f8b786ccf3aeb74796510893f8e33b33eae251b",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://b6b9a56ad90098fe772e7303ff3d202f9cf0e1b631ec5dc459f55542654a90d6",
+        "dweb:/ipfs/QmdAZ49UaG7iY1rH2Fk3gaLNhtH9EdtsqLiR1X6QVZJ653"
+      ]
+    },
     "lib/forge-std/lib/ds-test/src/test.sol": {
       "keccak256": "0xb39cd1d5220cb474947b131e15a4538334b7e886af244b440ae5c9c6bba96a54",
       "license": "GPL-3.0-or-later",
@@ -351,6 +384,14 @@
         "dweb:/ipfs/QmdBqsK8CcUceTeWzhHwFDEvKMoHimwtV96Lbim7ZBtCb8"
       ]
     },
+    "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol": {
+      "keccak256": "0xa82b58eca1ee256be466e536706850163d2ec7821945abd6b4778cfb3bee37da",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://6e75cf83beb757b8855791088546b8337e9d4684e169400c20d44a515353b708",
+        "dweb:/ipfs/QmYvPafLfoquiDMEj7CKHtvbgHu7TJNPSVPSCjrtjV8HjV"
+      ]
+    },
     "lib/openzeppelin-contracts/contracts/utils/Address.sol": {
       "keccak256": "0xb94eac067c85cd79a4195c0a1f4a878e9827329045c12475a0199f1ae17b9700",
       "license": "MIT",
@@ -392,11 +433,19 @@
       ]
     },
     "src/celo/xcUSD.sol": {
-      "keccak256": "0x34f3d01588cc94c29493c02f7c465499f19facdf22b5fb74868299eb769d94a8",
+      "keccak256": "0x14109138d0e3433e39dffe81271554e0fc673587ad85ccc248925fb8d1967e69",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://26ddc16245cdd5fcd2e1b925b18cd9ecfbccb8e210f90a80cb2413d376afdf60",
-        "dweb:/ipfs/QmUncKVZobAt9tq8C58tk8GmG3msUbR1Zn1UbG2p9AEx1U"
+        "bzz-raw://a8926c6e1ac50b29e88f53d4c79ad2092adfa087df37e9ba87fd77ba510de341",
+        "dweb:/ipfs/QmYSnMtwKmfQMf6a8rjucRyVJxH3Dm1oTCCZySvz17abXY"
+      ]
+    },
+    "src/interfaces/IUniswapV2Router02.sol": {
+      "keccak256": "0xdca706e998ee05f033344226b1484411707469d4d51f960900729b5e7b90572c",
+      "license": "agpl-3.0",
+      "urls": [
+        "bzz-raw://d006cfa46890ecd070e0638cdab18286ca212b8556073698e3988423a2031c35",
+        "dweb:/ipfs/QmZhUoTWEDLZGHtchdfpSsdoATARTpRX7ndrHGL91SWj2V"
       ]
     },
     "src/interfaces/xCO2.sol": {
@@ -448,11 +497,11 @@
       ]
     },
     "src/polygon/xUSDC.sol": {
-      "keccak256": "0x9e56c5ec71739b5e6f932c90d6dcd416be636228d9e9605c43a438b2303c9826",
+      "keccak256": "0x5dd93a84fc50c4139440e24a7a81efa1445671f13cfcf4970e06e245a57f9212",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://3e67c6e35ec7d7cfe9d495501db8502e38759f859af4e3c164d2d85cd68a5042",
-        "dweb:/ipfs/QmRqp5h3JYU8VSFmLN7UDakyTnKqrRhEkwRWc8HtEzCBQk"
+        "bzz-raw://da7d126ac097447ca8d2f530672b4cf5814f10852459fac15a075d3b18ac221b",
+        "dweb:/ipfs/QmZhrE4fp7gYAE3nvi7fg2dpxbEGG7omJHhiHYdhKyNBmL"
       ]
     }
   },
