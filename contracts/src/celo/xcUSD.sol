@@ -8,4 +8,8 @@ contract xcUSD is xERC20 {
     function toUSD(uint256 amount) public pure override returns (uint256) {
         return amount;
     }
+
+    function fromUSD(uint256 amount) public view override returns (uint256) {
+        return amount;
+    }
 }

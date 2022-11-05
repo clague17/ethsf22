@@ -6,17 +6,9 @@
   "output": {
     "abi": [
       {
-        "anonymous": false,
-        "inputs": [
-          {
-            "indexed": true,
-            "internalType": "address",
-            "name": "abacusConnectionManager",
-            "type": "address"
-          }
-        ],
-        "name": "AbacusConnectionManagerSet",
-        "type": "event"
+        "inputs": [],
+        "name": "NotImplemented",
+        "type": "error"
       },
       {
         "anonymous": false,
@@ -62,11 +54,54 @@
           {
             "indexed": true,
             "internalType": "address",
-            "name": "interchainGasPaymaster",
+            "name": "tCO2",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "amountXCO2",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "beneificiary",
             "type": "address"
           }
         ],
-        "name": "InterchainGasPaymasterSet",
+        "name": "Offset",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "tCO2",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "amountXCO2",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "beneficiary",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint32",
+            "name": "destination",
+            "type": "uint32"
+          }
+        ],
+        "name": "OffsetRemote",
         "type": "event"
       },
       {
@@ -93,75 +128,6 @@
         "inputs": [
           {
             "indexed": true,
-            "internalType": "uint32",
-            "name": "origin",
-            "type": "uint32"
-          },
-          {
-            "indexed": true,
-            "internalType": "address",
-            "name": "recipient",
-            "type": "address"
-          },
-          {
-            "indexed": false,
-            "internalType": "uint256",
-            "name": "amount",
-            "type": "uint256"
-          }
-        ],
-        "name": "ReceivedTransferRemote",
-        "type": "event"
-      },
-      {
-        "anonymous": false,
-        "inputs": [
-          {
-            "indexed": true,
-            "internalType": "uint32",
-            "name": "domain",
-            "type": "uint32"
-          },
-          {
-            "indexed": true,
-            "internalType": "bytes32",
-            "name": "router",
-            "type": "bytes32"
-          }
-        ],
-        "name": "RemoteRouterEnrolled",
-        "type": "event"
-      },
-      {
-        "anonymous": false,
-        "inputs": [
-          {
-            "indexed": true,
-            "internalType": "uint32",
-            "name": "destination",
-            "type": "uint32"
-          },
-          {
-            "indexed": true,
-            "internalType": "address",
-            "name": "recipient",
-            "type": "address"
-          },
-          {
-            "indexed": false,
-            "internalType": "uint256",
-            "name": "amount",
-            "type": "uint256"
-          }
-        ],
-        "name": "SentTransferRemote",
-        "type": "event"
-      },
-      {
-        "anonymous": false,
-        "inputs": [
-          {
-            "indexed": true,
             "internalType": "address",
             "name": "from",
             "type": "address"
@@ -181,19 +147,6 @@
         ],
         "name": "Transfer",
         "type": "event"
-      },
-      {
-        "inputs": [],
-        "name": "abacusConnectionManager",
-        "outputs": [
-          {
-            "internalType": "contract IAbacusConnectionManager",
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
       },
       {
         "inputs": [
@@ -300,64 +253,22 @@
         "type": "function"
       },
       {
-        "inputs": [],
-        "name": "deposit",
-        "outputs": [],
-        "stateMutability": "payable",
-        "type": "function"
-      },
-      {
         "inputs": [
           {
-            "internalType": "address",
-            "name": "_receiver",
-            "type": "address"
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
           }
         ],
-        "name": "depositFor",
-        "outputs": [],
-        "stateMutability": "payable",
-        "type": "function"
-      },
-      {
-        "inputs": [
+        "name": "fromUSD",
+        "outputs": [
           {
-            "internalType": "uint32",
-            "name": "_domain",
-            "type": "uint32"
-          },
-          {
-            "internalType": "bytes32",
-            "name": "_router",
-            "type": "bytes32"
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
           }
         ],
-        "name": "enrollRemoteRouter",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint32",
-            "name": "_origin",
-            "type": "uint32"
-          },
-          {
-            "internalType": "bytes32",
-            "name": "_sender",
-            "type": "bytes32"
-          },
-          {
-            "internalType": "bytes",
-            "name": "_message",
-            "type": "bytes"
-          }
-        ],
-        "name": "handle",
-        "outputs": [],
-        "stateMutability": "nonpayable",
+        "stateMutability": "view",
         "type": "function"
       },
       {
@@ -388,12 +299,12 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_abacusConnectionManager",
+            "name": "_outbox",
             "type": "address"
           },
           {
             "internalType": "address",
-            "name": "_interchainGasPaymaster",
+            "name": "_xUSDC",
             "type": "address"
           },
           {
@@ -414,19 +325,6 @@
       },
       {
         "inputs": [],
-        "name": "interchainGasPaymaster",
-        "outputs": [
-          {
-            "internalType": "contract IInterchainGasPaymaster",
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [],
         "name": "name",
         "outputs": [
           {
@@ -436,6 +334,29 @@
           }
         ],
         "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_tCO2",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_amountXCO2",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "_beneficiary",
+            "type": "address"
+          }
+        ],
+        "name": "offsetX",
+        "outputs": [],
+        "stateMutability": "payable",
         "type": "function"
       },
       {
@@ -474,38 +395,6 @@
       {
         "inputs": [
           {
-            "internalType": "uint32",
-            "name": "",
-            "type": "uint32"
-          }
-        ],
-        "name": "routers",
-        "outputs": [
-          {
-            "internalType": "bytes32",
-            "name": "",
-            "type": "bytes32"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "_abacusConnectionManager",
-            "type": "address"
-          }
-        ],
-        "name": "setAbacusConnectionManager",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
             "internalType": "address",
             "name": "_oracle",
             "type": "address"
@@ -517,19 +406,6 @@
           }
         ],
         "name": "setDependencies",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "_interchainGasPaymaster",
-            "type": "address"
-          }
-        ],
-        "name": "setInterchainGasPaymaster",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -659,57 +535,10 @@
         "type": "function"
       },
       {
-        "inputs": [
-          {
-            "internalType": "uint32",
-            "name": "_destination",
-            "type": "uint32"
-          },
-          {
-            "internalType": "address",
-            "name": "_recipient",
-            "type": "address"
-          },
-          {
-            "internalType": "uint256",
-            "name": "_amount",
-            "type": "uint256"
-          }
-        ],
-        "name": "transferRemote",
+        "inputs": [],
+        "name": "withdrawFunds",
         "outputs": [],
-        "stateMutability": "payable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint256",
-            "name": "amount",
-            "type": "uint256"
-          }
-        ],
-        "name": "withdraw",
-        "outputs": [],
-        "stateMutability": "payable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint256",
-            "name": "amount",
-            "type": "uint256"
-          },
-          {
-            "internalType": "address payable",
-            "name": "_receiver",
-            "type": "address"
-          }
-        ],
-        "name": "withdrawFor",
-        "outputs": [],
-        "stateMutability": "payable",
+        "stateMutability": "nonpayable",
         "type": "function"
       }
     ],
@@ -731,48 +560,32 @@
         "decreaseAllowance(address,uint256)": {
           "details": "Atomically decreases the allowance granted to `spender` by the caller. This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}. Emits an {Approval} event indicating the updated allowance. Requirements: - `spender` cannot be the zero address. - `spender` must have allowance for the caller of at least `subtractedValue`."
         },
-        "enrollRemoteRouter(uint32,bytes32)": {
-          "params": {
-            "_domain": "The domain of the remote Application Router",
-            "_router": "The address of the remote Application Router"
-          }
-        },
-        "handle(uint32,bytes32,bytes)": {
-          "params": {
-            "_message": "The message",
-            "_origin": "The origin domain",
-            "_sender": "The sender address"
-          }
-        },
         "increaseAllowance(address,uint256)": {
           "details": "Atomically increases the allowance granted to `spender` by the caller. This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}. Emits an {Approval} event indicating the updated allowance. Requirements: - `spender` cannot be the zero address."
         },
         "initialize(address,address,string,string)": {
           "params": {
-            "_abacusConnectionManager": "The address of the connection manager contract.",
-            "_interchainGasPaymaster": "The address of the interchain gas paymaster contract.",
             "_name": "The name of the token.",
-            "_symbol": "The symbol of the token."
+            "_outbox": "The Hyperlane outbox.",
+            "_symbol": "The symbol of the token.",
+            "_xUSDC": "The Polygon xUSDC contract."
           }
         },
         "name()": {
           "details": "Returns the name of the token."
+        },
+        "offsetX(address,uint256,address)": {
+          "params": {
+            "_amountXCO2": "Amount of xCO2 to burn to offset.",
+            "_beneficiary": "Beneficiary address of offset.",
+            "_tCO2": "Address of TCO2 token to redeem into."
+          }
         },
         "owner()": {
           "details": "Returns the address of the current owner."
         },
         "renounceOwnership()": {
           "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
-        },
-        "setAbacusConnectionManager(address)": {
-          "params": {
-            "_abacusConnectionManager": "The address of the AbacusConnectionManager contract."
-          }
-        },
-        "setInterchainGasPaymaster(address)": {
-          "params": {
-            "_interchainGasPaymaster": "The address of the InterchainGasPaymaster contract."
-          }
         },
         "symbol()": {
           "details": "Returns the symbol of the token, usually a shorter version of the name."
@@ -788,49 +601,24 @@
         },
         "transferOwnership(address)": {
           "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
-        },
-        "transferRemote(uint32,address,uint256)": {
-          "details": "Burns `_amount` of tokens from `msg.sender` on the origin chain and dispatches      message to the `destination` chain to mint `_amount` of tokens to `recipient`.Emits `SentTransferRemote` event on the origin chain.",
-          "params": {
-            "_amount": "The amount of tokens to be sent to the remote recipient.",
-            "_destination": "The identifier of the destination chain.",
-            "_recipient": "The address of the recipient on the destination chain."
-          }
         }
       },
       "version": 1
     },
     "userdoc": {
-      "events": {
-        "AbacusConnectionManagerSet(address)": {
-          "notice": "Emitted when a new abacusConnectionManager is set."
-        },
-        "InterchainGasPaymasterSet(address)": {
-          "notice": "Emitted when a new Interchain Gas Paymaster is set."
-        },
-        "RemoteRouterEnrolled(uint32,bytes32)": {
-          "notice": "Emitted when a router is set."
-        }
-      },
       "kind": "user",
       "methods": {
-        "enrollRemoteRouter(uint32,bytes32)": {
-          "notice": "Register the address of a Router contract for the same Application on a remote chain"
-        },
-        "handle(uint32,bytes32,bytes)": {
-          "notice": "Handles an incoming message"
+        "fromUSD(uint256)": {
+          "notice": "Convert USD value to amount of accepted asset."
         },
         "initialize(address,address,string,string)": {
           "notice": "Initializes the Hyperlane router, ERC20 metadata, and mints initial supply to deployer."
         },
-        "setAbacusConnectionManager(address)": {
-          "notice": "Sets the address of the application's AbacusConnectionManager."
+        "offsetX(address,uint256,address)": {
+          "notice": "Offset cross-chain using amount xCO2."
         },
-        "setInterchainGasPaymaster(address)": {
-          "notice": "Sets the address of the application's InterchainGasPaymaster."
-        },
-        "transferRemote(uint32,address,uint256)": {
-          "notice": "Transfers `_amount` of tokens from `msg.sender` to `_recipient` on the `_destination` chain."
+        "toUSD(uint256)": {
+          "notice": "Convert accepted asset to USD value."
         }
       },
       "version": 1
@@ -853,6 +641,7 @@
       ":@hyperlane-monorepo/=lib/hyperlane-monorepo/",
       ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
       ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+      ":OffsetHelper/=lib/OffsetHelper/contracts/",
       ":ds-test/=lib/forge-std/lib/ds-test/src/",
       ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
       ":forge-std/=lib/forge-std/src/",
@@ -862,52 +651,12 @@
     ]
   },
   "sources": {
-    "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol": {
-      "keccak256": "0x37167c97b550c6663a6c2a96b5b0eddb8856de795e39d582439548b14215d123",
-      "license": "MIT OR Apache-2.0",
-      "urls": [
-        "bzz-raw://c14881c2f7c7c8f571d3f6f9c14d5ad48fc2f1237875d323d476835fe7bdc388",
-        "dweb:/ipfs/QmSBYRGR8pKv5h9JcJseajnbkdhegoBoc1P1bnxydksvv1"
-      ]
-    },
-    "lib/hyperlane-monorepo/solidity/contracts/Router.sol": {
-      "keccak256": "0x2bdbc80547a433d9e2921ec688bc2938569721176fa23001da73a4caa02a743f",
-      "license": "MIT OR Apache-2.0",
-      "urls": [
-        "bzz-raw://8d92c29e14a9757dc3e50785edd733451eba8bf2e6d799ffa8f57a497853b3df",
-        "dweb:/ipfs/Qme1nYFFWXTryQpXwQ9KKBUEcVtVGovLWZsmza92A5GGKe"
-      ]
-    },
-    "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol": {
-      "keccak256": "0xa4db171637a95cc36bf8630fb9985e4dbbf9ee9c1cfe33f23e2cc95fac79b5b2",
-      "license": "MIT OR Apache-2.0",
-      "urls": [
-        "bzz-raw://94d8dff93ada07b6dd969650f55a4da6cbdb8f83af68ca0e67576f8d3333f14c",
-        "dweb:/ipfs/QmXqirY8A5bEG39rFh4C42TKsFtm2zUBR5q7pcZ3BMoVUg"
-      ]
-    },
-    "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol": {
-      "keccak256": "0x55a64141b9399b3dfee1a7267138c35b6cfd80400811af0da64277571421f979",
-      "license": "MIT OR Apache-2.0",
-      "urls": [
-        "bzz-raw://7ef79ca3c9668f3352ec7398a0fe5f5be021a339a58d6895f37c8de23d49fab1",
-        "dweb:/ipfs/QmSq3CGVJUwtcL5StR3U8MQ5PtkdEu4D9v6ByFrs35Ebei"
-      ]
-    },
     "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol": {
       "keccak256": "0x81bb496923c0c67eb41a5d312b4598887487e8caa741fd06a724a66685712ae2",
       "license": "MIT OR Apache-2.0",
       "urls": [
         "bzz-raw://13e91ca182a512033621b2ed25c2db5086b686c4e0c5cf5265c06ecde0dbca9c",
         "dweb:/ipfs/QmQonhNpxJP2p4kPDSNhhASRs6tKNxyZBg5idoP6kD2c38"
-      ]
-    },
-    "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol": {
-      "keccak256": "0x250fabee11ab22fc3cb14ba0ff86410f681e621c43590c24ecbcf48fea8c7e70",
-      "license": "MIT OR Apache-2.0",
-      "urls": [
-        "bzz-raw://a548c77a5288e4c8c0433aa8c2c5de53a8e04bc9beefdd181cac934022ea263d",
-        "dweb:/ipfs/QmezUeASavGbJJjcZmgcQrnpVVYT1QWFay44ND6hYofHh9"
       ]
     },
     "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol": {
@@ -975,27 +724,27 @@
       ]
     },
     "src/celo/xCelo.sol": {
-      "keccak256": "0xfb7ae46521d10133a57dd1327daabdc7bd96afabdc42839b07b01cb2a6031bf7",
+      "keccak256": "0xf8db285c4775f71080100add119291f3259601add6b07c0723be39d8283388c5",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://fa46c95c27d1008d0464549a54576b65a2739a7989d8ef6b0b2bc8fa676bbc75",
-        "dweb:/ipfs/QmYk5oBM4xTENcZ5kMrEgWv7MULbRTesLn31ckTwbP1qyA"
+        "bzz-raw://8eb8348078b09488585886c1580b6577b78cc00798e23cba713a866c168efe9a",
+        "dweb:/ipfs/QmSVsKguVGuaAE7z1ZN5hF4SkzcViURyag4auKnqehSG1q"
       ]
     },
     "src/interfaces/xCO2.sol": {
-      "keccak256": "0x604285e161c42549ac450c580d130f4dbb8990e789db3605e7651d3522e650a7",
+      "keccak256": "0xabdf88950dcddbefdc7025e3ba54e74c0af7f62a237c9d395dd04044026d2fe5",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://c0c38f1bcc988002a2c2765ab13d98a6d06adfec5815ddca3c44907a5da9daad",
-        "dweb:/ipfs/QmZJ1JSsZFcq2DT4u2X1WHpxrk1jYzr2GJ6MZux4tbsKoX"
+        "bzz-raw://658946a607decda94ac734bb813b9c369592067d47ac08179d64328f5173c749",
+        "dweb:/ipfs/Qmct1dERsQ6vDTVZugoWQMc7fHk4Y7k3V37QjhMwnEo77j"
       ]
     },
     "src/interfaces/xNative.sol": {
-      "keccak256": "0x33a454e53be591c6662a9c582897b31237308bb4ebda242b41a654cc84d677cf",
+      "keccak256": "0x0114f1fb8f1a40b72f77dfc520c5db7cd261f04f276ad444e24f09849ae4b13a",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://5436db5005a20836dfbb26c25af30977bcc2665abeab5d0d1aecd11504241d92",
-        "dweb:/ipfs/QmNXqQV3EfsFUQBA25UsJKwXGwPbBXGGYJJzXRi7J7NGVU"
+        "bzz-raw://d6d78b7e15f74c060a8c81ee24d57976192e32547cf7c231b9c93311f9f29d8b",
+        "dweb:/ipfs/QmZ49wzZqgp8gCLx68o2y78FfXwSP6D67ALSxXnMsiJ4kk"
       ]
     },
     "src/oracles/Celo.sol": {

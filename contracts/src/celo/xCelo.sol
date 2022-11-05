@@ -15,6 +15,12 @@ contract xCelo is xNative {
         return (amount * rateNumerator) / rateDenominator;
     }
 
+    function fromUSD(uint256 amount) public view override returns (uint256) {
+        (uint256 rateNumerator, uint256 rateDenominator) = ICeloOracle(oracle)
+            .medianRate(stableToken);
+        return (amount * rateDenominator) / rateNumerator;
+    }
+
     function setDependencies(address _oracle, address _stableToken)
         external
         onlyOwner
