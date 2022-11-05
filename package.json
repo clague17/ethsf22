@@ -10,10 +10,18 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.11",
+    "@chakra-ui/react": "^2.3.7",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@prisma/client": "^4.5.0",
+    "connectkit": "^0.0.2",
+    "ethers": "^5.7.2",
+    "framer-motion": "^7.6.4",
     "next": "13.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "wagmi": "^0.6.8",
     "zod": "^3.18.0"
   },
   "devDependencies": {
