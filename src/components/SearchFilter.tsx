@@ -1,22 +1,19 @@
 import { Box, Flex, Select, Heading, VStack, Center } from "@chakra-ui/react";
 import { useState } from "react";
+import type { Region } from "../store/useGlobeStore";
+import useGlobeStore from "../store/useGlobeStore";
 
-type Region = {
-  name: string;
-  lat: number;
-  long: number;
-};
-
-export const RegionMap: Map<string, { lat: number; long: number }> = new Map([
-  ["United Arab Emirates", { lat: 24.0, long: 54.0 }],
-  ["Nigeria", { lat: 9.0, long: 8.0 }],
-  ["China", { lat: 35.0, long: 105.0 }],
-  ["United States", { lat: 38.0, long: -97.0 }],
+export const RegionMap: Map<string, { lat: number; lng: number }> = new Map([
+  ["United Arab Emirates", { lat: 24.0, lng: 54.0 }],
+  ["Nigeria", { lat: 9.0, lng: 8.0 }],
+  ["China", { lat: 35.0, lng: 105.0 }],
+  ["United States", { lat: 38.0, lng: -97.0 }],
 ]);
 
 const SearchFilter = () => {
-  const [region, setRegion] = useState<Region | undefined>(undefined);
-  console.log("region", region);
+  const [region] = useState<Region | undefined>(undefined);
+  const { setRegion } = useGlobeStore();
+
   return (
     <Flex
       color="white"
