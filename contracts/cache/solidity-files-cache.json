@@ -783,185 +783,6 @@
         }
       }
     },
-    "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol": {
-      "lastModificationDate": 1667626293999,
-      "contentHash": "b12558e497d50294be23a4d3b812c08c",
-      "sourceName": "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs"
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
-        "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol",
-        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
-        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
-        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol"
-      ],
-      "versionRequirement": ">=0.6.11",
-      "artifacts": {
-        "AbacusConnectionClient": {
-          "0.8.11+commit.d7f03943.Darwin.appleclang": "AbacusConnectionClient.sol/AbacusConnectionClient.json"
-        }
-      }
-    },
-    "lib/hyperlane-monorepo/solidity/contracts/Router.sol": {
-      "lastModificationDate": 1667626294002,
-      "contentHash": "f67b49f14f5c106d0490f06b028cf86d",
-      "sourceName": "lib/hyperlane-monorepo/solidity/contracts/Router.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs"
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
-        "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol",
-        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
-        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
-        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol"
-      ],
-      "versionRequirement": ">=0.6.11",
-      "artifacts": {
-        "Router": {
-          "0.8.11+commit.d7f03943.Darwin.appleclang": "Router.sol/Router.json"
-        }
-      }
-    },
-    "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol": {
-      "lastModificationDate": 1667626294026,
-      "contentHash": "2a0970346903500d99b6e1b4bcaf6665",
-      "sourceName": "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs"
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol"
-      ],
-      "versionRequirement": ">=0.6.11",
-      "artifacts": {
-        "IAbacusConnectionManager": {
-          "0.8.11+commit.d7f03943.Darwin.appleclang": "IAbacusConnectionManager.sol/IAbacusConnectionManager.json"
-        }
-      }
-    },
-    "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol": {
-      "lastModificationDate": 1667626294027,
-      "contentHash": "c329f7a81eadc400bccb8e8968b43bd3",
-      "sourceName": "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs"
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [],
-      "versionRequirement": ">=0.6.11",
-      "artifacts": {
-        "IInterchainGasPaymaster": {
-          "0.8.11+commit.d7f03943.Darwin.appleclang": "IInterchainGasPaymaster.sol/IInterchainGasPaymaster.json"
-        }
-      }
-    },
     "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol": {
       "lastModificationDate": 1667626294027,
       "contentHash": "ed113ede1223faed609b6a40a30c05be",
@@ -998,45 +819,6 @@
       "artifacts": {
         "IMailbox": {
           "0.8.11+commit.d7f03943.Darwin.appleclang": "IMailbox.sol/IMailbox.json"
-        }
-      }
-    },
-    "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol": {
-      "lastModificationDate": 1667626294027,
-      "contentHash": "528e49377e9af17bc359f85250fe99c2",
-      "sourceName": "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs"
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [],
-      "versionRequirement": ">=0.6.11",
-      "artifacts": {
-        "IMessageRecipient": {
-          "0.8.11+commit.d7f03943.Darwin.appleclang": "IMessageRecipient.sol/IMessageRecipient.json"
         }
       }
     },
@@ -1922,12 +1704,7 @@
         "lib/forge-std/src/Vm.sol",
         "lib/forge-std/src/console.sol",
         "lib/forge-std/src/console2.sol",
-        "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol",
-        "lib/hyperlane-monorepo/solidity/contracts/Router.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol",
         "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol",
         "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
         "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
         "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC1822.sol",
@@ -1956,6 +1733,7 @@
         "src/interfaces/xNative.sol",
         "src/oracles/Celo.sol",
         "src/oracles/Matic.sol",
+        "src/polygon/CarbonOffsetTerminal.sol",
         "src/polygon/xMatic.sol",
         "src/polygon/xUSDC.sol"
       ],
@@ -1967,8 +1745,8 @@
       }
     },
     "src/celo/xCelo.sol": {
-      "lastModificationDate": 1667632266860,
-      "contentHash": "35e5be36d876bbe85dd049971bdb2fce",
+      "lastModificationDate": 1667680011527,
+      "contentHash": "efb8e6bc160d5bf1dc599e91a0406da7",
       "sourceName": "src/celo/xCelo.sol",
       "solcConfig": {
         "settings": {
@@ -1998,12 +1776,7 @@
         }
       },
       "imports": [
-        "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol",
-        "lib/hyperlane-monorepo/solidity/contracts/Router.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol",
         "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol",
         "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
@@ -2024,8 +1797,8 @@
       }
     },
     "src/celo/xcUSD.sol": {
-      "lastModificationDate": 1667632720233,
-      "contentHash": "cca52d27f581524de1d4b1859b8a3743",
+      "lastModificationDate": 1667680199212,
+      "contentHash": "505750dd8ee83220076910e2484a4980",
       "sourceName": "src/celo/xcUSD.sol",
       "solcConfig": {
         "settings": {
@@ -2055,12 +1828,7 @@
         }
       },
       "imports": [
-        "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol",
-        "lib/hyperlane-monorepo/solidity/contracts/Router.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol",
         "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol",
         "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
@@ -2119,8 +1887,8 @@
       }
     },
     "src/interfaces/xCO2.sol": {
-      "lastModificationDate": 1667632708474,
-      "contentHash": "d0f3dbd54711e24fe8298b2831199e89",
+      "lastModificationDate": 1667679957048,
+      "contentHash": "2e127d41d2942af5c410aec42a50323d",
       "sourceName": "src/interfaces/xCO2.sol",
       "solcConfig": {
         "settings": {
@@ -2150,13 +1918,6 @@
         }
       },
       "imports": [
-        "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol",
-        "lib/hyperlane-monorepo/solidity/contracts/Router.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/ERC20Upgradeable.sol",
@@ -2173,8 +1934,8 @@
       }
     },
     "src/interfaces/xERC20.sol": {
-      "lastModificationDate": 1667632703242,
-      "contentHash": "b009bb7797e6c54fdf61069f68ba112e",
+      "lastModificationDate": 1667679758341,
+      "contentHash": "f07a5df131f6ecab99900a7d54a55113",
       "sourceName": "src/interfaces/xERC20.sol",
       "solcConfig": {
         "settings": {
@@ -2204,12 +1965,7 @@
         }
       },
       "imports": [
-        "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol",
-        "lib/hyperlane-monorepo/solidity/contracts/Router.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol",
         "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol",
         "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
@@ -2228,8 +1984,8 @@
       }
     },
     "src/interfaces/xNative.sol": {
-      "lastModificationDate": 1667632569289,
-      "contentHash": "2d029a617f043dc31e299ce8acd3ad96",
+      "lastModificationDate": 1667680180443,
+      "contentHash": "4fc5609a374156c1181cee801a130b69",
       "sourceName": "src/interfaces/xNative.sol",
       "solcConfig": {
         "settings": {
@@ -2259,12 +2015,7 @@
         }
       },
       "imports": [
-        "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol",
-        "lib/hyperlane-monorepo/solidity/contracts/Router.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol",
         "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol",
         "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
@@ -2360,9 +2111,66 @@
         }
       }
     },
+    "src/polygon/CarbonOffsetTerminal.sol": {
+      "lastModificationDate": 1667678016175,
+      "contentHash": "8521e3bfda405a557bf316b89c4ec622",
+      "sourceName": "src/polygon/CarbonOffsetTerminal.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/OffsetHelper/contracts/interfaces/IToucanCarbonOffsets.sol",
+        "lib/OffsetHelper/contracts/interfaces/IToucanPoolToken.sol",
+        "lib/OffsetHelper/contracts/types/CarbonProjectTypes.sol",
+        "lib/OffsetHelper/contracts/types/CarbonProjectVintageTypes.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/ERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/IERC20MetadataUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "src/interfaces/IUniswapV2Router02.sol",
+        "src/interfaces/xCO2.sol",
+        "src/interfaces/xERC20.sol"
+      ],
+      "versionRequirement": "=0.8.11",
+      "artifacts": {
+        "CarbonOffsetTerminal": {
+          "0.8.11+commit.d7f03943.Darwin.appleclang": "CarbonOffsetTerminal.sol/CarbonOffsetTerminal.json"
+        }
+      }
+    },
     "src/polygon/xMatic.sol": {
-      "lastModificationDate": 1667632284622,
-      "contentHash": "360ed8c74c2ace481114cf05e4b0b28d",
+      "lastModificationDate": 1667679998083,
+      "contentHash": "fa2730c5f18557286533e5e779fcae50",
       "sourceName": "src/polygon/xMatic.sol",
       "solcConfig": {
         "settings": {
@@ -2392,12 +2200,7 @@
         }
       },
       "imports": [
-        "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol",
-        "lib/hyperlane-monorepo/solidity/contracts/Router.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol",
         "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol",
         "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
@@ -2418,8 +2221,8 @@
       }
     },
     "src/polygon/xUSDC.sol": {
-      "lastModificationDate": 1667670681703,
-      "contentHash": "9b299c34cfb037c9c9a9d4e73edfb3c6",
+      "lastModificationDate": 1667679995217,
+      "contentHash": "3bcf6d3860e09c5ef3dddc71fff27dd2",
       "sourceName": "src/polygon/xUSDC.sol",
       "solcConfig": {
         "settings": {
@@ -2453,12 +2256,7 @@
         "lib/OffsetHelper/contracts/interfaces/IToucanPoolToken.sol",
         "lib/OffsetHelper/contracts/types/CarbonProjectTypes.sol",
         "lib/OffsetHelper/contracts/types/CarbonProjectVintageTypes.sol",
-        "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol",
-        "lib/hyperlane-monorepo/solidity/contracts/Router.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol",
         "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol",
         "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
         "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol",
@@ -2470,7 +2268,8 @@
         "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
         "src/interfaces/IUniswapV2Router02.sol",
         "src/interfaces/xCO2.sol",
-        "src/interfaces/xERC20.sol"
+        "src/interfaces/xERC20.sol",
+        "src/polygon/CarbonOffsetTerminal.sol"
       ],
       "versionRequirement": "=0.8.11",
       "artifacts": {
