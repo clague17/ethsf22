@@ -1,0 +1,449 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "IS_SCRIPT",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "IS_SCRIPT()": "f8ccbf47"
+  },
+  "ast": {
+    "absolutePath": "lib/forge-std/src/Script.sol",
+    "id": 1864,
+    "exportedSymbols": {
+      "CommonBase": [
+        1818
+      ],
+      "Script": [
+        1863
+      ],
+      "ScriptBase": [
+        1853
+      ],
+      "StdCheatsSafe": [
+        4684
+      ],
+      "StdStorage": [
+        5672
+      ],
+      "StdUtils": [
+        7501
+      ],
+      "VmSafe": [
+        7959
+      ],
+      "console": [
+        16348
+      ],
+      "console2": [
+        24413
+      ],
+      "stdJson": [
+        5499
+      ],
+      "stdMath": [
+        5641
+      ],
+      "stdStorageSafe": [
+        6565
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:445:3",
+    "nodes": [
+      {
+        "id": 1832,
+        "nodeType": "PragmaDirective",
+        "src": "32:31:3",
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".2",
+          "<",
+          "0.9",
+          ".0"
+        ]
+      },
+      {
+        "id": 1834,
+        "nodeType": "ImportDirective",
+        "src": "65:40:3",
+        "absolutePath": "lib/forge-std/src/Common.sol",
+        "file": "./Common.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 1864,
+        "sourceUnit": 1819,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 1833,
+              "name": "CommonBase",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "73:10:3",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 1844,
+        "nodeType": "ImportDirective",
+        "src": "137:130:3",
+        "absolutePath": "lib/forge-std/src/Components.sol",
+        "file": "./Components.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 1864,
+        "sourceUnit": 1831,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 1835,
+              "name": "console",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "145:7:3",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 1836,
+              "name": "console2",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "154:8:3",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 1837,
+              "name": "StdCheatsSafe",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "164:13:3",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 1838,
+              "name": "stdJson",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "179:7:3",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 1839,
+              "name": "stdMath",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "188:7:3",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 1840,
+              "name": "StdStorage",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "197:10:3",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 1841,
+              "name": "stdStorageSafe",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "209:14:3",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 1842,
+              "name": "StdUtils",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "225:8:3",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 1843,
+              "name": "VmSafe",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "235:6:3",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 1853,
+        "nodeType": "ContractDefinition",
+        "src": "269:104:3",
+        "nodes": [
+          {
+            "id": 1852,
+            "nodeType": "VariableDeclaration",
+            "src": "318:52:3",
+            "constant": true,
+            "mutability": "constant",
+            "name": "vmSafe",
+            "nameLocation": "343:6:3",
+            "scope": 1853,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_VmSafe_$7959",
+              "typeString": "contract VmSafe"
+            },
+            "typeName": {
+              "id": 1848,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 1847,
+                "name": "VmSafe",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 7959,
+                "src": "318:6:3"
+              },
+              "referencedDeclaration": 7959,
+              "src": "318:6:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_VmSafe_$7959",
+                "typeString": "contract VmSafe"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "id": 1850,
+                  "name": "VM_ADDRESS",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1805,
+                  "src": "359:10:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                ],
+                "id": 1849,
+                "name": "VmSafe",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 7959,
+                "src": "352:6:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_contract$_VmSafe_$7959_$",
+                  "typeString": "type(contract VmSafe)"
+                }
+              },
+              "id": 1851,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "352:18:3",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_VmSafe_$7959",
+                "typeString": "contract VmSafe"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 1845,
+              "name": "CommonBase",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 1818,
+              "src": "301:10:3"
+            },
+            "id": 1846,
+            "nodeType": "InheritanceSpecifier",
+            "src": "301:10:3"
+          }
+        ],
+        "canonicalName": "ScriptBase",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          1853,
+          1818
+        ],
+        "name": "ScriptBase",
+        "nameLocation": "287:10:3",
+        "scope": 1864,
+        "usedErrors": []
+      },
+      {
+        "id": 1863,
+        "nodeType": "ContractDefinition",
+        "src": "375:101:3",
+        "nodes": [
+          {
+            "id": 1862,
+            "nodeType": "VariableDeclaration",
+            "src": "445:28:3",
+            "constant": false,
+            "functionSelector": "f8ccbf47",
+            "mutability": "mutable",
+            "name": "IS_SCRIPT",
+            "nameLocation": "457:9:3",
+            "scope": 1863,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 1860,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "445:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": {
+              "hexValue": "74727565",
+              "id": 1861,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "bool",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "469:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              },
+              "value": "true"
+            },
+            "visibility": "public"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 1854,
+              "name": "ScriptBase",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 1853,
+              "src": "403:10:3"
+            },
+            "id": 1855,
+            "nodeType": "InheritanceSpecifier",
+            "src": "403:10:3"
+          },
+          {
+            "baseName": {
+              "id": 1856,
+              "name": "StdCheatsSafe",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 4684,
+              "src": "415:13:3"
+            },
+            "id": 1857,
+            "nodeType": "InheritanceSpecifier",
+            "src": "415:13:3"
+          },
+          {
+            "baseName": {
+              "id": 1858,
+              "name": "StdUtils",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 7501,
+              "src": "430:8:3"
+            },
+            "id": 1859,
+            "nodeType": "InheritanceSpecifier",
+            "src": "430:8:3"
+          }
+        ],
+        "canonicalName": "Script",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          1863,
+          7501,
+          4684,
+          1853,
+          1818
+        ],
+        "name": "Script",
+        "nameLocation": "393:6:3",
+        "scope": 1864,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 3
+}

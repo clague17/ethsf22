@@ -1,0 +1,80 @@
+{
+  "compiler": {
+    "version": "0.8.11+commit.d7f03943"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "medianRate",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ],
+    "devdoc": {
+      "kind": "dev",
+      "methods": {},
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {},
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "src/oracles/Celo.sol": "ICeloOracle"
+    },
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": [
+      ":@hyperlane-monorepo/=lib/hyperlane-monorepo/",
+      ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+      ":ds-test/=lib/forge-std/lib/ds-test/src/",
+      ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+      ":forge-std/=lib/forge-std/src/",
+      ":hyperlane-monorepo/=lib/hyperlane-monorepo/",
+      ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      ":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/"
+    ]
+  },
+  "sources": {
+    "src/oracles/Celo.sol": {
+      "keccak256": "0xa3e4fe20e629878fe8ed71fb7e64c7406a9d7dfc14d254ae0b362bfc83429cc6",
+      "license": "Apache-2.0",
+      "urls": [
+        "bzz-raw://1357cab092193aa894750d6a88bf86652d833d215fcf84dbc6142de16aa931e7",
+        "dweb:/ipfs/QmWYjRDNw4cAaPsdPMLJ7DnW8btfLNE1gC5hiXtEjqCP1W"
+      ]
+    }
+  },
+  "version": 1
+}

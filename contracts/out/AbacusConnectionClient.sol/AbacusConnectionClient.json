@@ -165,31 +165,31 @@
   },
   "ast": {
     "absolutePath": "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol",
-    "id": 176,
+    "id": 24590,
     "exportedSymbols": {
       "AbacusConnectionClient": [
-        175
+        24589
       ],
       "IAbacusConnectionManager": [
-        476
+        24890
       ],
       "IInterchainGasPaymaster": [
-        489
+        24903
       ],
       "IOutbox": [
-        564
+        24978
       ],
       "OwnableUpgradeable": [
-        696
+        25110
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "46:4937:0",
+    "src": "46:4937:14",
     "nodes": [
       {
-        "id": 1,
+        "id": 24415,
         "nodeType": "PragmaDirective",
-        "src": "46:25:0",
+        "src": "46:25:14",
         "literals": [
           "solidity",
           ">=",
@@ -198,22 +198,22 @@
         ]
       },
       {
-        "id": 3,
+        "id": 24417,
         "nodeType": "ImportDirective",
-        "src": "119:82:0",
+        "src": "119:82:14",
         "absolutePath": "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol",
         "file": "../interfaces/IInterchainGasPaymaster.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 176,
-        "sourceUnit": 490,
+        "scope": 24590,
+        "sourceUnit": 24904,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 2,
+              "id": 24416,
               "name": "IInterchainGasPaymaster",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "src": "127:23:0",
+              "src": "127:23:14",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -222,22 +222,22 @@
         "unitAlias": ""
       },
       {
-        "id": 5,
+        "id": 24419,
         "nodeType": "ImportDirective",
-        "src": "202:50:0",
+        "src": "202:50:14",
         "absolutePath": "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
         "file": "../interfaces/IOutbox.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 176,
-        "sourceUnit": 565,
+        "scope": 24590,
+        "sourceUnit": 24979,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 4,
+              "id": 24418,
               "name": "IOutbox",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "src": "210:7:0",
+              "src": "210:7:14",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -246,22 +246,22 @@
         "unitAlias": ""
       },
       {
-        "id": 7,
+        "id": 24421,
         "nodeType": "ImportDirective",
-        "src": "253:84:0",
+        "src": "253:84:14",
         "absolutePath": "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
         "file": "../interfaces/IAbacusConnectionManager.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 176,
-        "sourceUnit": 477,
+        "scope": 24590,
+        "sourceUnit": 24891,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 6,
+              "id": 24420,
               "name": "IAbacusConnectionManager",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "src": "261:24:0",
+              "src": "261:24:14",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -270,22 +270,22 @@
         "unitAlias": ""
       },
       {
-        "id": 9,
+        "id": 24423,
         "nodeType": "ImportDirective",
-        "src": "385:101:0",
+        "src": "385:101:14",
         "absolutePath": "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol",
         "file": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 176,
-        "sourceUnit": 697,
+        "scope": 24590,
+        "sourceUnit": 25111,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 8,
+              "id": 24422,
               "name": "OwnableUpgradeable",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "src": "393:18:0",
+              "src": "393:18:14",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -294,89 +294,89 @@
         "unitAlias": ""
       },
       {
-        "id": 175,
+        "id": 24589,
         "nodeType": "ContractDefinition",
-        "src": "488:4494:0",
+        "src": "488:4494:14",
         "nodes": [
           {
-            "id": 14,
+            "id": 24428,
             "nodeType": "VariableDeclaration",
-            "src": "607:55:0",
+            "src": "607:55:14",
             "constant": false,
             "functionSelector": "9a35c359",
             "mutability": "mutable",
             "name": "abacusConnectionManager",
-            "nameLocation": "639:23:0",
-            "scope": 175,
+            "nameLocation": "639:23:14",
+            "scope": 24589,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_IAbacusConnectionManager_$476",
+              "typeIdentifier": "t_contract$_IAbacusConnectionManager_$24890",
               "typeString": "contract IAbacusConnectionManager"
             },
             "typeName": {
-              "id": 13,
+              "id": 24427,
               "nodeType": "UserDefinedTypeName",
               "pathNode": {
-                "id": 12,
+                "id": 24426,
                 "name": "IAbacusConnectionManager",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 476,
-                "src": "607:24:0"
+                "referencedDeclaration": 24890,
+                "src": "607:24:14"
               },
-              "referencedDeclaration": 476,
-              "src": "607:24:0",
+              "referencedDeclaration": 24890,
+              "src": "607:24:14",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IAbacusConnectionManager_$476",
+                "typeIdentifier": "t_contract$_IAbacusConnectionManager_$24890",
                 "typeString": "contract IAbacusConnectionManager"
               }
             },
             "visibility": "public"
           },
           {
-            "id": 17,
+            "id": 24431,
             "nodeType": "VariableDeclaration",
-            "src": "923:53:0",
+            "src": "923:53:14",
             "constant": false,
             "functionSelector": "39bb4ad9",
             "mutability": "mutable",
             "name": "interchainGasPaymaster",
-            "nameLocation": "954:22:0",
-            "scope": 175,
+            "nameLocation": "954:22:14",
+            "scope": 24589,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_IInterchainGasPaymaster_$489",
+              "typeIdentifier": "t_contract$_IInterchainGasPaymaster_$24903",
               "typeString": "contract IInterchainGasPaymaster"
             },
             "typeName": {
-              "id": 16,
+              "id": 24430,
               "nodeType": "UserDefinedTypeName",
               "pathNode": {
-                "id": 15,
+                "id": 24429,
                 "name": "IInterchainGasPaymaster",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 489,
-                "src": "923:23:0"
+                "referencedDeclaration": 24903,
+                "src": "923:23:14"
               },
-              "referencedDeclaration": 489,
-              "src": "923:23:0",
+              "referencedDeclaration": 24903,
+              "src": "923:23:14",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IInterchainGasPaymaster_$489",
+                "typeIdentifier": "t_contract$_IInterchainGasPaymaster_$24903",
                 "typeString": "contract IInterchainGasPaymaster"
               }
             },
             "visibility": "public"
           },
           {
-            "id": 21,
+            "id": 24435,
             "nodeType": "VariableDeclaration",
-            "src": "983:25:0",
+            "src": "983:25:14",
             "constant": false,
             "mutability": "mutable",
             "name": "__GAP",
-            "nameLocation": "1003:5:0",
-            "scope": 175,
+            "nameLocation": "1003:5:14",
+            "scope": 24589,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -385,26 +385,26 @@
             },
             "typeName": {
               "baseType": {
-                "id": 18,
+                "id": 24432,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
-                "src": "983:7:0",
+                "src": "983:7:14",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
-              "id": 20,
+              "id": 24434,
               "length": {
                 "hexValue": "3438",
-                "id": 19,
+                "id": 24433,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
                 "kind": "number",
                 "lValueRequested": false,
                 "nodeType": "Literal",
-                "src": "991:2:0",
+                "src": "991:2:14",
                 "typeDescriptions": {
                   "typeIdentifier": "t_rational_48_by_1",
                   "typeString": "int_const 48"
@@ -412,7 +412,7 @@
                 "value": "48"
               },
               "nodeType": "ArrayTypeName",
-              "src": "983:11:0",
+              "src": "983:11:14",
               "typeDescriptions": {
                 "typeIdentifier": "t_array$_t_uint256_$48_storage_ptr",
                 "typeString": "uint256[48]"
@@ -421,32 +421,32 @@
             "visibility": "private"
           },
           {
-            "id": 26,
+            "id": 24440,
             "nodeType": "EventDefinition",
-            "src": "1254:74:0",
+            "src": "1254:74:14",
             "anonymous": false,
             "documentation": {
-              "id": 22,
+              "id": 24436,
               "nodeType": "StructuredDocumentation",
-              "src": "1082:167:0",
+              "src": "1082:167:14",
               "text": " @notice Emitted when a new abacusConnectionManager is set.\n @param abacusConnectionManager The address of the abacusConnectionManager contract"
             },
             "name": "AbacusConnectionManagerSet",
-            "nameLocation": "1260:26:0",
+            "nameLocation": "1260:26:14",
             "parameters": {
-              "id": 25,
+              "id": 24439,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 24,
+                  "id": 24438,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "abacusConnectionManager",
-                  "nameLocation": "1303:23:0",
+                  "nameLocation": "1303:23:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 26,
-                  "src": "1287:39:0",
+                  "scope": 24440,
+                  "src": "1287:39:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -454,10 +454,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 23,
+                    "id": 24437,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1287:7:0",
+                    "src": "1287:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -467,36 +467,36 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1286:41:0"
+              "src": "1286:41:14"
             }
           },
           {
-            "id": 31,
+            "id": 24445,
             "nodeType": "EventDefinition",
-            "src": "1499:72:0",
+            "src": "1499:72:14",
             "anonymous": false,
             "documentation": {
-              "id": 27,
+              "id": 24441,
               "nodeType": "StructuredDocumentation",
-              "src": "1334:160:0",
+              "src": "1334:160:14",
               "text": " @notice Emitted when a new Interchain Gas Paymaster is set.\n @param interchainGasPaymaster The address of the Interchain Gas Paymaster."
             },
             "name": "InterchainGasPaymasterSet",
-            "nameLocation": "1505:25:0",
+            "nameLocation": "1505:25:14",
             "parameters": {
-              "id": 30,
+              "id": 24444,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 29,
+                  "id": 24443,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "interchainGasPaymaster",
-                  "nameLocation": "1547:22:0",
+                  "nameLocation": "1547:22:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 31,
-                  "src": "1531:38:0",
+                  "scope": 24445,
+                  "src": "1531:38:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -504,10 +504,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 28,
+                    "id": 24442,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1531:7:0",
+                    "src": "1531:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -517,17 +517,17 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1530:40:0"
+              "src": "1530:40:14"
             }
           },
           {
-            "id": 44,
+            "id": 24458,
             "nodeType": "ModifierDefinition",
-            "src": "1703:88:0",
+            "src": "1703:88:14",
             "body": {
-              "id": 43,
+              "id": 24457,
               "nodeType": "Block",
-              "src": "1724:67:0",
+              "src": "1724:67:14",
               "statements": [
                 {
                   "expression": {
@@ -536,25 +536,25 @@
                         "arguments": [
                           {
                             "expression": {
-                              "id": 36,
+                              "id": 24450,
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": -15,
-                              "src": "1751:3:0",
+                              "src": "1751:3:14",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
                                 "typeString": "msg"
                               }
                             },
-                            "id": 37,
+                            "id": 24451,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "sender",
                             "nodeType": "MemberAccess",
-                            "src": "1751:10:0",
+                            "src": "1751:10:14",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
@@ -568,18 +568,18 @@
                               "typeString": "address"
                             }
                           ],
-                          "id": 35,
+                          "id": 24449,
                           "name": "_isInbox",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 163,
-                          "src": "1742:8:0",
+                          "referencedDeclaration": 24577,
+                          "src": "1742:8:14",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
                             "typeString": "function (address) view returns (bool)"
                           }
                         },
-                        "id": 38,
+                        "id": 24452,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -587,7 +587,7 @@
                         "lValueRequested": false,
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "1742:20:0",
+                        "src": "1742:20:14",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -596,14 +596,14 @@
                       },
                       {
                         "hexValue": "21696e626f78",
-                        "id": 39,
+                        "id": 24453,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "1764:8:0",
+                        "src": "1764:8:14",
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_bdf80e704269be772c60297aa225a59a81a68860caec8acfc9aeed1e6b730862",
                           "typeString": "literal_string \"!inbox\""
@@ -622,7 +622,7 @@
                           "typeString": "literal_string \"!inbox\""
                         }
                       ],
-                      "id": 34,
+                      "id": 24448,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -630,13 +630,13 @@
                         -18
                       ],
                       "referencedDeclaration": -18,
-                      "src": "1734:7:0",
+                      "src": "1734:7:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 40,
+                    "id": 24454,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -644,60 +644,60 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1734:39:0",
+                    "src": "1734:39:14",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 41,
+                  "id": 24455,
                   "nodeType": "ExpressionStatement",
-                  "src": "1734:39:0"
+                  "src": "1734:39:14"
                 },
                 {
-                  "id": 42,
+                  "id": 24456,
                   "nodeType": "PlaceholderStatement",
-                  "src": "1783:1:0"
+                  "src": "1783:1:14"
                 }
               ]
             },
             "documentation": {
-              "id": 32,
+              "id": 24446,
               "nodeType": "StructuredDocumentation",
-              "src": "1621:77:0",
+              "src": "1621:77:14",
               "text": " @notice Only accept messages from an Abacus Inbox contract"
             },
             "name": "onlyInbox",
-            "nameLocation": "1712:9:0",
+            "nameLocation": "1712:9:14",
             "parameters": {
-              "id": 33,
+              "id": 24447,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1721:2:0"
+              "src": "1721:2:14"
             },
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 59,
+            "id": 24473,
             "nodeType": "FunctionDefinition",
-            "src": "1836:215:0",
+            "src": "1836:215:14",
             "body": {
-              "id": 58,
+              "id": 24472,
               "nodeType": "Block",
-              "src": "1955:96:0",
+              "src": "1955:96:14",
               "statements": [
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 52,
+                        "id": 24466,
                         "name": "_abacusConnectionManager",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 46,
-                        "src": "1993:24:0",
+                        "referencedDeclaration": 24460,
+                        "src": "1993:24:14",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -711,18 +711,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 51,
+                      "id": 24465,
                       "name": "_setAbacusConnectionManager",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 137,
-                      "src": "1965:27:0",
+                      "referencedDeclaration": 24551,
+                      "src": "1965:27:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 53,
+                    "id": 24467,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -730,34 +730,34 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1965:53:0",
+                    "src": "1965:53:14",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 54,
+                  "id": 24468,
                   "nodeType": "ExpressionStatement",
-                  "src": "1965:53:0"
+                  "src": "1965:53:14"
                 },
                 {
                   "expression": {
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 55,
+                      "id": 24469,
                       "name": "__Ownable_init",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 591,
-                      "src": "2028:14:0",
+                      "referencedDeclaration": 25005,
+                      "src": "2028:14:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
                         "typeString": "function ()"
                       }
                     },
-                    "id": 56,
+                    "id": 24470,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -765,16 +765,16 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2028:16:0",
+                    "src": "2028:16:14",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 57,
+                  "id": 24471,
                   "nodeType": "ExpressionStatement",
-                  "src": "2028:16:0"
+                  "src": "2028:16:14"
                 }
               ]
             },
@@ -782,34 +782,34 @@
             "kind": "function",
             "modifiers": [
               {
-                "id": 49,
+                "id": 24463,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 48,
+                  "id": 24462,
                   "name": "onlyInitializing",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 810,
-                  "src": "1938:16:0"
+                  "referencedDeclaration": 25224,
+                  "src": "1938:16:14"
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "1938:16:0"
+                "src": "1938:16:14"
               }
             ],
             "name": "__AbacusConnectionClient_initialize",
-            "nameLocation": "1845:35:0",
+            "nameLocation": "1845:35:14",
             "parameters": {
-              "id": 47,
+              "id": 24461,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 46,
+                  "id": 24460,
                   "mutability": "mutable",
                   "name": "_abacusConnectionManager",
-                  "nameLocation": "1898:24:0",
+                  "nameLocation": "1898:24:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 59,
-                  "src": "1890:32:0",
+                  "scope": 24473,
+                  "src": "1890:32:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -817,10 +817,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 45,
+                    "id": 24459,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1890:7:0",
+                    "src": "1890:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -830,38 +830,38 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1880:48:0"
+              "src": "1880:48:14"
             },
             "returnParameters": {
-              "id": 50,
+              "id": 24464,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1955:0:0"
+              "src": "1955:0:14"
             },
-            "scope": 175,
+            "scope": 24589,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 77,
+            "id": 24491,
             "nodeType": "FunctionDefinition",
-            "src": "2057:299:0",
+            "src": "2057:299:14",
             "body": {
-              "id": 76,
+              "id": 24490,
               "nodeType": "Block",
-              "src": "2217:139:0",
+              "src": "2217:139:14",
               "statements": [
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 69,
+                        "id": 24483,
                         "name": "_interchainGasPaymaster",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 63,
-                        "src": "2254:23:0",
+                        "referencedDeclaration": 24477,
+                        "src": "2254:23:14",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -875,18 +875,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 68,
+                      "id": 24482,
                       "name": "_setInterchainGasPaymaster",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 120,
-                      "src": "2227:26:0",
+                      "referencedDeclaration": 24534,
+                      "src": "2227:26:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 70,
+                    "id": 24484,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -894,27 +894,27 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2227:51:0",
+                    "src": "2227:51:14",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 71,
+                  "id": 24485,
                   "nodeType": "ExpressionStatement",
-                  "src": "2227:51:0"
+                  "src": "2227:51:14"
                 },
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 73,
+                        "id": 24487,
                         "name": "_abacusConnectionManager",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 61,
-                        "src": "2324:24:0",
+                        "referencedDeclaration": 24475,
+                        "src": "2324:24:14",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -928,21 +928,21 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 72,
+                      "id": 24486,
                       "name": "__AbacusConnectionClient_initialize",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        59,
-                        77
+                        24473,
+                        24491
                       ],
-                      "referencedDeclaration": 59,
-                      "src": "2288:35:0",
+                      "referencedDeclaration": 24473,
+                      "src": "2288:35:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 74,
+                    "id": 24488,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -950,16 +950,16 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2288:61:0",
+                    "src": "2288:61:14",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 75,
+                  "id": 24489,
                   "nodeType": "ExpressionStatement",
-                  "src": "2288:61:0"
+                  "src": "2288:61:14"
                 }
               ]
             },
@@ -967,34 +967,34 @@
             "kind": "function",
             "modifiers": [
               {
-                "id": 66,
+                "id": 24480,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 65,
+                  "id": 24479,
                   "name": "onlyInitializing",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 810,
-                  "src": "2200:16:0"
+                  "referencedDeclaration": 25224,
+                  "src": "2200:16:14"
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "2200:16:0"
+                "src": "2200:16:14"
               }
             ],
             "name": "__AbacusConnectionClient_initialize",
-            "nameLocation": "2066:35:0",
+            "nameLocation": "2066:35:14",
             "parameters": {
-              "id": 64,
+              "id": 24478,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 61,
+                  "id": 24475,
                   "mutability": "mutable",
                   "name": "_abacusConnectionManager",
-                  "nameLocation": "2119:24:0",
+                  "nameLocation": "2119:24:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 77,
-                  "src": "2111:32:0",
+                  "scope": 24491,
+                  "src": "2111:32:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1002,10 +1002,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 60,
+                    "id": 24474,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2111:7:0",
+                    "src": "2111:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1016,13 +1016,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 63,
+                  "id": 24477,
                   "mutability": "mutable",
                   "name": "_interchainGasPaymaster",
-                  "nameLocation": "2161:23:0",
+                  "nameLocation": "2161:23:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 77,
-                  "src": "2153:31:0",
+                  "scope": 24491,
+                  "src": "2153:31:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1030,10 +1030,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 62,
+                    "id": 24476,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2153:7:0",
+                    "src": "2153:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1043,38 +1043,38 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2101:89:0"
+              "src": "2101:89:14"
             },
             "returnParameters": {
-              "id": 67,
+              "id": 24481,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2217:0:0"
+              "src": "2217:0:14"
             },
-            "scope": 175,
+            "scope": 24589,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 90,
+            "id": 24504,
             "nodeType": "FunctionDefinition",
-            "src": "2601:195:0",
+            "src": "2601:195:14",
             "body": {
-              "id": 89,
+              "id": 24503,
               "nodeType": "Block",
-              "src": "2726:70:0",
+              "src": "2726:70:14",
               "statements": [
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 86,
+                        "id": 24500,
                         "name": "_abacusConnectionManager",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 80,
-                        "src": "2764:24:0",
+                        "referencedDeclaration": 24494,
+                        "src": "2764:24:14",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1088,18 +1088,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 85,
+                      "id": 24499,
                       "name": "_setAbacusConnectionManager",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 137,
-                      "src": "2736:27:0",
+                      "referencedDeclaration": 24551,
+                      "src": "2736:27:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 87,
+                    "id": 24501,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1107,23 +1107,23 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2736:53:0",
+                    "src": "2736:53:14",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 88,
+                  "id": 24502,
                   "nodeType": "ExpressionStatement",
-                  "src": "2736:53:0"
+                  "src": "2736:53:14"
                 }
               ]
             },
             "documentation": {
-              "id": 78,
+              "id": 24492,
               "nodeType": "StructuredDocumentation",
-              "src": "2415:181:0",
+              "src": "2415:181:14",
               "text": " @notice Sets the address of the application's AbacusConnectionManager.\n @param _abacusConnectionManager The address of the AbacusConnectionManager contract."
             },
             "functionSelector": "12b1d780",
@@ -1131,34 +1131,34 @@
             "kind": "function",
             "modifiers": [
               {
-                "id": 83,
+                "id": 24497,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 82,
+                  "id": 24496,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 610,
-                  "src": "2712:9:0"
+                  "referencedDeclaration": 25024,
+                  "src": "2712:9:14"
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "2712:9:0"
+                "src": "2712:9:14"
               }
             ],
             "name": "setAbacusConnectionManager",
-            "nameLocation": "2610:26:0",
+            "nameLocation": "2610:26:14",
             "parameters": {
-              "id": 81,
+              "id": 24495,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 80,
+                  "id": 24494,
                   "mutability": "mutable",
                   "name": "_abacusConnectionManager",
-                  "nameLocation": "2645:24:0",
+                  "nameLocation": "2645:24:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 90,
-                  "src": "2637:32:0",
+                  "scope": 24504,
+                  "src": "2637:32:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1166,10 +1166,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 79,
+                    "id": 24493,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2637:7:0",
+                    "src": "2637:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1179,38 +1179,38 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2636:34:0"
+              "src": "2636:34:14"
             },
             "returnParameters": {
-              "id": 84,
+              "id": 24498,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2726:0:0"
+              "src": "2726:0:14"
             },
-            "scope": 175,
+            "scope": 24589,
             "stateMutability": "nonpayable",
             "virtual": true,
             "visibility": "external"
           },
           {
-            "id": 103,
+            "id": 24517,
             "nodeType": "FunctionDefinition",
-            "src": "2985:191:0",
+            "src": "2985:191:14",
             "body": {
-              "id": 102,
+              "id": 24516,
               "nodeType": "Block",
-              "src": "3108:68:0",
+              "src": "3108:68:14",
               "statements": [
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 99,
+                        "id": 24513,
                         "name": "_interchainGasPaymaster",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 93,
-                        "src": "3145:23:0",
+                        "referencedDeclaration": 24507,
+                        "src": "3145:23:14",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1224,18 +1224,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 98,
+                      "id": 24512,
                       "name": "_setInterchainGasPaymaster",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 120,
-                      "src": "3118:26:0",
+                      "referencedDeclaration": 24534,
+                      "src": "3118:26:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 100,
+                    "id": 24514,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1243,23 +1243,23 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "3118:51:0",
+                    "src": "3118:51:14",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 101,
+                  "id": 24515,
                   "nodeType": "ExpressionStatement",
-                  "src": "3118:51:0"
+                  "src": "3118:51:14"
                 }
               ]
             },
             "documentation": {
-              "id": 91,
+              "id": 24505,
               "nodeType": "StructuredDocumentation",
-              "src": "2802:178:0",
+              "src": "2802:178:14",
               "text": " @notice Sets the address of the application's InterchainGasPaymaster.\n @param _interchainGasPaymaster The address of the InterchainGasPaymaster contract."
             },
             "functionSelector": "f1bd6f0a",
@@ -1267,34 +1267,34 @@
             "kind": "function",
             "modifiers": [
               {
-                "id": 96,
+                "id": 24510,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 95,
+                  "id": 24509,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 610,
-                  "src": "3094:9:0"
+                  "referencedDeclaration": 25024,
+                  "src": "3094:9:14"
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "3094:9:0"
+                "src": "3094:9:14"
               }
             ],
             "name": "setInterchainGasPaymaster",
-            "nameLocation": "2994:25:0",
+            "nameLocation": "2994:25:14",
             "parameters": {
-              "id": 94,
+              "id": 24508,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 93,
+                  "id": 24507,
                   "mutability": "mutable",
                   "name": "_interchainGasPaymaster",
-                  "nameLocation": "3028:23:0",
+                  "nameLocation": "3028:23:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 103,
-                  "src": "3020:31:0",
+                  "scope": 24517,
+                  "src": "3020:31:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1302,10 +1302,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 92,
+                    "id": 24506,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3020:7:0",
+                    "src": "3020:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1315,44 +1315,44 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3019:33:0"
+              "src": "3019:33:14"
             },
             "returnParameters": {
-              "id": 97,
+              "id": 24511,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3108:0:0"
+              "src": "3108:0:14"
             },
-            "scope": 175,
+            "scope": 24589,
             "stateMutability": "nonpayable",
             "virtual": true,
             "visibility": "external"
           },
           {
-            "id": 120,
+            "id": 24534,
             "nodeType": "FunctionDefinition",
-            "src": "3418:267:0",
+            "src": "3418:267:14",
             "body": {
-              "id": 119,
+              "id": 24533,
               "nodeType": "Block",
-              "src": "3508:177:0",
+              "src": "3508:177:14",
               "statements": [
                 {
                   "expression": {
-                    "id": 113,
+                    "id": 24527,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 109,
+                      "id": 24523,
                       "name": "interchainGasPaymaster",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 17,
-                      "src": "3518:22:0",
+                      "referencedDeclaration": 24431,
+                      "src": "3518:22:14",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IInterchainGasPaymaster_$489",
+                        "typeIdentifier": "t_contract$_IInterchainGasPaymaster_$24903",
                         "typeString": "contract IInterchainGasPaymaster"
                       }
                     },
@@ -1361,12 +1361,12 @@
                     "rightHandSide": {
                       "arguments": [
                         {
-                          "id": 111,
+                          "id": 24525,
                           "name": "_interchainGasPaymaster",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 106,
-                          "src": "3580:23:0",
+                          "referencedDeclaration": 24520,
+                          "src": "3580:23:14",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -1380,18 +1380,18 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 110,
+                        "id": 24524,
                         "name": "IInterchainGasPaymaster",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 489,
-                        "src": "3543:23:0",
+                        "referencedDeclaration": 24903,
+                        "src": "3543:23:14",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_IInterchainGasPaymaster_$489_$",
+                          "typeIdentifier": "t_type$_t_contract$_IInterchainGasPaymaster_$24903_$",
                           "typeString": "type(contract IInterchainGasPaymaster)"
                         }
                       },
-                      "id": 112,
+                      "id": 24526,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1399,33 +1399,33 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "3543:70:0",
+                      "src": "3543:70:14",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IInterchainGasPaymaster_$489",
+                        "typeIdentifier": "t_contract$_IInterchainGasPaymaster_$24903",
                         "typeString": "contract IInterchainGasPaymaster"
                       }
                     },
-                    "src": "3518:95:0",
+                    "src": "3518:95:14",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IInterchainGasPaymaster_$489",
+                      "typeIdentifier": "t_contract$_IInterchainGasPaymaster_$24903",
                       "typeString": "contract IInterchainGasPaymaster"
                     }
                   },
-                  "id": 114,
+                  "id": 24528,
                   "nodeType": "ExpressionStatement",
-                  "src": "3518:95:0"
+                  "src": "3518:95:14"
                 },
                 {
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 116,
+                        "id": 24530,
                         "name": "_interchainGasPaymaster",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 106,
-                        "src": "3654:23:0",
+                        "referencedDeclaration": 24520,
+                        "src": "3654:23:14",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1439,18 +1439,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 115,
+                      "id": 24529,
                       "name": "InterchainGasPaymasterSet",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 31,
-                      "src": "3628:25:0",
+                      "referencedDeclaration": 24445,
+                      "src": "3628:25:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 117,
+                    "id": 24531,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1458,43 +1458,43 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "3628:50:0",
+                    "src": "3628:50:14",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 118,
+                  "id": 24532,
                   "nodeType": "EmitStatement",
-                  "src": "3623:55:0"
+                  "src": "3623:55:14"
                 }
               ]
             },
             "documentation": {
-              "id": 104,
+              "id": 24518,
               "nodeType": "StructuredDocumentation",
-              "src": "3235:178:0",
+              "src": "3235:178:14",
               "text": " @notice Sets the address of the application's InterchainGasPaymaster.\n @param _interchainGasPaymaster The address of the InterchainGasPaymaster contract."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_setInterchainGasPaymaster",
-            "nameLocation": "3427:26:0",
+            "nameLocation": "3427:26:14",
             "parameters": {
-              "id": 107,
+              "id": 24521,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 106,
+                  "id": 24520,
                   "mutability": "mutable",
                   "name": "_interchainGasPaymaster",
-                  "nameLocation": "3462:23:0",
+                  "nameLocation": "3462:23:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 120,
-                  "src": "3454:31:0",
+                  "scope": 24534,
+                  "src": "3454:31:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1502,10 +1502,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 105,
+                    "id": 24519,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3454:7:0",
+                    "src": "3454:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1515,44 +1515,44 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3453:33:0"
+              "src": "3453:33:14"
             },
             "returnParameters": {
-              "id": 108,
+              "id": 24522,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3508:0:0"
+              "src": "3508:0:14"
             },
-            "scope": 175,
+            "scope": 24589,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 137,
+            "id": 24551,
             "nodeType": "FunctionDefinition",
-            "src": "3882:274:0",
+            "src": "3882:274:14",
             "body": {
-              "id": 136,
+              "id": 24550,
               "nodeType": "Block",
-              "src": "3974:182:0",
+              "src": "3974:182:14",
               "statements": [
                 {
                   "expression": {
-                    "id": 130,
+                    "id": 24544,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 126,
+                      "id": 24540,
                       "name": "abacusConnectionManager",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 14,
-                      "src": "3984:23:0",
+                      "referencedDeclaration": 24428,
+                      "src": "3984:23:14",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IAbacusConnectionManager_$476",
+                        "typeIdentifier": "t_contract$_IAbacusConnectionManager_$24890",
                         "typeString": "contract IAbacusConnectionManager"
                       }
                     },
@@ -1561,12 +1561,12 @@
                     "rightHandSide": {
                       "arguments": [
                         {
-                          "id": 128,
+                          "id": 24542,
                           "name": "_abacusConnectionManager",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 123,
-                          "src": "4048:24:0",
+                          "referencedDeclaration": 24537,
+                          "src": "4048:24:14",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -1580,18 +1580,18 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 127,
+                        "id": 24541,
                         "name": "IAbacusConnectionManager",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 476,
-                        "src": "4010:24:0",
+                        "referencedDeclaration": 24890,
+                        "src": "4010:24:14",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_IAbacusConnectionManager_$476_$",
+                          "typeIdentifier": "t_type$_t_contract$_IAbacusConnectionManager_$24890_$",
                           "typeString": "type(contract IAbacusConnectionManager)"
                         }
                       },
-                      "id": 129,
+                      "id": 24543,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1599,33 +1599,33 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "4010:72:0",
+                      "src": "4010:72:14",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IAbacusConnectionManager_$476",
+                        "typeIdentifier": "t_contract$_IAbacusConnectionManager_$24890",
                         "typeString": "contract IAbacusConnectionManager"
                       }
                     },
-                    "src": "3984:98:0",
+                    "src": "3984:98:14",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IAbacusConnectionManager_$476",
+                      "typeIdentifier": "t_contract$_IAbacusConnectionManager_$24890",
                       "typeString": "contract IAbacusConnectionManager"
                     }
                   },
-                  "id": 131,
+                  "id": 24545,
                   "nodeType": "ExpressionStatement",
-                  "src": "3984:98:0"
+                  "src": "3984:98:14"
                 },
                 {
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 133,
+                        "id": 24547,
                         "name": "_abacusConnectionManager",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 123,
-                        "src": "4124:24:0",
+                        "referencedDeclaration": 24537,
+                        "src": "4124:24:14",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1639,18 +1639,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 132,
+                      "id": 24546,
                       "name": "AbacusConnectionManagerSet",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 26,
-                      "src": "4097:26:0",
+                      "referencedDeclaration": 24440,
+                      "src": "4097:26:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 134,
+                    "id": 24548,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1658,43 +1658,43 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "4097:52:0",
+                    "src": "4097:52:14",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 135,
+                  "id": 24549,
                   "nodeType": "EmitStatement",
-                  "src": "4092:57:0"
+                  "src": "4092:57:14"
                 }
               ]
             },
             "documentation": {
-              "id": 121,
+              "id": 24535,
               "nodeType": "StructuredDocumentation",
-              "src": "3691:186:0",
+              "src": "3691:186:14",
               "text": " @notice Modify the contract the Application uses to validate Inbox contracts\n @param _abacusConnectionManager The address of the abacusConnectionManager contract"
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_setAbacusConnectionManager",
-            "nameLocation": "3891:27:0",
+            "nameLocation": "3891:27:14",
             "parameters": {
-              "id": 124,
+              "id": 24538,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 123,
+                  "id": 24537,
                   "mutability": "mutable",
                   "name": "_abacusConnectionManager",
-                  "nameLocation": "3927:24:0",
+                  "nameLocation": "3927:24:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 137,
-                  "src": "3919:32:0",
+                  "scope": 24551,
+                  "src": "3919:32:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1702,10 +1702,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 122,
+                    "id": 24536,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3919:7:0",
+                    "src": "3919:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1715,27 +1715,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3918:34:0"
+              "src": "3918:34:14"
             },
             "returnParameters": {
-              "id": 125,
+              "id": 24539,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3974:0:0"
+              "src": "3974:0:14"
             },
-            "scope": 175,
+            "scope": 24589,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 149,
+            "id": 24563,
             "nodeType": "FunctionDefinition",
-            "src": "4297:107:0",
+            "src": "4297:107:14",
             "body": {
-              "id": 148,
+              "id": 24562,
               "nodeType": "Block",
-              "src": "4348:56:0",
+              "src": "4348:56:14",
               "statements": [
                 {
                   "expression": {
@@ -1743,32 +1743,32 @@
                     "expression": {
                       "argumentTypes": [],
                       "expression": {
-                        "id": 144,
+                        "id": 24558,
                         "name": "abacusConnectionManager",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 14,
-                        "src": "4365:23:0",
+                        "referencedDeclaration": 24428,
+                        "src": "4365:23:14",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IAbacusConnectionManager_$476",
+                          "typeIdentifier": "t_contract$_IAbacusConnectionManager_$24890",
                           "typeString": "contract IAbacusConnectionManager"
                         }
                       },
-                      "id": 145,
+                      "id": 24559,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "outbox",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 463,
-                      "src": "4365:30:0",
+                      "referencedDeclaration": 24877,
+                      "src": "4365:30:14",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_external_view$__$returns$_t_contract$_IOutbox_$564_$",
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_contract$_IOutbox_$24978_$",
                         "typeString": "function () view external returns (contract IOutbox)"
                       }
                     },
-                    "id": 146,
+                    "id": 24560,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1776,102 +1776,102 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "4365:32:0",
+                    "src": "4365:32:14",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IOutbox_$564",
+                      "typeIdentifier": "t_contract$_IOutbox_$24978",
                       "typeString": "contract IOutbox"
                     }
                   },
-                  "functionReturnParameters": 143,
-                  "id": 147,
+                  "functionReturnParameters": 24557,
+                  "id": 24561,
                   "nodeType": "Return",
-                  "src": "4358:39:0"
+                  "src": "4358:39:14"
                 }
               ]
             },
             "documentation": {
-              "id": 138,
+              "id": 24552,
               "nodeType": "StructuredDocumentation",
-              "src": "4162:130:0",
+              "src": "4162:130:14",
               "text": " @notice Get the local Outbox contract from the abacusConnectionManager\n @return The local Outbox contract"
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_outbox",
-            "nameLocation": "4306:7:0",
+            "nameLocation": "4306:7:14",
             "parameters": {
-              "id": 139,
+              "id": 24553,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4313:2:0"
+              "src": "4313:2:14"
             },
             "returnParameters": {
-              "id": 143,
+              "id": 24557,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 142,
+                  "id": 24556,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 149,
-                  "src": "4339:7:0",
+                  "scope": 24563,
+                  "src": "4339:7:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IOutbox_$564",
+                    "typeIdentifier": "t_contract$_IOutbox_$24978",
                     "typeString": "contract IOutbox"
                   },
                   "typeName": {
-                    "id": 141,
+                    "id": 24555,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 140,
+                      "id": 24554,
                       "name": "IOutbox",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 564,
-                      "src": "4339:7:0"
+                      "referencedDeclaration": 24978,
+                      "src": "4339:7:14"
                     },
-                    "referencedDeclaration": 564,
-                    "src": "4339:7:0",
+                    "referencedDeclaration": 24978,
+                    "src": "4339:7:14",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IOutbox_$564",
+                      "typeIdentifier": "t_contract$_IOutbox_$24978",
                       "typeString": "contract IOutbox"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "4338:9:0"
+              "src": "4338:9:14"
             },
-            "scope": 175,
+            "scope": 24589,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 163,
+            "id": 24577,
             "nodeType": "FunctionDefinition",
-            "src": "4589:144:0",
+            "src": "4589:144:14",
             "body": {
-              "id": 162,
+              "id": 24576,
               "nodeType": "Block",
-              "src": "4661:72:0",
+              "src": "4661:72:14",
               "statements": [
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 159,
+                        "id": 24573,
                         "name": "_potentialInbox",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 152,
-                        "src": "4710:15:0",
+                        "referencedDeclaration": 24566,
+                        "src": "4710:15:14",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1886,32 +1886,32 @@
                         }
                       ],
                       "expression": {
-                        "id": 157,
+                        "id": 24571,
                         "name": "abacusConnectionManager",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 14,
-                        "src": "4678:23:0",
+                        "referencedDeclaration": 24428,
+                        "src": "4678:23:14",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IAbacusConnectionManager_$476",
+                          "typeIdentifier": "t_contract$_IAbacusConnectionManager_$24890",
                           "typeString": "contract IAbacusConnectionManager"
                         }
                       },
-                      "id": 158,
+                      "id": 24572,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "isInbox",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 470,
-                      "src": "4678:31:0",
+                      "referencedDeclaration": 24884,
+                      "src": "4678:31:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
                         "typeString": "function (address) view external returns (bool)"
                       }
                     },
-                    "id": 160,
+                    "id": 24574,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1919,44 +1919,44 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "4678:48:0",
+                    "src": "4678:48:14",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 156,
-                  "id": 161,
+                  "functionReturnParameters": 24570,
+                  "id": 24575,
                   "nodeType": "Return",
-                  "src": "4671:55:0"
+                  "src": "4671:55:14"
                 }
               ]
             },
             "documentation": {
-              "id": 150,
+              "id": 24564,
               "nodeType": "StructuredDocumentation",
-              "src": "4410:174:0",
+              "src": "4410:174:14",
               "text": " @notice Determine whether _potentialInbox is an enrolled Inbox from the abacusConnectionManager\n @return True if _potentialInbox is an enrolled Inbox"
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_isInbox",
-            "nameLocation": "4598:8:0",
+            "nameLocation": "4598:8:14",
             "parameters": {
-              "id": 153,
+              "id": 24567,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 152,
+                  "id": 24566,
                   "mutability": "mutable",
                   "name": "_potentialInbox",
-                  "nameLocation": "4615:15:0",
+                  "nameLocation": "4615:15:14",
                   "nodeType": "VariableDeclaration",
-                  "scope": 163,
-                  "src": "4607:23:0",
+                  "scope": 24577,
+                  "src": "4607:23:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1964,10 +1964,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 151,
+                    "id": 24565,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4607:7:0",
+                    "src": "4607:7:14",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1977,21 +1977,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4606:25:0"
+              "src": "4606:25:14"
             },
             "returnParameters": {
-              "id": 156,
+              "id": 24570,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 155,
+                  "id": 24569,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 163,
-                  "src": "4655:4:0",
+                  "scope": 24577,
+                  "src": "4655:4:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1999,10 +1999,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 154,
+                    "id": 24568,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4655:4:0",
+                    "src": "4655:4:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -2011,21 +2011,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4654:6:0"
+              "src": "4654:6:14"
             },
-            "scope": 175,
+            "scope": 24589,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 174,
+            "id": 24588,
             "nodeType": "FunctionDefinition",
-            "src": "4856:124:0",
+            "src": "4856:124:14",
             "body": {
-              "id": 173,
+              "id": 24587,
               "nodeType": "Block",
-              "src": "4919:61:0",
+              "src": "4919:61:14",
               "statements": [
                 {
                   "expression": {
@@ -2033,32 +2033,32 @@
                     "expression": {
                       "argumentTypes": [],
                       "expression": {
-                        "id": 169,
+                        "id": 24583,
                         "name": "abacusConnectionManager",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 14,
-                        "src": "4936:23:0",
+                        "referencedDeclaration": 24428,
+                        "src": "4936:23:14",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IAbacusConnectionManager_$476",
+                          "typeIdentifier": "t_contract$_IAbacusConnectionManager_$24890",
                           "typeString": "contract IAbacusConnectionManager"
                         }
                       },
-                      "id": 170,
+                      "id": 24584,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "localDomain",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 475,
-                      "src": "4936:35:0",
+                      "referencedDeclaration": 24889,
+                      "src": "4936:35:14",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$__$returns$_t_uint32_$",
                         "typeString": "function () view external returns (uint32)"
                       }
                     },
-                    "id": 171,
+                    "id": 24585,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2066,50 +2066,50 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "4936:37:0",
+                    "src": "4936:37:14",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint32",
                       "typeString": "uint32"
                     }
                   },
-                  "functionReturnParameters": 168,
-                  "id": 172,
+                  "functionReturnParameters": 24582,
+                  "id": 24586,
                   "nodeType": "Return",
-                  "src": "4929:44:0"
+                  "src": "4929:44:14"
                 }
               ]
             },
             "documentation": {
-              "id": 164,
+              "id": 24578,
               "nodeType": "StructuredDocumentation",
-              "src": "4739:112:0",
+              "src": "4739:112:14",
               "text": " @notice Get the local domain from the abacusConnectionManager\n @return The local domain"
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_localDomain",
-            "nameLocation": "4865:12:0",
+            "nameLocation": "4865:12:14",
             "parameters": {
-              "id": 165,
+              "id": 24579,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4877:2:0"
+              "src": "4877:2:14"
             },
             "returnParameters": {
-              "id": 168,
+              "id": 24582,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 167,
+                  "id": 24581,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 174,
-                  "src": "4911:6:0",
+                  "scope": 24588,
+                  "src": "4911:6:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2117,10 +2117,10 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 166,
+                    "id": 24580,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4911:6:0",
+                    "src": "4911:6:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint32",
                       "typeString": "uint32"
@@ -2129,9 +2129,9 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4910:8:0"
+              "src": "4910:8:14"
             },
-            "scope": 175,
+            "scope": 24589,
             "stateMutability": "view",
             "virtual": true,
             "visibility": "internal"
@@ -2141,15 +2141,15 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 10,
+              "id": 24424,
               "name": "OwnableUpgradeable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 696,
-              "src": "532:18:0"
+              "referencedDeclaration": 25110,
+              "src": "532:18:14"
             },
-            "id": 11,
+            "id": 24425,
             "nodeType": "InheritanceSpecifier",
-            "src": "532:18:0"
+            "src": "532:18:14"
           }
         ],
         "canonicalName": "AbacusConnectionClient",
@@ -2157,18 +2157,18 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          175,
-          696,
-          1906,
-          865
+          24589,
+          25110,
+          26320,
+          25279
         ],
         "name": "AbacusConnectionClient",
-        "nameLocation": "506:22:0",
-        "scope": 176,
+        "nameLocation": "506:22:14",
+        "scope": 24590,
         "usedErrors": []
       }
     ],
     "license": "MIT OR Apache-2.0"
   },
-  "id": 0
+  "id": 14
 }

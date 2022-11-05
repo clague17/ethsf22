@@ -397,11 +397,6 @@
             "type": "address"
           },
           {
-            "internalType": "uint256",
-            "name": "_totalSupply",
-            "type": "uint256"
-          },
-          {
             "internalType": "string",
             "name": "_name",
             "type": "string"
@@ -726,13 +721,12 @@
         "increaseAllowance(address,uint256)": {
           "details": "Atomically increases the allowance granted to `spender` by the caller. This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}. Emits an {Approval} event indicating the updated allowance. Requirements: - `spender` cannot be the zero address."
         },
-        "initialize(address,address,uint256,string,string)": {
+        "initialize(address,address,string,string)": {
           "params": {
             "_abacusConnectionManager": "The address of the connection manager contract.",
             "_interchainGasPaymaster": "The address of the interchain gas paymaster contract.",
             "_name": "The name of the token.",
-            "_symbol": "The symbol of the token.",
-            "_totalSupply": "The initial supply of the token."
+            "_symbol": "The symbol of the token."
           }
         },
         "name()": {
@@ -800,7 +794,7 @@
         "handle(uint32,bytes32,bytes)": {
           "notice": "Handles an incoming message"
         },
-        "initialize(address,address,uint256,string,string)": {
+        "initialize(address,address,string,string)": {
           "notice": "Initializes the Hyperlane router, ERC20 metadata, and mints initial supply to deployer."
         },
         "setAbacusConnectionManager(address)": {
@@ -818,7 +812,7 @@
   },
   "settings": {
     "compilationTarget": {
-      "src/CarbonCoinTerminal.sol": "CarbonCoinTerminal"
+      "src/InterchainCarbonCoin.sol": "InterchainCarbonCoin"
     },
     "evmVersion": "london",
     "libraries": {},
@@ -832,10 +826,13 @@
     "remappings": [
       ":@hyperlane-monorepo/=lib/hyperlane-monorepo/",
       ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
       ":ds-test/=lib/forge-std/lib/ds-test/src/",
+      ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
       ":forge-std/=lib/forge-std/src/",
       ":hyperlane-monorepo/=lib/hyperlane-monorepo/",
-      ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/"
+      ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      ":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/"
     ]
   },
   "sources": {
@@ -951,12 +948,12 @@
         "dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a"
       ]
     },
-    "src/CarbonCoinTerminal.sol": {
-      "keccak256": "0xc6199f198fdaab8762ef34aa694bb977479ebb2cda6219a9938135d672b7387d",
+    "src/InterchainCarbonCoin.sol": {
+      "keccak256": "0x0ba0139eca942e1e45947947f3c9dbefc29c29187918cf856c090b9cc481a236",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://c7fa7bd2bd941ec368fecb8590bb5d1b8e067fac89c20d1dfd1082a03e423ba5",
-        "dweb:/ipfs/QmYXQrWsHX2ZTVJ7zEmsFSqBMWRMQrRBBw6HKBBK2z5fLg"
+        "bzz-raw://727b6fad4e398a3f6d7e279e8aaa2d129a91aff6e0c54af351dec0ced6723678",
+        "dweb:/ipfs/QmTvzbSgsR8R8rpoY53zDtsFkA8YTNWSjgTs9bNRZYwrJo"
       ]
     }
   },

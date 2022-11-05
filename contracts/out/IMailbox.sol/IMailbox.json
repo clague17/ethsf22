@@ -43,19 +43,19 @@
   },
   "ast": {
     "absolutePath": "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol",
-    "id": 503,
+    "id": 24917,
     "exportedSymbols": {
       "IMailbox": [
-        502
+        24916
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "46:175:4",
+    "src": "46:175:18",
     "nodes": [
       {
-        "id": 491,
+        "id": 24905,
         "nodeType": "PragmaDirective",
-        "src": "46:25:4",
+        "src": "46:25:18",
         "literals": [
           "solidity",
           ">=",
@@ -64,39 +64,39 @@
         ]
       },
       {
-        "id": 502,
+        "id": 24916,
         "nodeType": "ContractDefinition",
-        "src": "73:147:4",
+        "src": "73:147:18",
         "nodes": [
           {
-            "id": 496,
+            "id": 24910,
             "nodeType": "FunctionDefinition",
-            "src": "98:54:4",
+            "src": "98:54:18",
             "functionSelector": "8d3638f4",
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "localDomain",
-            "nameLocation": "107:11:4",
+            "nameLocation": "107:11:18",
             "parameters": {
-              "id": 492,
+              "id": 24906,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "118:2:4"
+              "src": "118:2:18"
             },
             "returnParameters": {
-              "id": 495,
+              "id": 24909,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 494,
+                  "id": 24908,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 496,
-                  "src": "144:6:4",
+                  "scope": 24910,
+                  "src": "144:6:18",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -104,10 +104,10 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 493,
+                    "id": 24907,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "144:6:4",
+                    "src": "144:6:18",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint32",
                       "typeString": "uint32"
@@ -116,42 +116,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "143:8:4"
+              "src": "143:8:18"
             },
-            "scope": 502,
+            "scope": 24916,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 501,
+            "id": 24915,
             "nodeType": "FunctionDefinition",
-            "src": "158:60:4",
+            "src": "158:60:18",
             "functionSelector": "fe55bde9",
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "validatorManager",
-            "nameLocation": "167:16:4",
+            "nameLocation": "167:16:18",
             "parameters": {
-              "id": 497,
+              "id": 24911,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "183:2:4"
+              "src": "183:2:18"
             },
             "returnParameters": {
-              "id": 500,
+              "id": 24914,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 499,
+                  "id": 24913,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 501,
-                  "src": "209:7:4",
+                  "scope": 24915,
+                  "src": "209:7:18",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -159,10 +159,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 498,
+                    "id": 24912,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "209:7:4",
+                    "src": "209:7:18",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -172,9 +172,9 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "208:9:4"
+              "src": "208:9:18"
             },
-            "scope": 502,
+            "scope": 24916,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -187,15 +187,15 @@
         "contractKind": "interface",
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          502
+          24916
         ],
         "name": "IMailbox",
-        "nameLocation": "83:8:4",
-        "scope": 503,
+        "nameLocation": "83:8:18",
+        "scope": 24917,
         "usedErrors": []
       }
     ],
     "license": "MIT OR Apache-2.0"
   },
-  "id": 4
+  "id": 18
 }

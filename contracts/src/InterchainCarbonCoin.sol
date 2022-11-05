@@ -5,13 +5,7 @@ pragma solidity 0.8.11;
 import "../lib/hyperlane-monorepo/solidity/contracts/Router.sol";
 import "../lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/ERC20Upgradeable.sol";
 
-// import "../lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol";
-
-abstract contract CarbonCoinTerminal is
-    Router,
-    ERC20Upgradeable
-    // OwnableUpgradeable
-{
+abstract contract InterchainCarbonCoin is Router, ERC20Upgradeable {
     /**
      * @dev Emitted on `transferRemote` when a transfer message is dispatched.
      * @param destination The identifier of the destination chain.
@@ -40,14 +34,12 @@ abstract contract CarbonCoinTerminal is
      * @notice Initializes the Hyperlane router, ERC20 metadata, and mints initial supply to deployer.
      * @param _abacusConnectionManager The address of the connection manager contract.
      * @param _interchainGasPaymaster The address of the interchain gas paymaster contract.
-     * @param _totalSupply The initial supply of the token.
      * @param _name The name of the token.
      * @param _symbol The symbol of the token.
      */
     function initialize(
         address _abacusConnectionManager,
         address _interchainGasPaymaster,
-        uint256 _totalSupply,
         string memory _name,
         string memory _symbol
     ) external initializer {
@@ -59,7 +51,6 @@ abstract contract CarbonCoinTerminal is
         _setInterchainGasPaymaster(_interchainGasPaymaster);
 
         __ERC20_init(_name, _symbol);
-        _mint(msg.sender, _totalSupply);
     }
 
     function toUSD(uint256 amount) public view virtual returns (uint256);
