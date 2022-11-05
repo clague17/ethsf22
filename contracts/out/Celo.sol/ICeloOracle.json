@@ -1,0 +1,197 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "medianRate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "medianRate(address)": "ef90e1b0"
+  },
+  "ast": {
+    "absolutePath": "src/oracles/Celo.sol",
+    "id": 28010,
+    "exportedSymbols": {
+      "ICeloOracle": [
+        28009
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "100:165:41",
+    "nodes": [
+      {
+        "id": 27999,
+        "nodeType": "PragmaDirective",
+        "src": "100:23:41",
+        "literals": [
+          "solidity",
+          "0.8",
+          ".11"
+        ]
+      },
+      {
+        "id": 28009,
+        "nodeType": "ContractDefinition",
+        "src": "164:100:41",
+        "nodes": [
+          {
+            "id": 28008,
+            "nodeType": "FunctionDefinition",
+            "src": "192:70:41",
+            "functionSelector": "ef90e1b0",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "medianRate",
+            "nameLocation": "201:10:41",
+            "parameters": {
+              "id": 28002,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28001,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28008,
+                  "src": "212:7:41",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 28000,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "212:7:41",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "211:9:41"
+            },
+            "returnParameters": {
+              "id": 28007,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28004,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28008,
+                  "src": "244:7:41",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28003,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "244:7:41",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28006,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28008,
+                  "src": "253:7:41",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28005,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "253:7:41",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "243:18:41"
+            },
+            "scope": 28009,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ICeloOracle",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          28009
+        ],
+        "name": "ICeloOracle",
+        "nameLocation": "174:11:41",
+        "scope": 28010,
+        "usedErrors": []
+      }
+    ],
+    "license": "Apache-2.0"
+  },
+  "id": 41
+}

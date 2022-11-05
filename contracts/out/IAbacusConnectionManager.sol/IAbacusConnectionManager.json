@@ -63,22 +63,22 @@
   },
   "ast": {
     "absolutePath": "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
-    "id": 477,
+    "id": 24891,
     "exportedSymbols": {
       "IAbacusConnectionManager": [
-        476
+        24890
       ],
       "IOutbox": [
-        564
+        24978
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "46:289:2",
+    "src": "46:289:16",
     "nodes": [
       {
-        "id": 455,
+        "id": 24869,
         "nodeType": "PragmaDirective",
-        "src": "46:25:2",
+        "src": "46:25:16",
         "literals": [
           "solidity",
           ">=",
@@ -87,22 +87,22 @@
         ]
       },
       {
-        "id": 457,
+        "id": 24871,
         "nodeType": "ImportDirective",
-        "src": "73:38:2",
+        "src": "73:38:16",
         "absolutePath": "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
         "file": "./IOutbox.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 477,
-        "sourceUnit": 565,
+        "scope": 24891,
+        "sourceUnit": 24979,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 456,
+              "id": 24870,
               "name": "IOutbox",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "src": "81:7:2",
+              "src": "81:7:16",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -111,95 +111,95 @@
         "unitAlias": ""
       },
       {
-        "id": 476,
+        "id": 24890,
         "nodeType": "ContractDefinition",
-        "src": "113:221:2",
+        "src": "113:221:16",
         "nodes": [
           {
-            "id": 463,
+            "id": 24877,
             "nodeType": "FunctionDefinition",
-            "src": "154:50:2",
+            "src": "154:50:16",
             "functionSelector": "ce11e6ab",
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "outbox",
-            "nameLocation": "163:6:2",
+            "nameLocation": "163:6:16",
             "parameters": {
-              "id": 458,
+              "id": 24872,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "169:2:2"
+              "src": "169:2:16"
             },
             "returnParameters": {
-              "id": 462,
+              "id": 24876,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 461,
+                  "id": 24875,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 463,
-                  "src": "195:7:2",
+                  "scope": 24877,
+                  "src": "195:7:16",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IOutbox_$564",
+                    "typeIdentifier": "t_contract$_IOutbox_$24978",
                     "typeString": "contract IOutbox"
                   },
                   "typeName": {
-                    "id": 460,
+                    "id": 24874,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 459,
+                      "id": 24873,
                       "name": "IOutbox",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 564,
-                      "src": "195:7:2"
+                      "referencedDeclaration": 24978,
+                      "src": "195:7:16"
                     },
-                    "referencedDeclaration": 564,
-                    "src": "195:7:2",
+                    "referencedDeclaration": 24978,
+                    "src": "195:7:16",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IOutbox_$564",
+                      "typeIdentifier": "t_contract$_IOutbox_$24978",
                       "typeString": "contract IOutbox"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "194:9:2"
+              "src": "194:9:16"
             },
-            "scope": 476,
+            "scope": 24890,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 470,
+            "id": 24884,
             "nodeType": "FunctionDefinition",
-            "src": "210:62:2",
+            "src": "210:62:16",
             "functionSelector": "282f51eb",
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isInbox",
-            "nameLocation": "219:7:2",
+            "nameLocation": "219:7:16",
             "parameters": {
-              "id": 466,
+              "id": 24880,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 465,
+                  "id": 24879,
                   "mutability": "mutable",
                   "name": "_inbox",
-                  "nameLocation": "235:6:2",
+                  "nameLocation": "235:6:16",
                   "nodeType": "VariableDeclaration",
-                  "scope": 470,
-                  "src": "227:14:2",
+                  "scope": 24884,
+                  "src": "227:14:16",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -207,10 +207,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 464,
+                    "id": 24878,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "227:7:2",
+                    "src": "227:7:16",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -220,21 +220,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "226:16:2"
+              "src": "226:16:16"
             },
             "returnParameters": {
-              "id": 469,
+              "id": 24883,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 468,
+                  "id": 24882,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 470,
-                  "src": "266:4:2",
+                  "scope": 24884,
+                  "src": "266:4:16",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -242,10 +242,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 467,
+                    "id": 24881,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "266:4:2",
+                    "src": "266:4:16",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -254,42 +254,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "265:6:2"
+              "src": "265:6:16"
             },
-            "scope": 476,
+            "scope": 24890,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 475,
+            "id": 24889,
             "nodeType": "FunctionDefinition",
-            "src": "278:54:2",
+            "src": "278:54:16",
             "functionSelector": "8d3638f4",
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "localDomain",
-            "nameLocation": "287:11:2",
+            "nameLocation": "287:11:16",
             "parameters": {
-              "id": 471,
+              "id": 24885,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "298:2:2"
+              "src": "298:2:16"
             },
             "returnParameters": {
-              "id": 474,
+              "id": 24888,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 473,
+                  "id": 24887,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 475,
-                  "src": "324:6:2",
+                  "scope": 24889,
+                  "src": "324:6:16",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -297,10 +297,10 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 472,
+                    "id": 24886,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "324:6:2",
+                    "src": "324:6:16",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint32",
                       "typeString": "uint32"
@@ -309,9 +309,9 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "323:8:2"
+              "src": "323:8:16"
             },
-            "scope": 476,
+            "scope": 24890,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -324,15 +324,15 @@
         "contractKind": "interface",
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          476
+          24890
         ],
         "name": "IAbacusConnectionManager",
-        "nameLocation": "123:24:2",
-        "scope": 477,
+        "nameLocation": "123:24:16",
+        "scope": 24891,
         "usedErrors": []
       }
     ],
     "license": "MIT OR Apache-2.0"
   },
-  "id": 2
+  "id": 16
 }

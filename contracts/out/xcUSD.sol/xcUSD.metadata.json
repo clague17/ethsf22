@@ -244,6 +244,19 @@
         "type": "function"
       },
       {
+        "inputs": [],
+        "name": "asset",
+        "outputs": [
+          {
+            "internalType": "contract ERC20Upgradeable",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
         "inputs": [
           {
             "internalType": "address",
@@ -300,10 +313,16 @@
         "type": "function"
       },
       {
-        "inputs": [],
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
         "name": "deposit",
         "outputs": [],
-        "stateMutability": "payable",
+        "stateMutability": "nonpayable",
         "type": "function"
       },
       {
@@ -312,11 +331,16 @@
             "internalType": "address",
             "name": "_receiver",
             "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_amount",
+            "type": "uint256"
           }
         ],
         "name": "depositFor",
         "outputs": [],
-        "stateMutability": "payable",
+        "stateMutability": "nonpayable",
         "type": "function"
       },
       {
@@ -397,9 +421,32 @@
             "type": "address"
           },
           {
-            "internalType": "uint256",
-            "name": "_totalSupply",
-            "type": "uint256"
+            "internalType": "string",
+            "name": "_name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_symbol",
+            "type": "string"
+          }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_abacusConnectionManager",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "_interchainGasPaymaster",
+            "type": "address"
           },
           {
             "internalType": "string",
@@ -410,6 +457,11 @@
             "internalType": "string",
             "name": "_symbol",
             "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "_asset",
+            "type": "address"
           }
         ],
         "name": "initialize",
@@ -537,7 +589,7 @@
             "type": "uint256"
           }
         ],
-        "stateMutability": "view",
+        "stateMutability": "pure",
         "type": "function"
       },
       {
@@ -659,11 +711,11 @@
         "inputs": [
           {
             "internalType": "uint256",
-            "name": "amount",
+            "name": "_amount",
             "type": "uint256"
           },
           {
-            "internalType": "address payable",
+            "internalType": "address",
             "name": "_receiver",
             "type": "address"
           }
@@ -675,24 +727,6 @@
       }
     ],
     "devdoc": {
-      "events": {
-        "ReceivedTransferRemote(uint32,address,uint256)": {
-          "details": "Emitted on `_handle` when a transfer message is processed.",
-          "params": {
-            "amount": "The amount of tokens minted on the destination chain.",
-            "origin": "The identifier of the origin chain.",
-            "recipient": "The address of the recipient on the destination chain."
-          }
-        },
-        "SentTransferRemote(uint32,address,uint256)": {
-          "details": "Emitted on `transferRemote` when a transfer message is dispatched.",
-          "params": {
-            "amount": "The amount of tokens burnt on the origin chain.",
-            "destination": "The identifier of the destination chain.",
-            "recipient": "The address of the recipient on the destination chain."
-          }
-        }
-      },
       "kind": "dev",
       "methods": {
         "allowance(address,address)": {
@@ -726,13 +760,12 @@
         "increaseAllowance(address,uint256)": {
           "details": "Atomically increases the allowance granted to `spender` by the caller. This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}. Emits an {Approval} event indicating the updated allowance. Requirements: - `spender` cannot be the zero address."
         },
-        "initialize(address,address,uint256,string,string)": {
+        "initialize(address,address,string,string)": {
           "params": {
             "_abacusConnectionManager": "The address of the connection manager contract.",
             "_interchainGasPaymaster": "The address of the interchain gas paymaster contract.",
             "_name": "The name of the token.",
-            "_symbol": "The symbol of the token.",
-            "_totalSupply": "The initial supply of the token."
+            "_symbol": "The symbol of the token."
           }
         },
         "name()": {
@@ -800,7 +833,7 @@
         "handle(uint32,bytes32,bytes)": {
           "notice": "Handles an incoming message"
         },
-        "initialize(address,address,uint256,string,string)": {
+        "initialize(address,address,string,string)": {
           "notice": "Initializes the Hyperlane router, ERC20 metadata, and mints initial supply to deployer."
         },
         "setAbacusConnectionManager(address)": {
@@ -818,7 +851,7 @@
   },
   "settings": {
     "compilationTarget": {
-      "src/CarbonCoinTerminal.sol": "CarbonCoinTerminal"
+      "src/celo/xcUSD.sol": "xcUSD"
     },
     "evmVersion": "london",
     "libraries": {},
@@ -832,10 +865,14 @@
     "remappings": [
       ":@hyperlane-monorepo/=lib/hyperlane-monorepo/",
       ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+      ":OffsetHelper/=lib/OffsetHelper/contracts/",
       ":ds-test/=lib/forge-std/lib/ds-test/src/",
+      ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
       ":forge-std/=lib/forge-std/src/",
       ":hyperlane-monorepo/=lib/hyperlane-monorepo/",
-      ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/"
+      ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      ":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/"
     ]
   },
   "sources": {
@@ -951,12 +988,28 @@
         "dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a"
       ]
     },
-    "src/CarbonCoinTerminal.sol": {
-      "keccak256": "0xc6199f198fdaab8762ef34aa694bb977479ebb2cda6219a9938135d672b7387d",
+    "src/celo/xcUSD.sol": {
+      "keccak256": "0x14109138d0e3433e39dffe81271554e0fc673587ad85ccc248925fb8d1967e69",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://c7fa7bd2bd941ec368fecb8590bb5d1b8e067fac89c20d1dfd1082a03e423ba5",
-        "dweb:/ipfs/QmYXQrWsHX2ZTVJ7zEmsFSqBMWRMQrRBBw6HKBBK2z5fLg"
+        "bzz-raw://a8926c6e1ac50b29e88f53d4c79ad2092adfa087df37e9ba87fd77ba510de341",
+        "dweb:/ipfs/QmYSnMtwKmfQMf6a8rjucRyVJxH3Dm1oTCCZySvz17abXY"
+      ]
+    },
+    "src/interfaces/xCO2.sol": {
+      "keccak256": "0x604285e161c42549ac450c580d130f4dbb8990e789db3605e7651d3522e650a7",
+      "license": "Apache-2.0",
+      "urls": [
+        "bzz-raw://c0c38f1bcc988002a2c2765ab13d98a6d06adfec5815ddca3c44907a5da9daad",
+        "dweb:/ipfs/QmZJ1JSsZFcq2DT4u2X1WHpxrk1jYzr2GJ6MZux4tbsKoX"
+      ]
+    },
+    "src/interfaces/xERC20.sol": {
+      "keccak256": "0x35a894fb46cac96125290541aa64c3a1d9fa8b22f5fafb8aecd4ff668bd8d39b",
+      "license": "Apache-2.0",
+      "urls": [
+        "bzz-raw://476783557fc0839a28950914fedddf6e3ec695ef9d48eec76dff210c142e4864",
+        "dweb:/ipfs/QmadckVV8CMN4mUveL3pqip7ARZzkpQdmrU81YAxnBKUia"
       ]
     }
   },

@@ -39,19 +39,19 @@
   },
   "ast": {
     "absolutePath": "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol",
-    "id": 515,
+    "id": 24929,
     "exportedSymbols": {
       "IMessageRecipient": [
-        514
+        24928
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "46:177:5",
+    "src": "46:177:19",
     "nodes": [
       {
-        "id": 504,
+        "id": 24918,
         "nodeType": "PragmaDirective",
-        "src": "46:25:5",
+        "src": "46:25:19",
         "literals": [
           "solidity",
           ">=",
@@ -60,33 +60,33 @@
         ]
       },
       {
-        "id": 514,
+        "id": 24928,
         "nodeType": "ContractDefinition",
-        "src": "73:149:5",
+        "src": "73:149:19",
         "nodes": [
           {
-            "id": 513,
+            "id": 24927,
             "nodeType": "FunctionDefinition",
-            "src": "107:113:5",
+            "src": "107:113:19",
             "functionSelector": "56d5d475",
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "handle",
-            "nameLocation": "116:6:5",
+            "nameLocation": "116:6:19",
             "parameters": {
-              "id": 511,
+              "id": 24925,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 506,
+                  "id": 24920,
                   "mutability": "mutable",
                   "name": "_origin",
-                  "nameLocation": "139:7:5",
+                  "nameLocation": "139:7:19",
                   "nodeType": "VariableDeclaration",
-                  "scope": 513,
-                  "src": "132:14:5",
+                  "scope": 24927,
+                  "src": "132:14:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -94,10 +94,10 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 505,
+                    "id": 24919,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "132:6:5",
+                    "src": "132:6:19",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint32",
                       "typeString": "uint32"
@@ -107,13 +107,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 508,
+                  "id": 24922,
                   "mutability": "mutable",
                   "name": "_sender",
-                  "nameLocation": "164:7:5",
+                  "nameLocation": "164:7:19",
                   "nodeType": "VariableDeclaration",
-                  "scope": 513,
-                  "src": "156:15:5",
+                  "scope": 24927,
+                  "src": "156:15:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -121,10 +121,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 507,
+                    "id": 24921,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "156:7:5",
+                    "src": "156:7:19",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -134,13 +134,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 510,
+                  "id": 24924,
                   "mutability": "mutable",
                   "name": "_message",
-                  "nameLocation": "196:8:5",
+                  "nameLocation": "196:8:19",
                   "nodeType": "VariableDeclaration",
-                  "scope": 513,
-                  "src": "181:23:5",
+                  "scope": 24927,
+                  "src": "181:23:19",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -148,10 +148,10 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 509,
+                    "id": 24923,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "181:5:5",
+                    "src": "181:5:19",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -160,15 +160,15 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "122:88:5"
+              "src": "122:88:19"
             },
             "returnParameters": {
-              "id": 512,
+              "id": 24926,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "219:0:5"
+              "src": "219:0:19"
             },
-            "scope": 514,
+            "scope": 24928,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -181,15 +181,15 @@
         "contractKind": "interface",
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          514
+          24928
         ],
         "name": "IMessageRecipient",
-        "nameLocation": "83:17:5",
-        "scope": 515,
+        "nameLocation": "83:17:19",
+        "scope": 24929,
         "usedErrors": []
       }
     ],
     "license": "MIT OR Apache-2.0"
   },
-  "id": 5
+  "id": 19
 }
