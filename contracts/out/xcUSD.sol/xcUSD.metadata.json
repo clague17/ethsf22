@@ -742,11 +742,11 @@
       ]
     },
     "src/interfaces/xERC20.sol": {
-      "keccak256": "0x6c8dbd44a7e3ffcfc00a097578c6b806e445342d149079e738449be98b3d2464",
+      "keccak256": "0x4881f3090e74c53e643a2869a3d2215f293e9eff736f5327dd1cb115fc62f0b7",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://4a9ea94bae482d365314337690ac0b785194c3a15345ceca433844c358a5d578",
-        "dweb:/ipfs/QmS1X4WHZxqdTusAsp7BNncMfSbkjjubUn1ukgc7YtdKXN"
+        "bzz-raw://055b129b6070960542ac37a555a52a8e955711c5833eed87805c563f11848eb9",
+        "dweb:/ipfs/QmXwmFiiGjXMpRdqtQGyujKoAE2bCQViokyvoWoFztB8Tn"
       ]
     }
   },
