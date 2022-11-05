@@ -1,0 +1,76 @@
+{
+  "compiler": {
+    "version": "0.8.11+commit.d7f03943"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "inputs": [
+          {
+            "internalType": "uint32",
+            "name": "_origin",
+            "type": "uint32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "_sender",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes",
+            "name": "_message",
+            "type": "bytes"
+          }
+        ],
+        "name": "handle",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ],
+    "devdoc": {
+      "kind": "dev",
+      "methods": {},
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {},
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol": "IMessageRecipient"
+    },
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": [
+      ":@hyperlane-monorepo/=lib/hyperlane-monorepo/",
+      ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      ":ds-test/=lib/forge-std/lib/ds-test/src/",
+      ":forge-std/=lib/forge-std/src/",
+      ":hyperlane-monorepo/=lib/hyperlane-monorepo/",
+      ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/"
+    ]
+  },
+  "sources": {
+    "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol": {
+      "keccak256": "0x250fabee11ab22fc3cb14ba0ff86410f681e621c43590c24ecbcf48fea8c7e70",
+      "license": "MIT OR Apache-2.0",
+      "urls": [
+        "bzz-raw://a548c77a5288e4c8c0433aa8c2c5de53a8e04bc9beefdd181cac934022ea263d",
+        "dweb:/ipfs/QmezUeASavGbJJjcZmgcQrnpVVYT1QWFay44ND6hYofHh9"
+      ]
+    }
+  },
+  "version": 1
+}

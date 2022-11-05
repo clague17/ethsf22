@@ -1,0 +1,202 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_outbox",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_leafIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint32",
+          "name": "_destinationDomain",
+          "type": "uint32"
+        }
+      ],
+      "name": "payGasFor",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "payGasFor(address,uint256,uint32)": "a5703c8e"
+  },
+  "ast": {
+    "absolutePath": "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol",
+    "id": 490,
+    "exportedSymbols": {
+      "IInterchainGasPaymaster": [
+        489
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "46:354:3",
+    "nodes": [
+      {
+        "id": 478,
+        "nodeType": "PragmaDirective",
+        "src": "46:25:3",
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".11"
+        ]
+      },
+      {
+        "id": 489,
+        "nodeType": "ContractDefinition",
+        "src": "227:172:3",
+        "nodes": [
+          {
+            "id": 488,
+            "nodeType": "FunctionDefinition",
+            "src": "267:130:3",
+            "functionSelector": "a5703c8e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "payGasFor",
+            "nameLocation": "276:9:3",
+            "parameters": {
+              "id": 486,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 481,
+                  "mutability": "mutable",
+                  "name": "_outbox",
+                  "nameLocation": "303:7:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 488,
+                  "src": "295:15:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 480,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "295:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 483,
+                  "mutability": "mutable",
+                  "name": "_leafIndex",
+                  "nameLocation": "328:10:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 488,
+                  "src": "320:18:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 482,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "320:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 485,
+                  "mutability": "mutable",
+                  "name": "_destinationDomain",
+                  "nameLocation": "355:18:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 488,
+                  "src": "348:25:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 484,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "348:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "285:94:3"
+            },
+            "returnParameters": {
+              "id": 487,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "396:0:3"
+            },
+            "scope": 489,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IInterchainGasPaymaster",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 479,
+          "nodeType": "StructuredDocumentation",
+          "src": "73:153:3",
+          "text": " @title IInterchainGasPaymaster\n @notice Manages payments on a source chain to cover gas costs of relaying\n messages to destination chains."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          489
+        ],
+        "name": "IInterchainGasPaymaster",
+        "nameLocation": "237:23:3",
+        "scope": 490,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT OR Apache-2.0"
+  },
+  "id": 3
+}
