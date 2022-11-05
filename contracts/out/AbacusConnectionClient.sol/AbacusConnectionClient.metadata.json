@@ -1,0 +1,307 @@
+{
+  "compiler": {
+    "version": "0.8.11+commit.d7f03943"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "abacusConnectionManager",
+            "type": "address"
+          }
+        ],
+        "name": "AbacusConnectionManagerSet",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint8",
+            "name": "version",
+            "type": "uint8"
+          }
+        ],
+        "name": "Initialized",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "interchainGasPaymaster",
+            "type": "address"
+          }
+        ],
+        "name": "InterchainGasPaymasterSet",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "previousOwner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+      },
+      {
+        "inputs": [],
+        "name": "abacusConnectionManager",
+        "outputs": [
+          {
+            "internalType": "contract IAbacusConnectionManager",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "interchainGasPaymaster",
+        "outputs": [
+          {
+            "internalType": "contract IInterchainGasPaymaster",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_abacusConnectionManager",
+            "type": "address"
+          }
+        ],
+        "name": "setAbacusConnectionManager",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_interchainGasPaymaster",
+            "type": "address"
+          }
+        ],
+        "name": "setInterchainGasPaymaster",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ],
+    "devdoc": {
+      "events": {
+        "AbacusConnectionManagerSet(address)": {
+          "params": {
+            "abacusConnectionManager": "The address of the abacusConnectionManager contract"
+          }
+        },
+        "InterchainGasPaymasterSet(address)": {
+          "params": {
+            "interchainGasPaymaster": "The address of the Interchain Gas Paymaster."
+          }
+        }
+      },
+      "kind": "dev",
+      "methods": {
+        "owner()": {
+          "details": "Returns the address of the current owner."
+        },
+        "renounceOwnership()": {
+          "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+        },
+        "setAbacusConnectionManager(address)": {
+          "params": {
+            "_abacusConnectionManager": "The address of the AbacusConnectionManager contract."
+          }
+        },
+        "setInterchainGasPaymaster(address)": {
+          "params": {
+            "_interchainGasPaymaster": "The address of the InterchainGasPaymaster contract."
+          }
+        },
+        "transferOwnership(address)": {
+          "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+        }
+      },
+      "version": 1
+    },
+    "userdoc": {
+      "events": {
+        "AbacusConnectionManagerSet(address)": {
+          "notice": "Emitted when a new abacusConnectionManager is set."
+        },
+        "InterchainGasPaymasterSet(address)": {
+          "notice": "Emitted when a new Interchain Gas Paymaster is set."
+        }
+      },
+      "kind": "user",
+      "methods": {
+        "setAbacusConnectionManager(address)": {
+          "notice": "Sets the address of the application's AbacusConnectionManager."
+        },
+        "setInterchainGasPaymaster(address)": {
+          "notice": "Sets the address of the application's InterchainGasPaymaster."
+        }
+      },
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol": "AbacusConnectionClient"
+    },
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": [
+      ":@hyperlane-monorepo/=lib/hyperlane-monorepo/",
+      ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      ":ds-test/=lib/forge-std/lib/ds-test/src/",
+      ":forge-std/=lib/forge-std/src/",
+      ":hyperlane-monorepo/=lib/hyperlane-monorepo/",
+      ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/"
+    ]
+  },
+  "sources": {
+    "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol": {
+      "keccak256": "0x37167c97b550c6663a6c2a96b5b0eddb8856de795e39d582439548b14215d123",
+      "license": "MIT OR Apache-2.0",
+      "urls": [
+        "bzz-raw://c14881c2f7c7c8f571d3f6f9c14d5ad48fc2f1237875d323d476835fe7bdc388",
+        "dweb:/ipfs/QmSBYRGR8pKv5h9JcJseajnbkdhegoBoc1P1bnxydksvv1"
+      ]
+    },
+    "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol": {
+      "keccak256": "0xa4db171637a95cc36bf8630fb9985e4dbbf9ee9c1cfe33f23e2cc95fac79b5b2",
+      "license": "MIT OR Apache-2.0",
+      "urls": [
+        "bzz-raw://94d8dff93ada07b6dd969650f55a4da6cbdb8f83af68ca0e67576f8d3333f14c",
+        "dweb:/ipfs/QmXqirY8A5bEG39rFh4C42TKsFtm2zUBR5q7pcZ3BMoVUg"
+      ]
+    },
+    "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol": {
+      "keccak256": "0x55a64141b9399b3dfee1a7267138c35b6cfd80400811af0da64277571421f979",
+      "license": "MIT OR Apache-2.0",
+      "urls": [
+        "bzz-raw://7ef79ca3c9668f3352ec7398a0fe5f5be021a339a58d6895f37c8de23d49fab1",
+        "dweb:/ipfs/QmSq3CGVJUwtcL5StR3U8MQ5PtkdEu4D9v6ByFrs35Ebei"
+      ]
+    },
+    "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol": {
+      "keccak256": "0x81bb496923c0c67eb41a5d312b4598887487e8caa741fd06a724a66685712ae2",
+      "license": "MIT OR Apache-2.0",
+      "urls": [
+        "bzz-raw://13e91ca182a512033621b2ed25c2db5086b686c4e0c5cf5265c06ecde0dbca9c",
+        "dweb:/ipfs/QmQonhNpxJP2p4kPDSNhhASRs6tKNxyZBg5idoP6kD2c38"
+      ]
+    },
+    "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol": {
+      "keccak256": "0x65ebdb385cc14f4a3c0571131a3a43a8f26e90c92b70d6f00a2e2dbf6a9d2380",
+      "license": "MIT OR Apache-2.0",
+      "urls": [
+        "bzz-raw://eaf7c59c1c1d7499b7315617948226ab6e719a612f1d87d6c6a5cfa3bcdf7927",
+        "dweb:/ipfs/QmRqgabmYtyuz45KrhuToGHeUSekZEYJp9CVNjgwJ5Hd2n"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol": {
+      "keccak256": "0x247c62047745915c0af6b955470a72d1696ebad4352d7d3011aef1a2463cd888",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://d7fc8396619de513c96b6e00301b88dd790e83542aab918425633a5f7297a15a",
+        "dweb:/ipfs/QmXbP4kiZyp7guuS7xe8KaybnwkRPGrBc2Kbi3vhcTfpxb"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol": {
+      "keccak256": "0xedc5eaa54866c6d0e8960d9fe8ea6f9052ba28686907f6886f83dfba41fa1549",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://0b296244e62d13e87d8272c574fb58c22af02b262d74d7a8f642753522351bb0",
+        "dweb:/ipfs/Qmcd3MfBWRE8EQt67AqgGGHviNum5aQ7JE7manH5nNtx4o"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol": {
+      "keccak256": "0x0a3b4afc301241e2629ad192fa02e0f8626e3cf38ab6f45342bfd7afbde16ee0",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://b189423f1102ff4487e9c59a65ec400b98cc4aeef478dac8272b482e9f5ad7de",
+        "dweb:/ipfs/QmdpYHrzD8wPe5DMuEiWkXiVLsTkqD7C4tbBjWwkBQwJi2"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol": {
+      "keccak256": "0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c",
+        "dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a"
+      ]
+    }
+  },
+  "version": 1
+}

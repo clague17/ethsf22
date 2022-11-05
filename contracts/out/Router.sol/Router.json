@@ -1,0 +1,3624 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "abacusConnectionManager",
+          "type": "address"
+        }
+      ],
+      "name": "AbacusConnectionManagerSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "version",
+          "type": "uint8"
+        }
+      ],
+      "name": "Initialized",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "interchainGasPaymaster",
+          "type": "address"
+        }
+      ],
+      "name": "InterchainGasPaymasterSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint32",
+          "name": "domain",
+          "type": "uint32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "router",
+          "type": "bytes32"
+        }
+      ],
+      "name": "RemoteRouterEnrolled",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "abacusConnectionManager",
+      "outputs": [
+        {
+          "internalType": "contract IAbacusConnectionManager",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "_domain",
+          "type": "uint32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_router",
+          "type": "bytes32"
+        }
+      ],
+      "name": "enrollRemoteRouter",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "_origin",
+          "type": "uint32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_sender",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_message",
+          "type": "bytes"
+        }
+      ],
+      "name": "handle",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "interchainGasPaymaster",
+      "outputs": [
+        {
+          "internalType": "contract IInterchainGasPaymaster",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "name": "routers",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_abacusConnectionManager",
+          "type": "address"
+        }
+      ],
+      "name": "setAbacusConnectionManager",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_interchainGasPaymaster",
+          "type": "address"
+        }
+      ],
+      "name": "setInterchainGasPaymaster",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "abacusConnectionManager()": "9a35c359",
+    "enrollRemoteRouter(uint32,bytes32)": "b49c53a7",
+    "handle(uint32,bytes32,bytes)": "56d5d475",
+    "interchainGasPaymaster()": "39bb4ad9",
+    "owner()": "8da5cb5b",
+    "renounceOwnership()": "715018a6",
+    "routers(uint32)": "2ead72f6",
+    "setAbacusConnectionManager(address)": "12b1d780",
+    "setInterchainGasPaymaster(address)": "f1bd6f0a",
+    "transferOwnership(address)": "f2fde38b"
+  },
+  "ast": {
+    "absolutePath": "lib/hyperlane-monorepo/solidity/contracts/Router.sol",
+    "id": 454,
+    "exportedSymbols": {
+      "AbacusConnectionClient": [
+        175
+      ],
+      "IAbacusConnectionManager": [
+        476
+      ],
+      "IInterchainGasPaymaster": [
+        489
+      ],
+      "IMessageRecipient": [
+        514
+      ],
+      "IOutbox": [
+        564
+      ],
+      "Router": [
+        453
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "46:6790:1",
+    "nodes": [
+      {
+        "id": 177,
+        "nodeType": "PragmaDirective",
+        "src": "46:25:1",
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".11"
+        ]
+      },
+      {
+        "id": 179,
+        "nodeType": "ImportDirective",
+        "src": "119:68:1",
+        "absolutePath": "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol",
+        "file": "./AbacusConnectionClient.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 454,
+        "sourceUnit": 176,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 178,
+              "name": "AbacusConnectionClient",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "127:22:1",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 181,
+        "nodeType": "ImportDirective",
+        "src": "188:84:1",
+        "absolutePath": "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
+        "file": "../interfaces/IAbacusConnectionManager.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 454,
+        "sourceUnit": 477,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 180,
+              "name": "IAbacusConnectionManager",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "196:24:1",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 183,
+        "nodeType": "ImportDirective",
+        "src": "273:82:1",
+        "absolutePath": "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol",
+        "file": "../interfaces/IInterchainGasPaymaster.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 454,
+        "sourceUnit": 490,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 182,
+              "name": "IInterchainGasPaymaster",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "281:23:1",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 185,
+        "nodeType": "ImportDirective",
+        "src": "356:70:1",
+        "absolutePath": "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol",
+        "file": "../interfaces/IMessageRecipient.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 454,
+        "sourceUnit": 515,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 184,
+              "name": "IMessageRecipient",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "364:17:1",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 187,
+        "nodeType": "ImportDirective",
+        "src": "427:50:1",
+        "absolutePath": "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
+        "file": "../interfaces/IOutbox.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 454,
+        "sourceUnit": 565,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 186,
+              "name": "IOutbox",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "435:7:1",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 453,
+        "nodeType": "ContractDefinition",
+        "src": "479:6356:1",
+        "nodes": [
+          {
+            "id": 194,
+            "nodeType": "VariableDeclaration",
+            "src": "555:129:1",
+            "constant": true,
+            "mutability": "constant",
+            "name": "NO_ROUTER_ENROLLED_REVERT_MESSAGE",
+            "nameLocation": "571:33:1",
+            "scope": 453,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_memory_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 192,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "555:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "hexValue": "4e6f20726f7574657220656e726f6c6c656420666f7220646f6d61696e2e2044696420796f7520737065636966792074686520726967687420646f6d61696e2049443f",
+              "id": 193,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "615:69:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_63eed2ea46031620dca5226e14e14d2f5b7daea566c53da19dceb40d55125526",
+                "typeString": "literal_string \"No router enrolled for domain. Did you specify the right domain ID?\""
+              },
+              "value": "No router enrolled for domain. Did you specify the right domain ID?"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 198,
+            "nodeType": "VariableDeclaration",
+            "src": "741:41:1",
+            "constant": false,
+            "functionSelector": "2ead72f6",
+            "mutability": "mutable",
+            "name": "routers",
+            "nameLocation": "775:7:1",
+            "scope": 453,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint32_$_t_bytes32_$",
+              "typeString": "mapping(uint32 => bytes32)"
+            },
+            "typeName": {
+              "id": 197,
+              "keyType": {
+                "id": 195,
+                "name": "uint32",
+                "nodeType": "ElementaryTypeName",
+                "src": "749:6:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "741:26:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint32_$_t_bytes32_$",
+                "typeString": "mapping(uint32 => bytes32)"
+              },
+              "valueType": {
+                "id": 196,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "759:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 202,
+            "nodeType": "VariableDeclaration",
+            "src": "788:25:1",
+            "constant": false,
+            "mutability": "mutable",
+            "name": "__GAP",
+            "nameLocation": "808:5:1",
+            "scope": 453,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$49_storage",
+              "typeString": "uint256[49]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 199,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "788:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 201,
+              "length": {
+                "hexValue": "3439",
+                "id": 200,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "796:2:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_49_by_1",
+                  "typeString": "int_const 49"
+                },
+                "value": "49"
+              },
+              "nodeType": "ArrayTypeName",
+              "src": "788:11:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$49_storage_ptr",
+                "typeString": "uint256[49]"
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "id": 209,
+            "nodeType": "EventDefinition",
+            "src": "1049:74:1",
+            "anonymous": false,
+            "documentation": {
+              "id": 203,
+              "nodeType": "StructuredDocumentation",
+              "src": "887:157:1",
+              "text": " @notice Emitted when a router is set.\n @param domain The domain of the new router\n @param router The address of the new router"
+            },
+            "name": "RemoteRouterEnrolled",
+            "nameLocation": "1055:20:1",
+            "parameters": {
+              "id": 208,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 205,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "domain",
+                  "nameLocation": "1091:6:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 209,
+                  "src": "1076:21:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 204,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1076:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 207,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "router",
+                  "nameLocation": "1115:6:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 209,
+                  "src": "1099:22:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 206,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1099:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1075:47:1"
+            }
+          },
+          {
+            "id": 226,
+            "nodeType": "ModifierDefinition",
+            "src": "1375:198:1",
+            "body": {
+              "id": 225,
+              "nodeType": "Block",
+              "src": "1434:139:1",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 218,
+                            "name": "_origin",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 212,
+                            "src": "1481:7:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint32",
+                              "typeString": "uint32"
+                            }
+                          },
+                          {
+                            "id": 219,
+                            "name": "_router",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 214,
+                            "src": "1490:7:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint32",
+                              "typeString": "uint32"
+                            },
+                            {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          ],
+                          "id": 217,
+                          "name": "_isRemoteRouter",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 339,
+                          "src": "1465:15:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$_t_uint32_$_t_bytes32_$returns$_t_bool_$",
+                            "typeString": "function (uint32,bytes32) view returns (bool)"
+                          }
+                        },
+                        "id": 220,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1465:33:1",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "id": 221,
+                        "name": "NO_ROUTER_ENROLLED_REVERT_MESSAGE",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 194,
+                        "src": "1512:33:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 216,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "1444:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 222,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1444:111:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 223,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1444:111:1"
+                },
+                {
+                  "id": 224,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1565:1:1"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 210,
+              "nodeType": "StructuredDocumentation",
+              "src": "1172:198:1",
+              "text": " @notice Only accept messages from a remote Router contract\n @param _origin The domain the message is coming from\n @param _router The address the message is coming from"
+            },
+            "name": "onlyRemoteRouter",
+            "nameLocation": "1384:16:1",
+            "parameters": {
+              "id": 215,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 212,
+                  "mutability": "mutable",
+                  "name": "_origin",
+                  "nameLocation": "1408:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 226,
+                  "src": "1401:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 211,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1401:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 214,
+                  "mutability": "mutable",
+                  "name": "_router",
+                  "nameLocation": "1425:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 226,
+                  "src": "1417:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 213,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1417:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1400:33:1"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 238,
+            "nodeType": "FunctionDefinition",
+            "src": "1617:187:1",
+            "body": {
+              "id": 237,
+              "nodeType": "Block",
+              "src": "1726:78:1",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 234,
+                        "name": "_abacusConnectionManager",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 228,
+                        "src": "1772:24:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 233,
+                      "name": "__AbacusConnectionClient_initialize",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        59,
+                        77
+                      ],
+                      "referencedDeclaration": 59,
+                      "src": "1736:35:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 235,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1736:61:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 236,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1736:61:1"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 231,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 230,
+                  "name": "onlyInitializing",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 810,
+                  "src": "1705:16:1"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1705:16:1"
+              }
+            ],
+            "name": "__Router_initialize",
+            "nameLocation": "1626:19:1",
+            "parameters": {
+              "id": 229,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 228,
+                  "mutability": "mutable",
+                  "name": "_abacusConnectionManager",
+                  "nameLocation": "1654:24:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 238,
+                  "src": "1646:32:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 227,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1646:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1645:34:1"
+            },
+            "returnParameters": {
+              "id": 232,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1726:0:1"
+            },
+            "scope": 453,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 253,
+            "nodeType": "FunctionDefinition",
+            "src": "1810:281:1",
+            "body": {
+              "id": 252,
+              "nodeType": "Block",
+              "src": "1954:137:1",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 248,
+                        "name": "_abacusConnectionManager",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 240,
+                        "src": "2013:24:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 249,
+                        "name": "_interchainGasPaymaster",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 242,
+                        "src": "2051:23:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 247,
+                      "name": "__AbacusConnectionClient_initialize",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        59,
+                        77
+                      ],
+                      "referencedDeclaration": 77,
+                      "src": "1964:35:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 250,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1964:120:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 251,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1964:120:1"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 245,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 244,
+                  "name": "onlyInitializing",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 810,
+                  "src": "1937:16:1"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1937:16:1"
+              }
+            ],
+            "name": "__Router_initialize",
+            "nameLocation": "1819:19:1",
+            "parameters": {
+              "id": 243,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 240,
+                  "mutability": "mutable",
+                  "name": "_abacusConnectionManager",
+                  "nameLocation": "1856:24:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 253,
+                  "src": "1848:32:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 239,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1848:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 242,
+                  "mutability": "mutable",
+                  "name": "_interchainGasPaymaster",
+                  "nameLocation": "1898:23:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 253,
+                  "src": "1890:31:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 241,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1890:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1838:89:1"
+            },
+            "returnParameters": {
+              "id": 246,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1954:0:1"
+            },
+            "scope": 453,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 269,
+            "nodeType": "FunctionDefinition",
+            "src": "2399:170:1",
+            "body": {
+              "id": 268,
+              "nodeType": "Block",
+              "src": "2515:54:1",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 264,
+                        "name": "_domain",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 256,
+                        "src": "2545:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        }
+                      },
+                      {
+                        "id": 265,
+                        "name": "_router",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 258,
+                        "src": "2554:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "id": 263,
+                      "name": "_enrollRemoteRouter",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 322,
+                      "src": "2525:19:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint32_$_t_bytes32_$returns$__$",
+                        "typeString": "function (uint32,bytes32)"
+                      }
+                    },
+                    "id": 266,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2525:37:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 267,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2525:37:1"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 254,
+              "nodeType": "StructuredDocumentation",
+              "src": "2150:244:1",
+              "text": " @notice Register the address of a Router contract for the same Application on a remote chain\n @param _domain The domain of the remote Application Router\n @param _router The address of the remote Application Router"
+            },
+            "functionSelector": "b49c53a7",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 261,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 260,
+                  "name": "onlyOwner",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 610,
+                  "src": "2501:9:1"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "2501:9:1"
+              }
+            ],
+            "name": "enrollRemoteRouter",
+            "nameLocation": "2408:18:1",
+            "parameters": {
+              "id": 259,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 256,
+                  "mutability": "mutable",
+                  "name": "_domain",
+                  "nameLocation": "2434:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 269,
+                  "src": "2427:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 255,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2427:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 258,
+                  "mutability": "mutable",
+                  "name": "_router",
+                  "nameLocation": "2451:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 269,
+                  "src": "2443:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 257,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2443:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2426:33:1"
+            },
+            "returnParameters": {
+              "id": 262,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2515:0:1"
+            },
+            "scope": 453,
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "external"
+          },
+          {
+            "id": 293,
+            "nodeType": "FunctionDefinition",
+            "src": "2750:273:1",
+            "body": {
+              "id": 292,
+              "nodeType": "Block",
+              "src": "2925:98:1",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 287,
+                        "name": "_origin",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 272,
+                        "src": "2989:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        }
+                      },
+                      {
+                        "id": 288,
+                        "name": "_sender",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 274,
+                        "src": "2998:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "id": 289,
+                        "name": "_message",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 276,
+                        "src": "3007:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_calldata_ptr",
+                          "typeString": "bytes calldata"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_calldata_ptr",
+                          "typeString": "bytes calldata"
+                        }
+                      ],
+                      "id": 286,
+                      "name": "_handle",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 302,
+                      "src": "2981:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint32_$_t_bytes32_$_t_bytes_calldata_ptr_$returns$__$",
+                        "typeString": "function (uint32,bytes32,bytes calldata)"
+                      }
+                    },
+                    "id": 290,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2981:35:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 291,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2981:35:1"
+                }
+              ]
+            },
+            "baseFunctions": [
+              513
+            ],
+            "documentation": {
+              "id": 270,
+              "nodeType": "StructuredDocumentation",
+              "src": "2575:170:1",
+              "text": " @notice Handles an incoming message\n @param _origin The origin domain\n @param _sender The sender address\n @param _message The message"
+            },
+            "functionSelector": "56d5d475",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 280,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 279,
+                  "name": "onlyInbox",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 44,
+                  "src": "2880:9:1"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "2880:9:1"
+              },
+              {
+                "arguments": [
+                  {
+                    "id": 282,
+                    "name": "_origin",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 272,
+                    "src": "2907:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  {
+                    "id": 283,
+                    "name": "_sender",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 274,
+                    "src": "2916:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  }
+                ],
+                "id": 284,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 281,
+                  "name": "onlyRemoteRouter",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 226,
+                  "src": "2890:16:1"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "2890:34:1"
+              }
+            ],
+            "name": "handle",
+            "nameLocation": "2759:6:1",
+            "overrides": {
+              "id": 278,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "2871:8:1"
+            },
+            "parameters": {
+              "id": 277,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 272,
+                  "mutability": "mutable",
+                  "name": "_origin",
+                  "nameLocation": "2782:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 293,
+                  "src": "2775:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 271,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2775:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 274,
+                  "mutability": "mutable",
+                  "name": "_sender",
+                  "nameLocation": "2807:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 293,
+                  "src": "2799:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 273,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2799:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 276,
+                  "mutability": "mutable",
+                  "name": "_message",
+                  "nameLocation": "2839:8:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 293,
+                  "src": "2824:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 275,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2824:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2765:88:1"
+            },
+            "returnParameters": {
+              "id": 285,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2925:0:1"
+            },
+            "scope": 453,
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "external"
+          },
+          {
+            "id": 302,
+            "nodeType": "FunctionDefinition",
+            "src": "3080:122:1",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_handle",
+            "nameLocation": "3089:7:1",
+            "parameters": {
+              "id": 300,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 295,
+                  "mutability": "mutable",
+                  "name": "_origin",
+                  "nameLocation": "3113:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 302,
+                  "src": "3106:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 294,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3106:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 297,
+                  "mutability": "mutable",
+                  "name": "_sender",
+                  "nameLocation": "3138:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 302,
+                  "src": "3130:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 296,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3130:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 299,
+                  "mutability": "mutable",
+                  "name": "_message",
+                  "nameLocation": "3170:8:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 302,
+                  "src": "3155:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 298,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3155:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3096:88:1"
+            },
+            "returnParameters": {
+              "id": 301,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3201:0:1"
+            },
+            "scope": 453,
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "internal"
+          },
+          {
+            "id": 322,
+            "nodeType": "FunctionDefinition",
+            "src": "3396:167:1",
+            "body": {
+              "id": 321,
+              "nodeType": "Block",
+              "src": "3467:96:1",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 314,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "id": 310,
+                        "name": "routers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 198,
+                        "src": "3477:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint32_$_t_bytes32_$",
+                          "typeString": "mapping(uint32 => bytes32)"
+                        }
+                      },
+                      "id": 312,
+                      "indexExpression": {
+                        "id": 311,
+                        "name": "_domain",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 305,
+                        "src": "3485:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "3477:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 313,
+                      "name": "_router",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 307,
+                      "src": "3496:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "3477:26:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 315,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3477:26:1"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "id": 317,
+                        "name": "_domain",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 305,
+                        "src": "3539:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        }
+                      },
+                      {
+                        "id": 318,
+                        "name": "_router",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 307,
+                        "src": "3548:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "id": 316,
+                      "name": "RemoteRouterEnrolled",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 209,
+                      "src": "3518:20:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint32_$_t_bytes32_$returns$__$",
+                        "typeString": "function (uint32,bytes32)"
+                      }
+                    },
+                    "id": 319,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3518:38:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 320,
+                  "nodeType": "EmitStatement",
+                  "src": "3513:43:1"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 303,
+              "nodeType": "StructuredDocumentation",
+              "src": "3261:130:1",
+              "text": " @notice Set the router for a given domain\n @param _domain The domain\n @param _router The new router"
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_enrollRemoteRouter",
+            "nameLocation": "3405:19:1",
+            "parameters": {
+              "id": 308,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 305,
+                  "mutability": "mutable",
+                  "name": "_domain",
+                  "nameLocation": "3432:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 322,
+                  "src": "3425:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 304,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3425:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 307,
+                  "mutability": "mutable",
+                  "name": "_router",
+                  "nameLocation": "3449:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 322,
+                  "src": "3441:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 306,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3441:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3424:33:1"
+            },
+            "returnParameters": {
+              "id": 309,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3467:0:1"
+            },
+            "scope": 453,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 339,
+            "nodeType": "FunctionDefinition",
+            "src": "3840:166:1",
+            "body": {
+              "id": 338,
+              "nodeType": "Block",
+              "src": "3955:51:1",
+              "statements": [
+                {
+                  "expression": {
+                    "commonType": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    },
+                    "id": 336,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "baseExpression": {
+                        "id": 332,
+                        "name": "routers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 198,
+                        "src": "3972:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint32_$_t_bytes32_$",
+                          "typeString": "mapping(uint32 => bytes32)"
+                        }
+                      },
+                      "id": 334,
+                      "indexExpression": {
+                        "id": 333,
+                        "name": "_domain",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 325,
+                        "src": "3980:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "3972:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "id": 335,
+                      "name": "_router",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 327,
+                      "src": "3992:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "3972:27:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 331,
+                  "id": 337,
+                  "nodeType": "Return",
+                  "src": "3965:34:1"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 323,
+              "nodeType": "StructuredDocumentation",
+              "src": "3569:266:1",
+              "text": " @notice Return true if the given domain / router is the address of a remote Application Router\n @param _domain The domain of the potential remote Application Router\n @param _router The address of the potential remote Application Router"
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_isRemoteRouter",
+            "nameLocation": "3849:15:1",
+            "parameters": {
+              "id": 328,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 325,
+                  "mutability": "mutable",
+                  "name": "_domain",
+                  "nameLocation": "3872:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 339,
+                  "src": "3865:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 324,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3865:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 327,
+                  "mutability": "mutable",
+                  "name": "_router",
+                  "nameLocation": "3889:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 339,
+                  "src": "3881:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 326,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3881:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3864:33:1"
+            },
+            "returnParameters": {
+              "id": 331,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 330,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 339,
+                  "src": "3945:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 329,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3945:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3944:6:1"
+            },
+            "scope": 453,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 364,
+            "nodeType": "FunctionDefinition",
+            "src": "4296:233:1",
+            "body": {
+              "id": 363,
+              "nodeType": "Block",
+              "src": "4411:118:1",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 351,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 347,
+                      "name": "_router",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 345,
+                      "src": "4421:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "baseExpression": {
+                        "id": 348,
+                        "name": "routers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 198,
+                        "src": "4431:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint32_$_t_bytes32_$",
+                          "typeString": "mapping(uint32 => bytes32)"
+                        }
+                      },
+                      "id": 350,
+                      "indexExpression": {
+                        "id": 349,
+                        "name": "_domain",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 342,
+                        "src": "4439:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "4431:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "4421:26:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 352,
+                  "nodeType": "ExpressionStatement",
+                  "src": "4421:26:1"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        "id": 359,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "id": 354,
+                          "name": "_router",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 345,
+                          "src": "4465:7:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "arguments": [
+                            {
+                              "hexValue": "30",
+                              "id": 357,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "4484:1:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 356,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "4476:7:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_bytes32_$",
+                              "typeString": "type(bytes32)"
+                            },
+                            "typeName": {
+                              "id": 355,
+                              "name": "bytes32",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "4476:7:1",
+                              "typeDescriptions": {}
+                            }
+                          },
+                          "id": 358,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "4476:10:1",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        },
+                        "src": "4465:21:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "id": 360,
+                        "name": "NO_ROUTER_ENROLLED_REVERT_MESSAGE",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 194,
+                        "src": "4488:33:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 353,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "4457:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 361,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "4457:65:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 362,
+                  "nodeType": "ExpressionStatement",
+                  "src": "4457:65:1"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 340,
+              "nodeType": "StructuredDocumentation",
+              "src": "4012:279:1",
+              "text": " @notice Assert that the given domain has a Application Router registered and return its address\n @param _domain The domain of the chain for which to get the Application Router\n @return _router The address of the remote Application Router on _domain"
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_mustHaveRemoteRouter",
+            "nameLocation": "4305:21:1",
+            "parameters": {
+              "id": 343,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 342,
+                  "mutability": "mutable",
+                  "name": "_domain",
+                  "nameLocation": "4334:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 364,
+                  "src": "4327:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 341,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4327:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4326:16:1"
+            },
+            "returnParameters": {
+              "id": 346,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 345,
+                  "mutability": "mutable",
+                  "name": "_router",
+                  "nameLocation": "4398:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 364,
+                  "src": "4390:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 344,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4390:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4389:17:1"
+            },
+            "scope": 453,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 382,
+            "nodeType": "FunctionDefinition",
+            "src": "4890:182:1",
+            "body": {
+              "id": 381,
+              "nodeType": "Block",
+              "src": "5002:70:1",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 375,
+                          "name": "_outbox",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 149,
+                          "src": "5029:7:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_IOutbox_$564_$",
+                            "typeString": "function () view returns (contract IOutbox)"
+                          }
+                        },
+                        "id": 376,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "5029:9:1",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IOutbox_$564",
+                          "typeString": "contract IOutbox"
+                        }
+                      },
+                      {
+                        "id": 377,
+                        "name": "_destinationDomain",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 367,
+                        "src": "5040:18:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        }
+                      },
+                      {
+                        "id": 378,
+                        "name": "_msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 369,
+                        "src": "5060:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_IOutbox_$564",
+                          "typeString": "contract IOutbox"
+                        },
+                        {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 374,
+                      "name": "_dispatch",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        382,
+                        452
+                      ],
+                      "referencedDeclaration": 452,
+                      "src": "5019:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_contract$_IOutbox_$564_$_t_uint32_$_t_bytes_memory_ptr_$returns$_t_uint256_$",
+                        "typeString": "function (contract IOutbox,uint32,bytes memory) returns (uint256)"
+                      }
+                    },
+                    "id": 379,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "5019:46:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 373,
+                  "id": 380,
+                  "nodeType": "Return",
+                  "src": "5012:53:1"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 365,
+              "nodeType": "StructuredDocumentation",
+              "src": "4535:350:1",
+              "text": " @notice Dispatches a message to an enrolled router via the local router's Outbox.\n @notice Does not pay interchain gas.\n @dev Reverts if there is no enrolled router for _destinationDomain.\n @param _destinationDomain The domain of the chain to which to send the message.\n @param _msg The message to dispatch."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_dispatch",
+            "nameLocation": "4899:9:1",
+            "parameters": {
+              "id": 370,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 367,
+                  "mutability": "mutable",
+                  "name": "_destinationDomain",
+                  "nameLocation": "4916:18:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 382,
+                  "src": "4909:25:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 366,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4909:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 369,
+                  "mutability": "mutable",
+                  "name": "_msg",
+                  "nameLocation": "4949:4:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 382,
+                  "src": "4936:17:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 368,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4936:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4908:46:1"
+            },
+            "returnParameters": {
+              "id": 373,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 372,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 382,
+                  "src": "4989:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 371,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4989:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4988:9:1"
+            },
+            "scope": 453,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 425,
+            "nodeType": "FunctionDefinition",
+            "src": "5537:470:1",
+            "body": {
+              "id": 424,
+              "nodeType": "Block",
+              "src": "5669:338:1",
+              "statements": [
+                {
+                  "assignments": [
+                    394
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 394,
+                      "mutability": "mutable",
+                      "name": "_outbox",
+                      "nameLocation": "5687:7:1",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 424,
+                      "src": "5679:15:1",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IOutbox_$564",
+                        "typeString": "contract IOutbox"
+                      },
+                      "typeName": {
+                        "id": 393,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 392,
+                          "name": "IOutbox",
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 564,
+                          "src": "5679:7:1"
+                        },
+                        "referencedDeclaration": 564,
+                        "src": "5679:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IOutbox_$564",
+                          "typeString": "contract IOutbox"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 397,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 395,
+                      "name": "_outbox",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 149,
+                      "src": "5697:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_IOutbox_$564_$",
+                        "typeString": "function () view returns (contract IOutbox)"
+                      }
+                    },
+                    "id": 396,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "5697:9:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IOutbox_$564",
+                      "typeString": "contract IOutbox"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "5679:27:1"
+                },
+                {
+                  "assignments": [
+                    399
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 399,
+                      "mutability": "mutable",
+                      "name": "_leafIndex",
+                      "nameLocation": "5724:10:1",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 424,
+                      "src": "5716:18:1",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 398,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "5716:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 405,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 401,
+                        "name": "_outbox",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 394,
+                        "src": "5747:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IOutbox_$564",
+                          "typeString": "contract IOutbox"
+                        }
+                      },
+                      {
+                        "id": 402,
+                        "name": "_destinationDomain",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 385,
+                        "src": "5756:18:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        }
+                      },
+                      {
+                        "id": 403,
+                        "name": "_msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 387,
+                        "src": "5776:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_IOutbox_$564",
+                          "typeString": "contract IOutbox"
+                        },
+                        {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 400,
+                      "name": "_dispatch",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        382,
+                        452
+                      ],
+                      "referencedDeclaration": 452,
+                      "src": "5737:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_contract$_IOutbox_$564_$_t_uint32_$_t_bytes_memory_ptr_$returns$_t_uint256_$",
+                        "typeString": "function (contract IOutbox,uint32,bytes memory) returns (uint256)"
+                      }
+                    },
+                    "id": 404,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "5737:44:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "5716:65:1"
+                },
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 408,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 406,
+                      "name": "_gasPayment",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 389,
+                      "src": "5795:11:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression": {
+                      "hexValue": "30",
+                      "id": 407,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "5809:1:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "5795:15:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 423,
+                  "nodeType": "IfStatement",
+                  "src": "5791:210:1",
+                  "trueBody": {
+                    "id": 422,
+                    "nodeType": "Block",
+                    "src": "5812:189:1",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "arguments": [
+                                {
+                                  "id": 416,
+                                  "name": "_outbox",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 394,
+                                  "src": "5904:7:1",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_contract$_IOutbox_$564",
+                                    "typeString": "contract IOutbox"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_contract$_IOutbox_$564",
+                                    "typeString": "contract IOutbox"
+                                  }
+                                ],
+                                "id": 415,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "nodeType": "ElementaryTypeNameExpression",
+                                "src": "5896:7:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_address_$",
+                                  "typeString": "type(address)"
+                                },
+                                "typeName": {
+                                  "id": 414,
+                                  "name": "address",
+                                  "nodeType": "ElementaryTypeName",
+                                  "src": "5896:7:1",
+                                  "typeDescriptions": {}
+                                }
+                              },
+                              "id": 417,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "typeConversion",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "5896:16:1",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            {
+                              "id": 418,
+                              "name": "_leafIndex",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 399,
+                              "src": "5930:10:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            {
+                              "id": 419,
+                              "name": "_destinationDomain",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 385,
+                              "src": "5958:18:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint32",
+                                "typeString": "uint32"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              },
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              {
+                                "typeIdentifier": "t_uint32",
+                                "typeString": "uint32"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint32",
+                                  "typeString": "uint32"
+                                }
+                              ],
+                              "expression": {
+                                "id": 409,
+                                "name": "interchainGasPaymaster",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 17,
+                                "src": "5826:22:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_contract$_IInterchainGasPaymaster_$489",
+                                  "typeString": "contract IInterchainGasPaymaster"
+                                }
+                              },
+                              "id": 411,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "payGasFor",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 488,
+                              "src": "5826:32:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_external_payable$_t_address_$_t_uint256_$_t_uint32_$returns$__$",
+                                "typeString": "function (address,uint256,uint32) payable external"
+                              }
+                            },
+                            "id": 413,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "names": [
+                              "value"
+                            ],
+                            "nodeType": "FunctionCallOptions",
+                            "options": [
+                              {
+                                "id": 412,
+                                "name": "_gasPayment",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 389,
+                                "src": "5866:11:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              }
+                            ],
+                            "src": "5826:52:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_payable$_t_address_$_t_uint256_$_t_uint32_$returns$__$value",
+                              "typeString": "function (address,uint256,uint32) payable external"
+                            }
+                          },
+                          "id": 420,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "5826:164:1",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 421,
+                        "nodeType": "ExpressionStatement",
+                        "src": "5826:164:1"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": {
+              "id": 383,
+              "nodeType": "StructuredDocumentation",
+              "src": "5078:454:1",
+              "text": " @notice Dispatches a message to an enrolled router via the local router's Outbox\n and pays for it to be relayed to the destination.\n @dev Reverts if there is no enrolled router for _destinationDomain.\n @param _destinationDomain The domain of the chain to which to send the message.\n @param _msg The message to dispatch.\n @param _gasPayment The amount of native tokens to pay for the message to be relayed."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_dispatchWithGas",
+            "nameLocation": "5546:16:1",
+            "parameters": {
+              "id": 390,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 385,
+                  "mutability": "mutable",
+                  "name": "_destinationDomain",
+                  "nameLocation": "5579:18:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 425,
+                  "src": "5572:25:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 384,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5572:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 387,
+                  "mutability": "mutable",
+                  "name": "_msg",
+                  "nameLocation": "5620:4:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 425,
+                  "src": "5607:17:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 386,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5607:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 389,
+                  "mutability": "mutable",
+                  "name": "_gasPayment",
+                  "nameLocation": "5642:11:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 425,
+                  "src": "5634:19:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 388,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5634:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5562:97:1"
+            },
+            "returnParameters": {
+              "id": 391,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5669:0:1"
+            },
+            "scope": 453,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 452,
+            "nodeType": "FunctionDefinition",
+            "src": "6486:347:1",
+            "body": {
+              "id": 451,
+              "nodeType": "Block",
+              "src": "6624:209:1",
+              "statements": [
+                {
+                  "assignments": [
+                    439
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 439,
+                      "mutability": "mutable",
+                      "name": "_router",
+                      "nameLocation": "6707:7:1",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 451,
+                      "src": "6699:15:1",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      },
+                      "typeName": {
+                        "id": 438,
+                        "name": "bytes32",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "6699:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 443,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 441,
+                        "name": "_destinationDomain",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 431,
+                        "src": "6739:18:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        }
+                      ],
+                      "id": 440,
+                      "name": "_mustHaveRemoteRouter",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 364,
+                      "src": "6717:21:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_uint32_$returns$_t_bytes32_$",
+                        "typeString": "function (uint32) view returns (bytes32)"
+                      }
+                    },
+                    "id": 442,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "6717:41:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "6699:59:1"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 446,
+                        "name": "_destinationDomain",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 431,
+                        "src": "6792:18:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        }
+                      },
+                      {
+                        "id": 447,
+                        "name": "_router",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 439,
+                        "src": "6812:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "id": 448,
+                        "name": "_msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 433,
+                        "src": "6821:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "expression": {
+                        "id": 444,
+                        "name": "_outbox",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 429,
+                        "src": "6775:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IOutbox_$564",
+                          "typeString": "contract IOutbox"
+                        }
+                      },
+                      "id": 445,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "dispatch",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 531,
+                      "src": "6775:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_uint32_$_t_bytes32_$_t_bytes_memory_ptr_$returns$_t_uint256_$",
+                        "typeString": "function (uint32,bytes32,bytes memory) external returns (uint256)"
+                      }
+                    },
+                    "id": 449,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "6775:51:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 437,
+                  "id": 450,
+                  "nodeType": "Return",
+                  "src": "6768:58:1"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 426,
+              "nodeType": "StructuredDocumentation",
+              "src": "6065:416:1",
+              "text": " @notice Dispatches a message to an enrolled router via the provided Outbox.\n @dev Does not pay interchain gas.\n @dev Reverts if there is no enrolled router for _destinationDomain.\n @param _outbox The outbox contract to dispatch the message through.\n @param _destinationDomain The domain of the chain to which to send the message.\n @param _msg The message to dispatch."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_dispatch",
+            "nameLocation": "6495:9:1",
+            "parameters": {
+              "id": 434,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 429,
+                  "mutability": "mutable",
+                  "name": "_outbox",
+                  "nameLocation": "6522:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 452,
+                  "src": "6514:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IOutbox_$564",
+                    "typeString": "contract IOutbox"
+                  },
+                  "typeName": {
+                    "id": 428,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 427,
+                      "name": "IOutbox",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 564,
+                      "src": "6514:7:1"
+                    },
+                    "referencedDeclaration": 564,
+                    "src": "6514:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IOutbox_$564",
+                      "typeString": "contract IOutbox"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 431,
+                  "mutability": "mutable",
+                  "name": "_destinationDomain",
+                  "nameLocation": "6546:18:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 452,
+                  "src": "6539:25:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 430,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6539:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 433,
+                  "mutability": "mutable",
+                  "name": "_msg",
+                  "nameLocation": "6587:4:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 452,
+                  "src": "6574:17:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 432,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6574:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6504:93:1"
+            },
+            "returnParameters": {
+              "id": 437,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 436,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 452,
+                  "src": "6615:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 435,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6615:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6614:9:1"
+            },
+            "scope": 453,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "private"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 188,
+              "name": "AbacusConnectionClient",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 175,
+              "src": "507:22:1"
+            },
+            "id": 189,
+            "nodeType": "InheritanceSpecifier",
+            "src": "507:22:1"
+          },
+          {
+            "baseName": {
+              "id": 190,
+              "name": "IMessageRecipient",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 514,
+              "src": "531:17:1"
+            },
+            "id": 191,
+            "nodeType": "InheritanceSpecifier",
+            "src": "531:17:1"
+          }
+        ],
+        "canonicalName": "Router",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          453,
+          514,
+          175,
+          696,
+          1906,
+          865
+        ],
+        "name": "Router",
+        "nameLocation": "497:6:1",
+        "scope": 454,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT OR Apache-2.0"
+  },
+  "id": 1
+}

@@ -1,0 +1,338 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_inbox",
+          "type": "address"
+        }
+      ],
+      "name": "isInbox",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "localDomain",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "outbox",
+      "outputs": [
+        {
+          "internalType": "contract IOutbox",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "isInbox(address)": "282f51eb",
+    "localDomain()": "8d3638f4",
+    "outbox()": "ce11e6ab"
+  },
+  "ast": {
+    "absolutePath": "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
+    "id": 477,
+    "exportedSymbols": {
+      "IAbacusConnectionManager": [
+        476
+      ],
+      "IOutbox": [
+        564
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "46:289:2",
+    "nodes": [
+      {
+        "id": 455,
+        "nodeType": "PragmaDirective",
+        "src": "46:25:2",
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".11"
+        ]
+      },
+      {
+        "id": 457,
+        "nodeType": "ImportDirective",
+        "src": "73:38:2",
+        "absolutePath": "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
+        "file": "./IOutbox.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 477,
+        "sourceUnit": 565,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 456,
+              "name": "IOutbox",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "81:7:2",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 476,
+        "nodeType": "ContractDefinition",
+        "src": "113:221:2",
+        "nodes": [
+          {
+            "id": 463,
+            "nodeType": "FunctionDefinition",
+            "src": "154:50:2",
+            "functionSelector": "ce11e6ab",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "outbox",
+            "nameLocation": "163:6:2",
+            "parameters": {
+              "id": 458,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "169:2:2"
+            },
+            "returnParameters": {
+              "id": 462,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 461,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 463,
+                  "src": "195:7:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IOutbox_$564",
+                    "typeString": "contract IOutbox"
+                  },
+                  "typeName": {
+                    "id": 460,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 459,
+                      "name": "IOutbox",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 564,
+                      "src": "195:7:2"
+                    },
+                    "referencedDeclaration": 564,
+                    "src": "195:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IOutbox_$564",
+                      "typeString": "contract IOutbox"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "194:9:2"
+            },
+            "scope": 476,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 470,
+            "nodeType": "FunctionDefinition",
+            "src": "210:62:2",
+            "functionSelector": "282f51eb",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isInbox",
+            "nameLocation": "219:7:2",
+            "parameters": {
+              "id": 466,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 465,
+                  "mutability": "mutable",
+                  "name": "_inbox",
+                  "nameLocation": "235:6:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 470,
+                  "src": "227:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 464,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "227:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "226:16:2"
+            },
+            "returnParameters": {
+              "id": 469,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 468,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 470,
+                  "src": "266:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 467,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "266:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "265:6:2"
+            },
+            "scope": 476,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 475,
+            "nodeType": "FunctionDefinition",
+            "src": "278:54:2",
+            "functionSelector": "8d3638f4",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "localDomain",
+            "nameLocation": "287:11:2",
+            "parameters": {
+              "id": 471,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "298:2:2"
+            },
+            "returnParameters": {
+              "id": 474,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 473,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 475,
+                  "src": "324:6:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 472,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "324:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "323:8:2"
+            },
+            "scope": 476,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IAbacusConnectionManager",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          476
+        ],
+        "name": "IAbacusConnectionManager",
+        "nameLocation": "123:24:2",
+        "scope": 477,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT OR Apache-2.0"
+  },
+  "id": 2
+}

@@ -1,0 +1,78 @@
+{
+  "compiler": {
+    "version": "0.8.11+commit.d7f03943"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_outbox",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_leafIndex",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint32",
+            "name": "_destinationDomain",
+            "type": "uint32"
+          }
+        ],
+        "name": "payGasFor",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      }
+    ],
+    "devdoc": {
+      "kind": "dev",
+      "methods": {},
+      "title": "IInterchainGasPaymaster",
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {},
+      "notice": "Manages payments on a source chain to cover gas costs of relaying messages to destination chains.",
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol": "IInterchainGasPaymaster"
+    },
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": [
+      ":@hyperlane-monorepo/=lib/hyperlane-monorepo/",
+      ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      ":ds-test/=lib/forge-std/lib/ds-test/src/",
+      ":forge-std/=lib/forge-std/src/",
+      ":hyperlane-monorepo/=lib/hyperlane-monorepo/",
+      ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/"
+    ]
+  },
+  "sources": {
+    "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol": {
+      "keccak256": "0x55a64141b9399b3dfee1a7267138c35b6cfd80400811af0da64277571421f979",
+      "license": "MIT OR Apache-2.0",
+      "urls": [
+        "bzz-raw://7ef79ca3c9668f3352ec7398a0fe5f5be021a339a58d6895f37c8de23d49fab1",
+        "dweb:/ipfs/QmSq3CGVJUwtcL5StR3U8MQ5PtkdEu4D9v6ByFrs35Ebei"
+      ]
+    }
+  },
+  "version": 1
+}
