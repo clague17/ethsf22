@@ -1671,8 +1671,8 @@
       }
     },
     "script/DeployInterchainCarbonCoin.s.sol": {
-      "lastModificationDate": 1667630580340,
-      "contentHash": "1d2a97336adfde7e82c668180bb52349",
+      "lastModificationDate": 1667632640300,
+      "contentHash": "615fad6ec319db6844dd61e3f91042c2",
       "sourceName": "script/DeployInterchainCarbonCoin.s.sol",
       "solcConfig": {
         "settings": {
@@ -1741,11 +1741,15 @@
         "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/IERC20MetadataUpgradeable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
-        "src/InterchainCarbonCoin.sol",
+        "src/celo/xCelo.sol",
+        "src/celo/xcUSD.sol",
+        "src/interfaces/xCO2.sol",
+        "src/interfaces/xERC20.sol",
+        "src/interfaces/xNative.sol",
         "src/oracles/Celo.sol",
         "src/oracles/Matic.sol",
-        "src/xCelo.sol",
-        "src/xPolygon.sol"
+        "src/polygon/xMatic.sol",
+        "src/polygon/xUSDC.sol"
       ],
       "versionRequirement": "=0.8.11",
       "artifacts": {
@@ -1754,10 +1758,123 @@
         }
       }
     },
-    "src/InterchainCarbonCoin.sol": {
-      "lastModificationDate": 1667628167565,
-      "contentHash": "65865e0ef6752b8e91e5b62663c9b7b4",
-      "sourceName": "src/InterchainCarbonCoin.sol",
+    "src/celo/xCelo.sol": {
+      "lastModificationDate": 1667632266860,
+      "contentHash": "35e5be36d876bbe85dd049971bdb2fce",
+      "sourceName": "src/celo/xCelo.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol",
+        "lib/hyperlane-monorepo/solidity/contracts/Router.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/ERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/IERC20MetadataUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "src/interfaces/xCO2.sol",
+        "src/interfaces/xNative.sol",
+        "src/oracles/Celo.sol"
+      ],
+      "versionRequirement": "=0.8.11",
+      "artifacts": {
+        "xCelo": {
+          "0.8.11+commit.d7f03943.Darwin.appleclang": "xCelo.sol/xCelo.json"
+        }
+      }
+    },
+    "src/celo/xcUSD.sol": {
+      "lastModificationDate": 1667632348665,
+      "contentHash": "1f527d7206b41c2d47ae85bf4e02c1f6",
+      "sourceName": "src/celo/xcUSD.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol",
+        "lib/hyperlane-monorepo/solidity/contracts/Router.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/ERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/IERC20MetadataUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "src/interfaces/xCO2.sol",
+        "src/interfaces/xERC20.sol"
+      ],
+      "versionRequirement": "=0.8.11",
+      "artifacts": {
+        "xcUSD": {
+          "0.8.11+commit.d7f03943.Darwin.appleclang": "xcUSD.sol/xcUSD.json"
+        }
+      }
+    },
+    "src/interfaces/xCO2.sol": {
+      "lastModificationDate": 1667632708474,
+      "contentHash": "d0f3dbd54711e24fe8298b2831199e89",
+      "sourceName": "src/interfaces/xCO2.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -1803,8 +1920,118 @@
       ],
       "versionRequirement": "=0.8.11",
       "artifacts": {
-        "InterchainCarbonCoin": {
-          "0.8.11+commit.d7f03943.Darwin.appleclang": "InterchainCarbonCoin.sol/InterchainCarbonCoin.json"
+        "xCO2": {
+          "0.8.11+commit.d7f03943.Darwin.appleclang": "xCO2.sol/xCO2.json"
+        }
+      }
+    },
+    "src/interfaces/xERC20.sol": {
+      "lastModificationDate": 1667632703242,
+      "contentHash": "b009bb7797e6c54fdf61069f68ba112e",
+      "sourceName": "src/interfaces/xERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol",
+        "lib/hyperlane-monorepo/solidity/contracts/Router.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/ERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/IERC20MetadataUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "src/interfaces/xCO2.sol"
+      ],
+      "versionRequirement": "=0.8.11",
+      "artifacts": {
+        "xERC20": {
+          "0.8.11+commit.d7f03943.Darwin.appleclang": "xERC20.sol/xERC20.json"
+        }
+      }
+    },
+    "src/interfaces/xNative.sol": {
+      "lastModificationDate": 1667632569289,
+      "contentHash": "2d029a617f043dc31e299ce8acd3ad96",
+      "sourceName": "src/interfaces/xNative.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol",
+        "lib/hyperlane-monorepo/solidity/contracts/Router.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/ERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/IERC20MetadataUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "src/interfaces/xCO2.sol"
+      ],
+      "versionRequirement": "=0.8.11",
+      "artifacts": {
+        "xNative": {
+          "0.8.11+commit.d7f03943.Darwin.appleclang": "xNative.sol/xNative.json"
         }
       }
     },
@@ -1886,10 +2113,10 @@
         }
       }
     },
-    "src/xCelo.sol": {
-      "lastModificationDate": 1667630505495,
-      "contentHash": "fd4d99f1779728946c0fe165b23d5521",
-      "sourceName": "src/xCelo.sol",
+    "src/polygon/xMatic.sol": {
+      "lastModificationDate": 1667632284622,
+      "contentHash": "360ed8c74c2ace481114cf05e4b0b28d",
+      "sourceName": "src/polygon/xMatic.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -1932,69 +2159,70 @@
         "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/IERC20MetadataUpgradeable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
-        "src/InterchainCarbonCoin.sol",
-        "src/oracles/Celo.sol"
-      ],
-      "versionRequirement": "=0.8.11",
-      "artifacts": {
-        "xCelo": {
-          "0.8.11+commit.d7f03943.Darwin.appleclang": "xCelo.sol/xCelo.json"
-        }
-      }
-    },
-    "src/xPolygon.sol": {
-      "lastModificationDate": 1667630593257,
-      "contentHash": "b08b17c6d51105a21335ac6f0168d385",
-      "sourceName": "src/xPolygon.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs"
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol",
-        "lib/hyperlane-monorepo/solidity/contracts/Router.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol",
-        "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
-        "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol",
-        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
-        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/ERC20Upgradeable.sol",
-        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol",
-        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/IERC20MetadataUpgradeable.sol",
-        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
-        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
-        "src/InterchainCarbonCoin.sol",
+        "src/interfaces/xCO2.sol",
+        "src/interfaces/xNative.sol",
         "src/oracles/Matic.sol"
       ],
       "versionRequirement": "=0.8.11",
       "artifacts": {
-        "xPolygon": {
-          "0.8.11+commit.d7f03943.Darwin.appleclang": "xPolygon.sol/xPolygon.json"
+        "xMatic": {
+          "0.8.11+commit.d7f03943.Darwin.appleclang": "xMatic.sol/xMatic.json"
+        }
+      }
+    },
+    "src/polygon/xUSDC.sol": {
+      "lastModificationDate": 1667632344117,
+      "contentHash": "0466bf0cc8fa9c89e6b33be474e9b58a",
+      "sourceName": "src/polygon/xUSDC.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/hyperlane-monorepo/solidity/contracts/AbacusConnectionClient.sol",
+        "lib/hyperlane-monorepo/solidity/contracts/Router.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IAbacusConnectionManager.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IInterchainGasPaymaster.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IMailbox.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IMessageRecipient.sol",
+        "lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/ERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/IERC20MetadataUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "src/interfaces/xCO2.sol",
+        "src/interfaces/xERC20.sol"
+      ],
+      "versionRequirement": "=0.8.11",
+      "artifacts": {
+        "xUSDC": {
+          "0.8.11+commit.d7f03943.Darwin.appleclang": "xUSDC.sol/xUSDC.json"
         }
       }
     }

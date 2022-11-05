@@ -5,9 +5,11 @@ import "../lib/forge-std/src/Script.sol";
 import "../lib/forge-std/src/console.sol";
 import "../lib/openzeppelin-contracts/contracts/proxy/transparent/ProxyAdmin.sol";
 import "../lib/openzeppelin-contracts/contracts/proxy/transparent/TransparentUpgradeableProxy.sol";
-import "../src/InterchainCarbonCoin.sol";
-import "../src/xCelo.sol";
-import "../src/xPolygon.sol";
+import "../src/interfaces/xCO2.sol";
+import "../src/celo/xCelo.sol";
+import "../src/celo/xcUSD.sol";
+import "../src/polygon/xMatic.sol";
+import "../src/polygon/xUSDC.sol";
 
 contract DeployInterchainCarbonCoin is Script {
     address _abacusConnectionManager;
@@ -27,18 +29,18 @@ contract DeployInterchainCarbonCoin is Script {
             _interchainGasPaymaster = 0x60B8d195f1b2EcaC26d54b95C69E6399cFD64b53;
             _proxyAdmin = 0xf666D879e0480f0Dd9F64D3c31Abd9F89ffA85C9;
 
-            xPolygon cc = new xPolygon();
+            xMatic cc = new xMatic();
             address proxy = _deployProxyFor(_proxyAdmin, address(cc));
-            xPolygon(proxy).initialize(
+            xMatic(proxy).initialize(
                 _abacusConnectionManager,
                 _interchainGasPaymaster,
                 "Interchain Carbon Coin",
                 "xCO2"
             );
-            xPolygon(proxy).setDependencies(
+            xMatic(proxy).setDependencies(
                 0xAB594600376Ec9fD91F8e885dADF0CE036862dE0
             );
-            console.log("xPolygon deployed!");
+            console.log("xMatic deployed!");
         } else if (block.chainid == 42220) {
             // Celo
             _abacusConnectionManager = 0x12582c7B0f43c6A667CBaA7fA8b112F7fb1E69F0;

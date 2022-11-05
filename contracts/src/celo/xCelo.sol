@@ -2,10 +2,10 @@
 // https://docs.soliditylang.org/en/v0.8.10/style-guide.html
 pragma solidity 0.8.11;
 
-import "./InterchainCarbonCoin.sol";
-import "./oracles/Celo.sol";
+import "../interfaces/xNative.sol";
+import "../oracles/Celo.sol";
 
-contract xCelo is InterchainCarbonCoin {
+contract xCelo is xNative {
     address public oracle;
     address public stableToken;
 

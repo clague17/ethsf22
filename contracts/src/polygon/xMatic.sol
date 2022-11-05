@@ -2,10 +2,10 @@
 // https://docs.soliditylang.org/en/v0.8.10/style-guide.html
 pragma solidity 0.8.11;
 
-import "./InterchainCarbonCoin.sol";
-import "./oracles/Matic.sol";
+import "../interfaces/xNative.sol";
+import "../oracles/Matic.sol";
 
-contract xPolygon is InterchainCarbonCoin {
+contract xMatic is xNative {
     address public oracle;
 
     function toUSD(uint256 amount) public view override returns (uint256) {

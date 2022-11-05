@@ -376,19 +376,51 @@
       ]
     },
     "script/DeployInterchainCarbonCoin.s.sol": {
-      "keccak256": "0xd528a168df0f094ec73d3393c4c870e7996e81be1b857d8eb881496b7d5f4851",
+      "keccak256": "0x4c307506d110fec77210947ca06e41d3eae1695f3e454b9009da8df03baaf128",
       "license": "UNLICENSED",
       "urls": [
-        "bzz-raw://3a1ac336f6e12a83840aa37df2fa204241906990b81d347e00e0b70cbe78f64e",
-        "dweb:/ipfs/QmdmwFWQXJ5bGzW1pSqwgG1G6i8hGL66AoYeZ3Xoh1bT1A"
+        "bzz-raw://4dba560791804b8370c6dd0503c2a83e037ac2767d67214403dfd954935dde9b",
+        "dweb:/ipfs/QmXKuhM5yuyUoSRu7SdbTLYajxkfZZuUTziWbhW5fpDfRX"
       ]
     },
-    "src/InterchainCarbonCoin.sol": {
-      "keccak256": "0x0ba0139eca942e1e45947947f3c9dbefc29c29187918cf856c090b9cc481a236",
+    "src/celo/xCelo.sol": {
+      "keccak256": "0xfb7ae46521d10133a57dd1327daabdc7bd96afabdc42839b07b01cb2a6031bf7",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://727b6fad4e398a3f6d7e279e8aaa2d129a91aff6e0c54af351dec0ced6723678",
-        "dweb:/ipfs/QmTvzbSgsR8R8rpoY53zDtsFkA8YTNWSjgTs9bNRZYwrJo"
+        "bzz-raw://fa46c95c27d1008d0464549a54576b65a2739a7989d8ef6b0b2bc8fa676bbc75",
+        "dweb:/ipfs/QmYk5oBM4xTENcZ5kMrEgWv7MULbRTesLn31ckTwbP1qyA"
+      ]
+    },
+    "src/celo/xcUSD.sol": {
+      "keccak256": "0x34f3d01588cc94c29493c02f7c465499f19facdf22b5fb74868299eb769d94a8",
+      "license": "Apache-2.0",
+      "urls": [
+        "bzz-raw://26ddc16245cdd5fcd2e1b925b18cd9ecfbccb8e210f90a80cb2413d376afdf60",
+        "dweb:/ipfs/QmUncKVZobAt9tq8C58tk8GmG3msUbR1Zn1UbG2p9AEx1U"
+      ]
+    },
+    "src/interfaces/xCO2.sol": {
+      "keccak256": "0x604285e161c42549ac450c580d130f4dbb8990e789db3605e7651d3522e650a7",
+      "license": "Apache-2.0",
+      "urls": [
+        "bzz-raw://c0c38f1bcc988002a2c2765ab13d98a6d06adfec5815ddca3c44907a5da9daad",
+        "dweb:/ipfs/QmZJ1JSsZFcq2DT4u2X1WHpxrk1jYzr2GJ6MZux4tbsKoX"
+      ]
+    },
+    "src/interfaces/xERC20.sol": {
+      "keccak256": "0x35a894fb46cac96125290541aa64c3a1d9fa8b22f5fafb8aecd4ff668bd8d39b",
+      "license": "Apache-2.0",
+      "urls": [
+        "bzz-raw://476783557fc0839a28950914fedddf6e3ec695ef9d48eec76dff210c142e4864",
+        "dweb:/ipfs/QmadckVV8CMN4mUveL3pqip7ARZzkpQdmrU81YAxnBKUia"
+      ]
+    },
+    "src/interfaces/xNative.sol": {
+      "keccak256": "0x33a454e53be591c6662a9c582897b31237308bb4ebda242b41a654cc84d677cf",
+      "license": "Apache-2.0",
+      "urls": [
+        "bzz-raw://5436db5005a20836dfbb26c25af30977bcc2665abeab5d0d1aecd11504241d92",
+        "dweb:/ipfs/QmNXqQV3EfsFUQBA25UsJKwXGwPbBXGGYJJzXRi7J7NGVU"
       ]
     },
     "src/oracles/Celo.sol": {
@@ -407,20 +439,20 @@
         "dweb:/ipfs/QmXiVBMkexP1RaZwP2AXCivwzeAxTv2tfu2B5vfAjFm4yG"
       ]
     },
-    "src/xCelo.sol": {
-      "keccak256": "0x54f643ce4304e56faf6926f830d88c26b4674202113cfa7a7a5bf5ab1c81fc7f",
+    "src/polygon/xMatic.sol": {
+      "keccak256": "0x8668d5bc7a849eadd9c8cf6f688eec8ee4ba556ebaa7dcd286c909e809a10c22",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://a39eefc83631ff29823d230b8ac0f3a202713cac5c1c1d6b9640fb184a31a084",
-        "dweb:/ipfs/QmQ6TgDkUErVFJpxDECQSYuKW6J7xhjPkErpzwwZAPgMJd"
+        "bzz-raw://d6829c0de49ce267e1796284a2b9b766f2dca107dc3a82d5ec188618ce27d1bd",
+        "dweb:/ipfs/QmZnCWBvWFv1QZdc3KANxJdjJN3ByY9DUPWmkRRGbT7QFP"
       ]
     },
-    "src/xPolygon.sol": {
-      "keccak256": "0x6f22443ef2a15a070c6252ce50a7d9920908620b571c121e0bd368684d03dae5",
+    "src/polygon/xUSDC.sol": {
+      "keccak256": "0x9e56c5ec71739b5e6f932c90d6dcd416be636228d9e9605c43a438b2303c9826",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://1c2d8d856767110ccc705f7fb3b9e4e09efa22e50912a9a2093ee17d5913128c",
-        "dweb:/ipfs/Qma3QoKr6NdfSY4eaAYMrYroJZXpJALjtupTEANgKrJCh9"
+        "bzz-raw://3e67c6e35ec7d7cfe9d495501db8502e38759f859af4e3c164d2d85cd68a5042",
+        "dweb:/ipfs/QmRqp5h3JYU8VSFmLN7UDakyTnKqrRhEkwRWc8HtEzCBQk"
       ]
     }
   },

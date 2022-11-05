@@ -2,10 +2,10 @@
 // https://docs.soliditylang.org/en/v0.8.10/style-guide.html
 pragma solidity 0.8.11;
 
-import "../lib/hyperlane-monorepo/solidity/contracts/Router.sol";
-import "../lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/ERC20Upgradeable.sol";
+import "../../lib/hyperlane-monorepo/solidity/contracts/Router.sol";
+import "../../lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/ERC20Upgradeable.sol";
 
-abstract contract InterchainCarbonCoin is Router, ERC20Upgradeable {
+abstract contract xCO2 is Router, ERC20Upgradeable {
     /**
      * @dev Emitted on `transferRemote` when a transfer message is dispatched.
      * @param destination The identifier of the destination chain.
@@ -42,7 +42,7 @@ abstract contract InterchainCarbonCoin is Router, ERC20Upgradeable {
         address _interchainGasPaymaster,
         string memory _name,
         string memory _symbol
-    ) external initializer {
+    ) external virtual initializer {
         // Set ownable to sender
         _transferOwnership(msg.sender);
         // Set ACM contract address
@@ -54,26 +54,6 @@ abstract contract InterchainCarbonCoin is Router, ERC20Upgradeable {
     }
 
     function toUSD(uint256 amount) public view virtual returns (uint256);
-
-    function depositFor(address _receiver) public payable {
-        _mint(_receiver, toUSD(msg.value));
-    }
-
-    function deposit() external payable {
-        depositFor(msg.sender);
-    }
-
-    function withdrawFor(uint256 amount, address payable _receiver)
-        public
-        payable
-    {
-        _burn(msg.sender, toUSD(amount));
-        _receiver.send(amount);
-    }
-
-    function withdraw(uint256 amount) external payable {
-        withdrawFor(amount, payable(msg.sender));
-    }
 
     /**
      * @notice Transfers `_amount` of tokens from `msg.sender` to `_recipient` on the `_destination` chain.

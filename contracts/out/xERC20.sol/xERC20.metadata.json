@@ -244,6 +244,19 @@
         "type": "function"
       },
       {
+        "inputs": [],
+        "name": "asset",
+        "outputs": [
+          {
+            "internalType": "contract ERC20Upgradeable",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
         "inputs": [
           {
             "internalType": "address",
@@ -300,10 +313,16 @@
         "type": "function"
       },
       {
-        "inputs": [],
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
         "name": "deposit",
         "outputs": [],
-        "stateMutability": "payable",
+        "stateMutability": "nonpayable",
         "type": "function"
       },
       {
@@ -312,11 +331,16 @@
             "internalType": "address",
             "name": "_receiver",
             "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_amount",
+            "type": "uint256"
           }
         ],
         "name": "depositFor",
         "outputs": [],
-        "stateMutability": "payable",
+        "stateMutability": "nonpayable",
         "type": "function"
       },
       {
@@ -413,6 +437,39 @@
         "type": "function"
       },
       {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_abacusConnectionManager",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "_interchainGasPaymaster",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "_name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_symbol",
+            "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "_asset",
+            "type": "address"
+          }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
         "inputs": [],
         "name": "interchainGasPaymaster",
         "outputs": [
@@ -433,19 +490,6 @@
             "internalType": "string",
             "name": "",
             "type": "string"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [],
-        "name": "oracle",
-        "outputs": [
-          {
-            "internalType": "address",
-            "name": "",
-            "type": "address"
           }
         ],
         "stateMutability": "view",
@@ -507,24 +551,6 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_oracle",
-            "type": "address"
-          },
-          {
-            "internalType": "address",
-            "name": "_stableToken",
-            "type": "address"
-          }
-        ],
-        "name": "setDependencies",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address",
             "name": "_interchainGasPaymaster",
             "type": "address"
           }
@@ -532,19 +558,6 @@
         "name": "setInterchainGasPaymaster",
         "outputs": [],
         "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [],
-        "name": "stableToken",
-        "outputs": [
-          {
-            "internalType": "address",
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "stateMutability": "view",
         "type": "function"
       },
       {
@@ -698,11 +711,11 @@
         "inputs": [
           {
             "internalType": "uint256",
-            "name": "amount",
+            "name": "_amount",
             "type": "uint256"
           },
           {
-            "internalType": "address payable",
+            "internalType": "address",
             "name": "_receiver",
             "type": "address"
           }
@@ -838,7 +851,7 @@
   },
   "settings": {
     "compilationTarget": {
-      "src/celo/xCelo.sol": "xCelo"
+      "src/interfaces/xERC20.sol": "xERC20"
     },
     "evmVersion": "london",
     "libraries": {},
@@ -974,14 +987,6 @@
         "dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a"
       ]
     },
-    "src/celo/xCelo.sol": {
-      "keccak256": "0xfb7ae46521d10133a57dd1327daabdc7bd96afabdc42839b07b01cb2a6031bf7",
-      "license": "Apache-2.0",
-      "urls": [
-        "bzz-raw://fa46c95c27d1008d0464549a54576b65a2739a7989d8ef6b0b2bc8fa676bbc75",
-        "dweb:/ipfs/QmYk5oBM4xTENcZ5kMrEgWv7MULbRTesLn31ckTwbP1qyA"
-      ]
-    },
     "src/interfaces/xCO2.sol": {
       "keccak256": "0x604285e161c42549ac450c580d130f4dbb8990e789db3605e7651d3522e650a7",
       "license": "Apache-2.0",
@@ -990,20 +995,12 @@
         "dweb:/ipfs/QmZJ1JSsZFcq2DT4u2X1WHpxrk1jYzr2GJ6MZux4tbsKoX"
       ]
     },
-    "src/interfaces/xNative.sol": {
-      "keccak256": "0x33a454e53be591c6662a9c582897b31237308bb4ebda242b41a654cc84d677cf",
+    "src/interfaces/xERC20.sol": {
+      "keccak256": "0x35a894fb46cac96125290541aa64c3a1d9fa8b22f5fafb8aecd4ff668bd8d39b",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://5436db5005a20836dfbb26c25af30977bcc2665abeab5d0d1aecd11504241d92",
-        "dweb:/ipfs/QmNXqQV3EfsFUQBA25UsJKwXGwPbBXGGYJJzXRi7J7NGVU"
-      ]
-    },
-    "src/oracles/Celo.sol": {
-      "keccak256": "0xa3e4fe20e629878fe8ed71fb7e64c7406a9d7dfc14d254ae0b362bfc83429cc6",
-      "license": "Apache-2.0",
-      "urls": [
-        "bzz-raw://1357cab092193aa894750d6a88bf86652d833d215fcf84dbc6142de16aa931e7",
-        "dweb:/ipfs/QmWYjRDNw4cAaPsdPMLJ7DnW8btfLNE1gC5hiXtEjqCP1W"
+        "bzz-raw://476783557fc0839a28950914fedddf6e3ec695ef9d48eec76dff210c142e4864",
+        "dweb:/ipfs/QmadckVV8CMN4mUveL3pqip7ARZzkpQdmrU81YAxnBKUia"
       ]
     }
   },

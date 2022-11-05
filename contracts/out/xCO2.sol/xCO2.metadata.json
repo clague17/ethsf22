@@ -300,26 +300,6 @@
         "type": "function"
       },
       {
-        "inputs": [],
-        "name": "deposit",
-        "outputs": [],
-        "stateMutability": "payable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "_receiver",
-            "type": "address"
-          }
-        ],
-        "name": "depositFor",
-        "outputs": [],
-        "stateMutability": "payable",
-        "type": "function"
-      },
-      {
         "inputs": [
           {
             "internalType": "uint32",
@@ -440,19 +420,6 @@
       },
       {
         "inputs": [],
-        "name": "oracle",
-        "outputs": [
-          {
-            "internalType": "address",
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [],
         "name": "owner",
         "outputs": [
           {
@@ -507,24 +474,6 @@
         "inputs": [
           {
             "internalType": "address",
-            "name": "_oracle",
-            "type": "address"
-          },
-          {
-            "internalType": "address",
-            "name": "_stableToken",
-            "type": "address"
-          }
-        ],
-        "name": "setDependencies",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address",
             "name": "_interchainGasPaymaster",
             "type": "address"
           }
@@ -532,19 +481,6 @@
         "name": "setInterchainGasPaymaster",
         "outputs": [],
         "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [],
-        "name": "stableToken",
-        "outputs": [
-          {
-            "internalType": "address",
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "stateMutability": "view",
         "type": "function"
       },
       {
@@ -680,40 +616,27 @@
         "outputs": [],
         "stateMutability": "payable",
         "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint256",
-            "name": "amount",
-            "type": "uint256"
-          }
-        ],
-        "name": "withdraw",
-        "outputs": [],
-        "stateMutability": "payable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint256",
-            "name": "amount",
-            "type": "uint256"
-          },
-          {
-            "internalType": "address payable",
-            "name": "_receiver",
-            "type": "address"
-          }
-        ],
-        "name": "withdrawFor",
-        "outputs": [],
-        "stateMutability": "payable",
-        "type": "function"
       }
     ],
     "devdoc": {
+      "events": {
+        "ReceivedTransferRemote(uint32,address,uint256)": {
+          "details": "Emitted on `_handle` when a transfer message is processed.",
+          "params": {
+            "amount": "The amount of tokens minted on the destination chain.",
+            "origin": "The identifier of the origin chain.",
+            "recipient": "The address of the recipient on the destination chain."
+          }
+        },
+        "SentTransferRemote(uint32,address,uint256)": {
+          "details": "Emitted on `transferRemote` when a transfer message is dispatched.",
+          "params": {
+            "amount": "The amount of tokens burnt on the origin chain.",
+            "destination": "The identifier of the destination chain.",
+            "recipient": "The address of the recipient on the destination chain."
+          }
+        }
+      },
       "kind": "dev",
       "methods": {
         "allowance(address,address)": {
@@ -838,7 +761,7 @@
   },
   "settings": {
     "compilationTarget": {
-      "src/celo/xCelo.sol": "xCelo"
+      "src/interfaces/xCO2.sol": "xCO2"
     },
     "evmVersion": "london",
     "libraries": {},
@@ -974,36 +897,12 @@
         "dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a"
       ]
     },
-    "src/celo/xCelo.sol": {
-      "keccak256": "0xfb7ae46521d10133a57dd1327daabdc7bd96afabdc42839b07b01cb2a6031bf7",
-      "license": "Apache-2.0",
-      "urls": [
-        "bzz-raw://fa46c95c27d1008d0464549a54576b65a2739a7989d8ef6b0b2bc8fa676bbc75",
-        "dweb:/ipfs/QmYk5oBM4xTENcZ5kMrEgWv7MULbRTesLn31ckTwbP1qyA"
-      ]
-    },
     "src/interfaces/xCO2.sol": {
       "keccak256": "0x604285e161c42549ac450c580d130f4dbb8990e789db3605e7651d3522e650a7",
       "license": "Apache-2.0",
       "urls": [
         "bzz-raw://c0c38f1bcc988002a2c2765ab13d98a6d06adfec5815ddca3c44907a5da9daad",
         "dweb:/ipfs/QmZJ1JSsZFcq2DT4u2X1WHpxrk1jYzr2GJ6MZux4tbsKoX"
-      ]
-    },
-    "src/interfaces/xNative.sol": {
-      "keccak256": "0x33a454e53be591c6662a9c582897b31237308bb4ebda242b41a654cc84d677cf",
-      "license": "Apache-2.0",
-      "urls": [
-        "bzz-raw://5436db5005a20836dfbb26c25af30977bcc2665abeab5d0d1aecd11504241d92",
-        "dweb:/ipfs/QmNXqQV3EfsFUQBA25UsJKwXGwPbBXGGYJJzXRi7J7NGVU"
-      ]
-    },
-    "src/oracles/Celo.sol": {
-      "keccak256": "0xa3e4fe20e629878fe8ed71fb7e64c7406a9d7dfc14d254ae0b362bfc83429cc6",
-      "license": "Apache-2.0",
-      "urls": [
-        "bzz-raw://1357cab092193aa894750d6a88bf86652d833d215fcf84dbc6142de16aa931e7",
-        "dweb:/ipfs/QmWYjRDNw4cAaPsdPMLJ7DnW8btfLNE1gC5hiXtEjqCP1W"
       ]
     }
   },
