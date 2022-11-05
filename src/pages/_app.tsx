@@ -4,6 +4,7 @@ import theme from "../theme";
 import type { Chain } from "wagmi";
 import { WagmiConfig, createClient, configureChains } from "wagmi";
 import { MetaMaskConnector } from "wagmi/connectors/metaMask";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { WalletConnectConnector } from "wagmi/connectors/walletConnect";
 import { ConnectKitProvider } from "connectkit";
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
@@ -39,13 +40,17 @@ const client = createClient({
   provider,
 });
 
+const queryClient = new QueryClient();
+
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <ChakraProvider theme={theme}>
       <WagmiConfig client={client}>
-        <ConnectKitProvider>
-          <Component {...pageProps} />
-        </ConnectKitProvider>
+        <QueryClientProvider client={queryClient}>
+          <ConnectKitProvider>
+            <Component {...pageProps} />
+          </ConnectKitProvider>
+        </QueryClientProvider>
       </WagmiConfig>
     </ChakraProvider>
   );

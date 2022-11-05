@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import dynamic from "next/dynamic";
 import { Box } from "@chakra-ui/react";
 import useWindowSize from "../hooks/useWindowSize";
@@ -53,8 +53,6 @@ function GlobeComponent() {
   //   },
   // ];
 
-  const [globe, setGlobe] = useState();
-
   const windowSize = useWindowSize();
   console.log(region); // captured globe instance with API methods
 
@@ -65,15 +63,12 @@ function GlobeComponent() {
         width={windowSize.width}
         height={windowSize.height}
         globeImageUrl="globe-texture.jpeg"
-        labelsData={[region]}
-        labelLat={(region) => (region as Region).lat}
-        labelLng={(region) => (region as Region).lng}
-        labelText={(region) => (region as Region).name}
-        labelSize={(d) => 1.1}
-        labelDotRadius={(d) => 1.1}
-        labelColor={() => "green"}
-        labelResolution={2}
-        labelsTransitionDuration={4000}
+        ringsData={[region]}
+        ringLat={(region) => (region as Region).lat}
+        ringLng={(region) => (region as Region).lng}
+        ringPropagationSpeed={4}
+        ringColor={() => "green"}
+        ringMaxRadius={10}
         backgroundImageUrl="bg.png"
       />
     </Box>
