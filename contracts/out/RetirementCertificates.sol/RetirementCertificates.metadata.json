@@ -1,0 +1,1456 @@
+{
+  "compiler": {
+    "version": "0.8.11+commit.d7f03943"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "inputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "previousAdmin",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "newAdmin",
+            "type": "address"
+          }
+        ],
+        "name": "AdminChanged",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "approved",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "Approval",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "operator",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "bool",
+            "name": "approved",
+            "type": "bool"
+          }
+        ],
+        "name": "ApprovalForAll",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "baseURI",
+            "type": "string"
+          }
+        ],
+        "name": "BaseURISet",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "beacon",
+            "type": "address"
+          }
+        ],
+        "name": "BeaconUpgraded",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "CertificateMinted",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "CertificateUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256[]",
+            "name": "eventIds",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "EventsAttached",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint8",
+            "name": "version",
+            "type": "uint8"
+          }
+        ],
+        "name": "Initialized",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "previousAmount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "newAmount",
+            "type": "uint256"
+          }
+        ],
+        "name": "MinValidAmountSet",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "previousOwner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "ContractRegistry",
+            "type": "address"
+          }
+        ],
+        "name": "ToucanRegistrySet",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "Transfer",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "implementation",
+            "type": "address"
+          }
+        ],
+        "name": "Upgraded",
+        "type": "event"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "approve",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "retirementEventIds",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "attachRetirementEvents",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          }
+        ],
+        "name": "balanceOf",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "baseURI",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "certificates",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "createdAt",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "retiringEntity",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "beneficiary",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "retiringEntityString",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "beneficiaryString",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "retirementMessage",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "claimedEvents",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "contractRegistry",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "getApproved",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "getData",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "uint256[]",
+                "name": "retirementEventIds",
+                "type": "uint256[]"
+              },
+              {
+                "internalType": "uint256",
+                "name": "createdAt",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "retiringEntity",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "beneficiary",
+                "type": "address"
+              },
+              {
+                "internalType": "string",
+                "name": "retiringEntityString",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "beneficiaryString",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "retirementMessage",
+                "type": "string"
+              }
+            ],
+            "internalType": "struct RetirementCertificatesStorageV1.Data",
+            "name": "",
+            "type": "tuple"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "getRetiredAmount",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "getRetiredAmountInKilos",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "getRetiredAmountInTonnes",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "user",
+            "type": "address"
+          }
+        ],
+        "name": "getUserEvents",
+        "outputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_contractRegistry",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "_baseURI",
+            "type": "string"
+          }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "operator",
+            "type": "address"
+          }
+        ],
+        "name": "isApprovedForAll",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "kiloDenomination",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "minValidRetirementAmount",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "retiringEntity",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "retiringEntityString",
+            "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "beneficiary",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "beneficiaryString",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "retirementMessage",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "retirementEventIds",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "mintCertificate",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "name",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "ownerOf",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "proxiableUUID",
+        "outputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "retiringEntity",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "projectVintageTokenId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isLegacy",
+            "type": "bool"
+          }
+        ],
+        "name": "registerEvent",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "retireEventCounter",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "retirements",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "createdAt",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "retiringEntity",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "projectVintageTokenId",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "safeTransferFrom",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes",
+            "name": "data",
+            "type": "bytes"
+          }
+        ],
+        "name": "safeTransferFrom",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "operator",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "approved",
+            "type": "bool"
+          }
+        ],
+        "name": "setApprovalForAll",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "baseURI_",
+            "type": "string"
+          }
+        ],
+        "name": "setBaseURI",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "setMinValidRetirementAmount",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_address",
+            "type": "address"
+          }
+        ],
+        "name": "setToucanContractRegistry",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes4",
+            "name": "interfaceId",
+            "type": "bytes4"
+          }
+        ],
+        "name": "supportsInterface",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "symbol",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "tokenURI",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "tonneDenomination",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "transferFrom",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "retiringEntityString",
+            "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "beneficiary",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "beneficiaryString",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "retirementMessage",
+            "type": "string"
+          }
+        ],
+        "name": "updateCertificate",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "newImplementation",
+            "type": "address"
+          }
+        ],
+        "name": "upgradeTo",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "newImplementation",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes",
+            "name": "data",
+            "type": "bytes"
+          }
+        ],
+        "name": "upgradeToAndCall",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "version",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+      }
+    ],
+    "devdoc": {
+      "details": "The amount of RetirementEvents is denominated in the 18-decimal formGetters in this contract return the corresponding amount in tonnes or kilos",
+      "kind": "dev",
+      "methods": {
+        "approve(address,uint256)": {
+          "details": "See {IERC721-approve}."
+        },
+        "attachRetirementEvents(uint256,uint256[])": {
+          "params": {
+            "retirementEventIds": "An array of event ids to associate with the NFT.",
+            "tokenId": "The id of the NFT to attach events to."
+          }
+        },
+        "balanceOf(address)": {
+          "details": "See {IERC721-balanceOf}."
+        },
+        "constructor": {
+          "custom:oz-upgrades-unsafe-allow": "constructor"
+        },
+        "getApproved(uint256)": {
+          "details": "See {IERC721-getApproved}."
+        },
+        "getData(uint256)": {
+          "params": {
+            "tokenId": "The id of the NFT to get data for."
+          }
+        },
+        "getRetiredAmount(uint256)": {
+          "details": "The return amount is denominated in 18 decimals, similar to amounts as they are read in TCO2 contracts. For example, 1000000000000000000 means 1 tonne.",
+          "params": {
+            "tokenId": "The id of the NFT to update."
+          },
+          "returns": {
+            "amount": "Total retired amount for an NFT."
+          }
+        },
+        "getRetiredAmountInKilos(uint256)": {
+          "params": {
+            "tokenId": "The id of the NFT to update."
+          },
+          "returns": {
+            "_0": "amount Total retired amount for an NFT in kilos."
+          }
+        },
+        "getRetiredAmountInTonnes(uint256)": {
+          "params": {
+            "tokenId": "The id of the NFT to update."
+          },
+          "returns": {
+            "_0": "amount Total retired amount for an NFT in tonnes."
+          }
+        },
+        "getUserEvents(address)": {
+          "params": {
+            "user": "The user for whom to fetch all events."
+          }
+        },
+        "isApprovedForAll(address,address)": {
+          "details": "See {IERC721-isApprovedForAll}."
+        },
+        "mintCertificate(address,string,address,string,string,uint256[])": {
+          "details": "The function can either be called by a valid TCO2 contract or by someone who         owns retirement events.",
+          "params": {
+            "beneficiary": "The beneficiary address for whom the TCO2 amount was retired.",
+            "beneficiaryString": "An identifiable string for the beneficiary, eg. their name.",
+            "retirementEventIds": "An array of event ids to associate with the NFT. Currently only 1 event is allowed to be provided here.",
+            "retirementMessage": "A message to accompany the retirement.",
+            "retiringEntity": "The entity that has retired TCO2 and is eligible to mint an NFT.",
+            "retiringEntityString": "An identifiable string for the retiring entity, eg. their name."
+          }
+        },
+        "name()": {
+          "details": "See {IERC721Metadata-name}."
+        },
+        "owner()": {
+          "details": "Returns the address of the current owner."
+        },
+        "ownerOf(uint256)": {
+          "details": "See {IERC721-ownerOf}."
+        },
+        "proxiableUUID()": {
+          "details": "Implementation of the ERC1822 {proxiableUUID} function. This returns the storage slot used by the implementation. It is used to validate the implementation's compatibility when performing an upgrade. IMPORTANT: A proxy pointing at a proxiable contract should not be considered proxiable itself, because this risks bricking a proxy that upgrades to it, by delegating to itself until out of gas. Thus it is critical that this function revert if invoked through a proxy. This is guaranteed by the `notDelegated` modifier."
+        },
+        "registerEvent(address,uint256,uint256,bool)": {
+          "details": "The function can either be only called by a valid TCO2 contract.",
+          "params": {
+            "amount": "The amount of the TCO2 that is retired.",
+            "isLegacy": "Whether this event registration was executed by using the legacy retired amount in the TCO2 contract or utilizes the new retirement event design.",
+            "projectVintageTokenId": "The vintage id of the TCO2 that is retired.",
+            "retiringEntity": "The entity that has retired TCO2 and is eligible to mint an NFT."
+          }
+        },
+        "renounceOwnership()": {
+          "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+        },
+        "safeTransferFrom(address,address,uint256)": {
+          "details": "See {IERC721-safeTransferFrom}."
+        },
+        "safeTransferFrom(address,address,uint256,bytes)": {
+          "details": "See {IERC721-safeTransferFrom}."
+        },
+        "setApprovalForAll(address,bool)": {
+          "details": "See {IERC721-setApprovalForAll}."
+        },
+        "supportsInterface(bytes4)": {
+          "details": "See {IERC165-supportsInterface}."
+        },
+        "symbol()": {
+          "details": "See {IERC721Metadata-symbol}."
+        },
+        "tokenURI(uint256)": {
+          "details": "Returns the Uniform Resource Identifier (URI) for `tokenId` token. based on the ERC721URIStorage implementation",
+          "params": {
+            "tokenId": "The id of the NFT to get the URI."
+          }
+        },
+        "transferFrom(address,address,uint256)": {
+          "details": "See {IERC721-transferFrom}."
+        },
+        "transferOwnership(address)": {
+          "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+        },
+        "updateCertificate(uint256,string,address,string,string)": {
+          "params": {
+            "beneficiary": "The new beneficiary to set in the NFT.",
+            "beneficiaryString": "An identifiable string for the beneficiary, eg. their name.",
+            "retirementMessage": "The new retirementMessage to set in the NFT.",
+            "retiringEntityString": "An identifiable string for the retiring entity, eg. their name.",
+            "tokenId": "The id of the NFT to update."
+          }
+        },
+        "upgradeTo(address)": {
+          "details": "Upgrade the implementation of the proxy to `newImplementation`. Calls {_authorizeUpgrade}. Emits an {Upgraded} event."
+        },
+        "upgradeToAndCall(address,bytes)": {
+          "details": "Upgrade the implementation of the proxy to `newImplementation`, and subsequently execute the function call encoded in `data`. Calls {_authorizeUpgrade}. Emits an {Upgraded} event."
+        },
+        "version()": {
+          "details": "Returns the current version of the smart contract"
+        }
+      },
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {
+        "attachRetirementEvents(uint256,uint256[])": {
+          "notice": "Attach retirement events to an NFT."
+        },
+        "getData(uint256)": {
+          "notice": "Get certificate data for an NFT."
+        },
+        "getRetiredAmount(uint256)": {
+          "notice": "Get total retired amount for an NFT."
+        },
+        "getRetiredAmountInKilos(uint256)": {
+          "notice": "Get total retired amount for an NFT in kilos."
+        },
+        "getRetiredAmountInTonnes(uint256)": {
+          "notice": "Get total retired amount for an NFT in tonnes."
+        },
+        "getUserEvents(address)": {
+          "notice": "Get all events for a user."
+        },
+        "mintCertificate(address,string,address,string,string,uint256[])": {
+          "notice": "Mint new Retirement Certificate NFT that shows how many TCO2s have been retired."
+        },
+        "registerEvent(address,uint256,uint256,bool)": {
+          "notice": "Register retirement events. This function can only be called by a TC02 contract to register retirement events so they can be directly linked to an NFT mint."
+        },
+        "updateCertificate(uint256,string,address,string,string)": {
+          "notice": "Update retirementMessage, beneficiary, and beneficiaryString of a NFT within 24h of creation. Empty values are ignored, ie., will not overwrite the existing stored values in the NFT."
+        }
+      },
+      "notice": "The `RetirementCertificates` contract lets users mint NFTs that act as proof-of-retirement. These Retirement Certificate NFTs display how many TCO2s a user has burnt",
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "lib/contracts/contracts/RetirementCertificates.sol": "RetirementCertificates"
+    },
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": [
+      ":@hyperlane-monorepo/=lib/hyperlane-monorepo/",
+      ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+      ":@toucan/=lib/contracts/",
+      ":OffsetHelper/=lib/OffsetHelper/contracts/",
+      ":ds-test/=lib/forge-std/lib/ds-test/src/",
+      ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+      ":forge-std/=lib/forge-std/src/",
+      ":hyperlane-monorepo/=lib/hyperlane-monorepo/",
+      ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      ":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/"
+    ]
+  },
+  "sources": {
+    "lib/contracts/contracts/RetirementCertificates.sol": {
+      "keccak256": "0x1be1a3efcde1aad8f4f7e808d075317caded30c774e004390a5d7c56bbf751de",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://3ca18d22ac05ca397b522d7ad5716d4503ab9d296c8acce8e03af44906441306",
+        "dweb:/ipfs/QmTpNBtujrBdnDznfxgX6ih8XzsARK9BtPWqDF9XFTYP1Y"
+      ]
+    },
+    "lib/contracts/contracts/RetirementCertificatesStorage.sol": {
+      "keccak256": "0x898a18107d6bfc8d607fbf6fa262b7e0a84f80dfddd5903bc112b3cd83a32b91",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://ff7c73a111019ae0ba3a6496da0f8e52f30546ca9a331434c1ba6a2fb405b6a4",
+        "dweb:/ipfs/QmdnKJv8qSWvuEzrdsoEzymph4RLxC7Mvg7VmM9JvgBFtd"
+      ]
+    },
+    "lib/contracts/contracts/interfaces/IToucanContractRegistry.sol": {
+      "keccak256": "0xda5dcf17e10d10292d12f0d6209ed67401d119b489749934c7096123059f1f07",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://ce1984dd3dbb3fd06ba6dafe011047f4dd28f4743a7ec81dc229fb326436d28f",
+        "dweb:/ipfs/Qmd4wtC8S7x1mpXnoPWvCGAAmpsfzDYNngsgTkar8Gzd1k"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol": {
+      "keccak256": "0x247c62047745915c0af6b955470a72d1696ebad4352d7d3011aef1a2463cd888",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://d7fc8396619de513c96b6e00301b88dd790e83542aab918425633a5f7297a15a",
+        "dweb:/ipfs/QmXbP4kiZyp7guuS7xe8KaybnwkRPGrBc2Kbi3vhcTfpxb"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/draft-IERC1822Upgradeable.sol": {
+      "keccak256": "0x77c89f893e403efc6929ba842b7ccf6534d4ffe03afe31670b4a528c0ad78c0f",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://496bd9b3df2455d571018c09f0c6badd29713fdeb907c6aa09d8d28cb603f053",
+        "dweb:/ipfs/QmXdJDyYs6WMwMh21dez2BYPxhSUaUYFMDtVNcn2cgFR79"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol": {
+      "keccak256": "0x315887e846f1e5f8d8fa535a229d318bb9290aaa69485117f1ee8a9a6b3be823",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://29dda00da6d269685b555e710e4abf1c3eb6d00c15b888a7880a2f8dd3c4fdc2",
+        "dweb:/ipfs/QmSqcjtdECygtT1Gy7uEo42x8542srpgGEeKKHfcnQqXgn"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/proxy/beacon/IBeaconUpgradeable.sol": {
+      "keccak256": "0x24b86ac8c005b8c654fbf6ac34a5a4f61580d7273541e83e013e89d66fbf0908",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://4dbfe1a3b3b3fb64294ce41fd2ad362e7b7012208117864f42c1a67620a6d5c1",
+        "dweb:/ipfs/QmVMU5tWt7zBQMmf5cpMX8UMHV86T3kFeTxBTBjFqVWfoJ"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol": {
+      "keccak256": "0xedc5eaa54866c6d0e8960d9fe8ea6f9052ba28686907f6886f83dfba41fa1549",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://0b296244e62d13e87d8272c574fb58c22af02b262d74d7a8f642753522351bb0",
+        "dweb:/ipfs/Qmcd3MfBWRE8EQt67AqgGGHviNum5aQ7JE7manH5nNtx4o"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol": {
+      "keccak256": "0xcf6837f68b5376c07f7b5130dc8de39f00f357f119113a82a15229bf2b96fdc5",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://6be1e3e05f79a714c08a446a994dba2939203092d7aa97302d7b2ab157b437fb",
+        "dweb:/ipfs/QmdgBbHNijVgApRQ9UM17qds6QdhTgXxKHUoLAswA6VNyH"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC721/ERC721Upgradeable.sol": {
+      "keccak256": "0xc59987151acbe0c0c2ece15cb40e1375266ecabf78b1a2b8b1f88733400e10de",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://a2a15815fc935f3a85441c5eaa9855c251d15049f2d7bd9e3f874b8b9e343e5c",
+        "dweb:/ipfs/QmWihdmYc4cJz9iTn6n1y3mQF7MUdocfHvMAoHgzXUXvTi"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC721/IERC721ReceiverUpgradeable.sol": {
+      "keccak256": "0xbb2ed8106d94aeae6858e2551a1e7174df73994b77b13ebd120ccaaef80155f5",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://8bc3c6a456dba727d8dd9fd33420febede490abb49a07469f61d2a3ace66a95a",
+        "dweb:/ipfs/QmVAWtEVj7K5AbvgJa9Dz22KiDq9eoptCjnVZqsTMtKXyd"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC721/IERC721Upgradeable.sol": {
+      "keccak256": "0x20ad2fc58bb29dd0c35a3ecd1c01a8e0641320cda53c8044e2d31a7644b48767",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://891f78963aa3e65ba6d962344b6850338b54e73541a6ae3f707506c1255edd6a",
+        "dweb:/ipfs/Qmde3JnEmyGjUKi7KevjgPbyhQ57yCLarojM8VyhGgANze"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC721/extensions/IERC721MetadataUpgradeable.sol": {
+      "keccak256": "0x95a471796eb5f030fdc438660bebec121ad5d063763e64d92376ffb4b5ce8b70",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://4ffbd627e6958983d288801acdedbf3491ee0ebf1a430338bce47c96481ce9e3",
+        "dweb:/ipfs/QmUM1vpmNgBV34sYf946SthDJNGhwwqjoRggmj4TUUQmdB"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol": {
+      "keccak256": "0x0a3b4afc301241e2629ad192fa02e0f8626e3cf38ab6f45342bfd7afbde16ee0",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://b189423f1102ff4487e9c59a65ec400b98cc4aeef478dac8272b482e9f5ad7de",
+        "dweb:/ipfs/QmdpYHrzD8wPe5DMuEiWkXiVLsTkqD7C4tbBjWwkBQwJi2"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol": {
+      "keccak256": "0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c",
+        "dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/utils/StorageSlotUpgradeable.sol": {
+      "keccak256": "0x09864aea84f01e39313375b5610c73a3c1c68abbdc51e5ccdd25ff977fdadf9a",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://aedb48081190fa828d243529ce25c708202c7d4ccfe99f0e4ecd6bc0cfcd03f3",
+        "dweb:/ipfs/QmWyiDQHPZA56iqsAwTmiJoxvNeRQLUVr4gTfzpdpXivpo"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/utils/StringsUpgradeable.sol": {
+      "keccak256": "0x0c2ac2e8ea31517e8a807e6fe8a3cf6de47ae76a5e8ed8ca60a209efa12aab69",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://88334f7a744ce234f624320e485c23ecdcc1a1cbb62d3251d495c0776cf465f3",
+        "dweb:/ipfs/QmX15xCk4dLM6dL3JVzQZ3t47H3nahccWaSZosEN8vKzQw"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol": {
+      "keccak256": "0x9a3b990bd56d139df3e454a9edf1c64668530b5a77fc32eb063bc206f958274a",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://0895399d170daab2d69b4c43a0202e5a07f2e67a93b26e3354dcbedb062232f7",
+        "dweb:/ipfs/QmUM1VH3XDk559Dsgh4QPvupr3YVKjz87HrSyYzzVFZbxw"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol": {
+      "keccak256": "0xc6cef87559d0aeffdf0a99803de655938a7779ec0a3cd5d4383483ad85565a09",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://92ad7e572cf44e6b4b37631b44b62f9eb9fb1cf14d9ce51c1504d5dc7ccaf758",
+        "dweb:/ipfs/QmcnbqX85tsWnUXPmtuPLE4SczME2sJaTfmqEFkuAJvWhy"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/utils/math/MathUpgradeable.sol": {
+      "keccak256": "0xb49137b771712774960cca0acf428499e2aa85f179fe03712e5c06c5a6ab6316",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://ec66760482c33d84dda577e3a7a4b81000a92e37cae5c8b55339e2d83abfce03",
+        "dweb:/ipfs/QmVDSFsp9dnW8P92Yrq2jAjr9piKke8gjuZX5QjtFuZRfx"
+      ]
+    }
+  },
+  "version": 1
+}

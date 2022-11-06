@@ -8,9 +8,9 @@ import "../../lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpg
 abstract contract xCO2 is ERC20Upgradeable, OwnableUpgradeable {
     error NotImplemented();
 
-    uint32 constant OFFSET_X_DEST_DOMAIN = 0x706f6c79;
-    address outbox;
-    address xUSDC;
+    uint32 constant OFFSET_X_DEST_DOMAIN = 0x706f6c79; // polygon
+    address public outbox;
+    address public xUSDC;
 
     event OffsetRemote(
         address indexed tCO2,

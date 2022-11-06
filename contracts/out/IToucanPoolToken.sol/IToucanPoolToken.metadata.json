@@ -284,6 +284,25 @@
         "type": "function"
       },
       {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "tokenBalances",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
         "inputs": [],
         "name": "totalSupply",
         "outputs": [
@@ -408,11 +427,11 @@
   },
   "sources": {
     "lib/OffsetHelper/contracts/interfaces/IToucanPoolToken.sol": {
-      "keccak256": "0xef39949a81cf4ed78d789a1aac5c5860de1582be70de7435f1671931091d43a7",
+      "keccak256": "0xe7eff8de14df3ac0e8f032a047b3c1544e73c3965ebff4f74a0e1c547e71f8c5",
       "license": "UNLICENSED",
       "urls": [
-        "bzz-raw://f4e46d08158ecc85af3604f6fcb4032d0a6efcadaddb3a575c96c08a71f40a6b",
-        "dweb:/ipfs/QmaE4i1UNB2z2uW4KD6bb5sbTsy3KSUgLNhmuDxjekZ1AU"
+        "bzz-raw://fbaf58422b0b8992e738c3e612697b9afd962ed3542fd6baadc59ca200dc1008",
+        "dweb:/ipfs/QmYsU8Df1L7GbkzLudSqCFVBQ86qXjCfsK5AEMGreUYHFA"
       ]
     },
     "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol": {

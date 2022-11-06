@@ -3,7 +3,8 @@
 pragma solidity 0.8.11;
 
 import "../interfaces/xERC20.sol";
-import "./CarbonOffsetTerminal.sol";
+import "./CarbonOffsetSettler.sol";
+import "forge-std/console.sol";
 
 contract xUSDC is xERC20 {
     address public offsetTerminal;
@@ -18,7 +19,7 @@ contract xUSDC is xERC20 {
             (address, uint256, address)
         );
         asset.transfer(offsetTerminal, amountXCO2);
-        CarbonOffsetTerminal(offsetTerminal).retire(
+        CarbonOffsetSettler(offsetTerminal).retire(
             tCO2,
             amountXCO2,
             beneficiary
@@ -31,12 +32,25 @@ contract xUSDC is xERC20 {
         uint256 _amountXCO2,
         address _beneficiary
     ) public {
-        asset.transferFrom(msg.sender, address(this), _amountXCO2);
-        CarbonOffsetTerminal(offsetTerminal).retire(
+        asset.transferFrom(msg.sender, offsetTerminal, _amountXCO2);
+        CarbonOffsetSettler(offsetTerminal).retire(
             _tCO2,
             _amountXCO2,
             _beneficiary
         );
+    }
+
+    function setOffsetTerminal(address _terminal) external onlyOwner {
+        offsetTerminal = _terminal;
+    }
+
+    // Override as same-chain version
+    function offsetX(
+        address _tCO2,
+        uint256 _amountXCO2,
+        address _beneficiary
+    ) public payable override {
+        offset(_tCO2, _amountXCO2, _beneficiary);
     }
 
     function toUSD(uint256 amount) public pure override returns (uint256) {

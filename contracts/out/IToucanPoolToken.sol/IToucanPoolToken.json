@@ -279,6 +279,25 @@
       "type": "function"
     },
     {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "tokenBalances",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
       "inputs": [],
       "name": "totalSupply",
       "outputs": [
@@ -368,23 +387,24 @@
     "redeemAuto(uint256)": "20b167f9",
     "redeemAuto2(uint256)": "4c02cad1",
     "redeemMany(address[],uint256[])": "2b554142",
+    "tokenBalances(address)": "523fba7f",
     "totalSupply()": "18160ddd",
     "transfer(address,uint256)": "a9059cbb",
     "transferFrom(address,address,uint256)": "23b872dd"
   },
   "ast": {
     "absolutePath": "lib/OffsetHelper/contracts/interfaces/IToucanPoolToken.sol",
-    "id": 149,
+    "id": 156,
     "exportedSymbols": {
       "IERC20Upgradeable": [
-        26167
+        25703
       ],
       "IToucanPoolToken": [
-        148
+        155
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "206:956:1",
+    "src": "206:1026:1",
     "nodes": [
       {
         "id": 76,
@@ -404,15 +424,15 @@
         "absolutePath": "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol",
         "file": "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 149,
-        "sourceUnit": 26168,
+        "scope": 156,
+        "sourceUnit": 25704,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 148,
+        "id": 155,
         "nodeType": "ContractDefinition",
-        "src": "312:849:1",
+        "src": "312:919:1",
         "nodes": [
           {
             "id": 86,
@@ -492,7 +512,7 @@
               "parameters": [],
               "src": "426:0:1"
             },
-            "scope": 148,
+            "scope": 155,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -576,7 +596,7 @@
               ],
               "src": "497:6:1"
             },
-            "scope": 148,
+            "scope": 155,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -660,7 +680,7 @@
               ],
               "src": "607:6:1"
             },
-            "scope": 148,
+            "scope": 155,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -789,7 +809,7 @@
               ],
               "src": "743:9:1"
             },
-            "scope": 148,
+            "scope": 155,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -890,7 +910,7 @@
               "parameters": [],
               "src": "845:0:1"
             },
-            "scope": 148,
+            "scope": 155,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -945,7 +965,7 @@
               "parameters": [],
               "src": "896:0:1"
             },
-            "scope": 148,
+            "scope": 155,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -1074,7 +1094,7 @@
               ],
               "src": "973:50:1"
             },
-            "scope": 148,
+            "scope": 155,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -1129,7 +1149,7 @@
               ],
               "src": "1076:9:1"
             },
-            "scope": 148,
+            "scope": 155,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -1194,7 +1214,91 @@
               ],
               "src": "1140:18:1"
             },
-            "scope": 148,
+            "scope": 155,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 154,
+            "nodeType": "FunctionDefinition",
+            "src": "1165:64:1",
+            "functionSelector": "523fba7f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "tokenBalances",
+            "nameLocation": "1174:13:1",
+            "parameters": {
+              "id": 150,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 149,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 154,
+                  "src": "1188:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 148,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1188:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1187:9:1"
+            },
+            "returnParameters": {
+              "id": 153,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 152,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 154,
+                  "src": "1220:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 151,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1220:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1219:9:1"
+            },
+            "scope": 155,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -1207,7 +1311,7 @@
               "id": 78,
               "name": "IERC20Upgradeable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 26167,
+              "referencedDeclaration": 25703,
               "src": "342:17:1"
             },
             "id": 79,
@@ -1220,12 +1324,12 @@
         "contractKind": "interface",
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          148,
-          26167
+          155,
+          25703
         ],
         "name": "IToucanPoolToken",
         "nameLocation": "322:16:1",
-        "scope": 149,
+        "scope": 156,
         "usedErrors": []
       }
     ],

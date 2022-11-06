@@ -1,0 +1,66 @@
+{
+  "compiler": {
+    "version": "0.8.11+commit.d7f03943"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [],
+    "devdoc": {
+      "details": "String operations.",
+      "kind": "dev",
+      "methods": {},
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {},
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "lib/openzeppelin-contracts-upgradeable/contracts/utils/StringsUpgradeable.sol": "StringsUpgradeable"
+    },
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": [
+      ":@hyperlane-monorepo/=lib/hyperlane-monorepo/",
+      ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+      ":@toucan/=lib/contracts/",
+      ":OffsetHelper/=lib/OffsetHelper/contracts/",
+      ":ds-test/=lib/forge-std/lib/ds-test/src/",
+      ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+      ":forge-std/=lib/forge-std/src/",
+      ":hyperlane-monorepo/=lib/hyperlane-monorepo/",
+      ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      ":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/"
+    ]
+  },
+  "sources": {
+    "lib/openzeppelin-contracts-upgradeable/contracts/utils/StringsUpgradeable.sol": {
+      "keccak256": "0x0c2ac2e8ea31517e8a807e6fe8a3cf6de47ae76a5e8ed8ca60a209efa12aab69",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://88334f7a744ce234f624320e485c23ecdcc1a1cbb62d3251d495c0776cf465f3",
+        "dweb:/ipfs/QmX15xCk4dLM6dL3JVzQZ3t47H3nahccWaSZosEN8vKzQw"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/utils/math/MathUpgradeable.sol": {
+      "keccak256": "0xb49137b771712774960cca0acf428499e2aa85f179fe03712e5c06c5a6ab6316",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://ec66760482c33d84dda577e3a7a4b81000a92e37cae5c8b55339e2d83abfce03",
+        "dweb:/ipfs/QmVDSFsp9dnW8P92Yrq2jAjr9piKke8gjuZX5QjtFuZRfx"
+      ]
+    }
+  },
+  "version": 1
+}
