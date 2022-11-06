@@ -8,36 +8,29 @@ import {
   InputLeftElement,
   InputRightElement,
   Text,
-  useDisclosure,
 } from "@chakra-ui/react";
 import { calculateEmissions } from "ethereum-emissions-calculator";
 import { useCallback, useState } from "react";
 import { useEnsAddress } from "wagmi";
+import useFetchENS from "../hooks/useFetchENS";
 import useEmissionsStore from "../store/useEmissionsStore";
 
 const FootprintModal = () => {
   const { emissions, setEmissions } = useEmissionsStore();
-  const [nameEntry, setNameEntry] = useState("");
-  const {
-    onClose: onSelectorModalClose,
-    isOpen: isSelectorModalOpen,
-    onOpen: onSelectorModalOpen,
-  } = useDisclosure();
+  const [nameEntry, setNameEntry] = useState<string | undefined>(undefined);
 
-  const { data: ENSAddress } = useEnsAddress({
-    name: nameEntry,
-  });
-
+  const { ens } = useFetchENS(nameEntry);
   const fetchEmissions = useCallback(async () => {
+    if (!ens) return;
     await calculateEmissions({
-      address: nameEntry ?? "",
+      address: ens,
       etherscanAPIKey: "P2KWECEJGIRTHCINS7UWITA8THH1GKA4YW",
     })
       .then((res) => {
-        setEmissions({ ...res, tCO2: res.kgCO2 / 1000, wallet: nameEntry });
+        setEmissions({ ...res, tCO2: res.kgCO2 / 1000, wallet: nameEntry ?? "" });
       })
       .catch((err) => console.log("Houston we have a problem", err));
-  }, [nameEntry]);
+  }, [nameEntry, setEmissions, ens]);
 
   return (
     <Flex
@@ -68,8 +61,6 @@ const FootprintModal = () => {
           bg="gray.200"
           borderRadius={"lg"}
           onClick={(e) => {
-            console.log("entry name: ", nameEntry);
-            console.log("ENSName: ", ENSAddress);
             fetchEmissions();
           }}
         >
