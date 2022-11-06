@@ -361,6 +361,19 @@
       },
       {
         "inputs": [],
+        "name": "outbox",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
         "name": "owner",
         "outputs": [
           {
@@ -496,6 +509,19 @@
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "xUSDC",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
       }
     ],
     "devdoc": {
@@ -597,6 +623,7 @@
       ":@hyperlane-monorepo/=lib/hyperlane-monorepo/",
       ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
       ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+      ":@toucan/=lib/contracts/",
       ":OffsetHelper/=lib/OffsetHelper/contracts/",
       ":ds-test/=lib/forge-std/lib/ds-test/src/",
       ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
@@ -680,11 +707,11 @@
       ]
     },
     "src/interfaces/xCO2.sol": {
-      "keccak256": "0xabdf88950dcddbefdc7025e3ba54e74c0af7f62a237c9d395dd04044026d2fe5",
+      "keccak256": "0xbf04b62d29a238aeba38a2f2cd83f00cb45ed7661d8b53eb40b4301dfbd16240",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://658946a607decda94ac734bb813b9c369592067d47ac08179d64328f5173c749",
-        "dweb:/ipfs/Qmct1dERsQ6vDTVZugoWQMc7fHk4Y7k3V37QjhMwnEo77j"
+        "bzz-raw://3f118d3f7b92d6d0de0367d6b9fbfb65b7de837551f1ae44209992e96ed941e0",
+        "dweb:/ipfs/QmdY9gRZELhwdctkiEcyVbgkQ7ATNJePY68uBK9ZHcUuPn"
       ]
     },
     "src/interfaces/xNative.sol": {

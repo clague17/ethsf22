@@ -32,10 +32,7 @@ contract xUSDC is xERC20 {
         uint256 _amountXCO2,
         address _beneficiary
     ) public {
-        console.log("amount ", _amountXCO2);
-        console.log("balance", asset.balanceOf(msg.sender));
         asset.transferFrom(msg.sender, offsetTerminal, _amountXCO2);
-        console.log("0");
         CarbonOffsetSettler(offsetTerminal).retire(
             _tCO2,
             _amountXCO2,
@@ -47,12 +44,14 @@ contract xUSDC is xERC20 {
         offsetTerminal = _terminal;
     }
 
-    // Override this, no need for cross-chain
+    // Override as same-chain version
     function offsetX(
         address _tCO2,
         uint256 _amountXCO2,
         address _beneficiary
-    ) public payable override {}
+    ) public payable override {
+        offset(_tCO2, _amountXCO2, _beneficiary);
+    }
 
     function toUSD(uint256 amount) public pure override returns (uint256) {
         return amount;

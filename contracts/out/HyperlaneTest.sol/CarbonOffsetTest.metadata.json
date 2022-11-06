@@ -404,7 +404,7 @@
       },
       {
         "inputs": [],
-        "name": "test_success",
+        "name": "test_bridge",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -423,7 +423,7 @@
   },
   "settings": {
     "compilationTarget": {
-      "test/CarbonOffsetTerminal.t.sol": "CarbonOffsetTest"
+      "test/HyperlaneTest.sol": "CarbonOffsetTest"
     },
     "evmVersion": "london",
     "libraries": {},
@@ -801,6 +801,14 @@
         "dweb:/ipfs/QmYvPafLfoquiDMEj7CKHtvbgHu7TJNPSVPSCjrtjV8HjV"
       ]
     },
+    "src/celo/xcUSD.sol": {
+      "keccak256": "0x13738cd0488d88d5a705a588e8683ae313454a54653121330c1ea3faf018fdbd",
+      "license": "Apache-2.0",
+      "urls": [
+        "bzz-raw://5ccfee2c468ce555111b8d22d7defc6dd9d65b9fda17920e6f72ee56b8f8fd3c",
+        "dweb:/ipfs/QmQQZWohGvPKwCbUE3386vijH2gCg1zKUX8x2jSbnDFaf9"
+      ]
+    },
     "src/interfaces/IUniswapV2Router02.sol": {
       "keccak256": "0xdca706e998ee05f033344226b1484411707469d4d51f960900729b5e7b90572c",
       "license": "agpl-3.0",
@@ -841,12 +849,28 @@
         "dweb:/ipfs/QmRoYDvZv9u7FyAdkpkPBnMYoduBPgrCJKeL7Cct2vNJPc"
       ]
     },
-    "test/CarbonOffsetTerminal.t.sol": {
-      "keccak256": "0xeb88d4ce25eb352d2822b59a6ad8c899e1c1082893b83442fbb96bea1c1e91ee",
+    "test/HyperlaneTest.sol": {
+      "keccak256": "0x06eaaa10917567242dec51068adc91c2a2808659d7abc4913f1e91d7a101bed1",
       "license": "UNLICENSEDCONVERSION",
       "urls": [
-        "bzz-raw://425856e42fc2c8bd68fe91cd68184d5b9044b042c9a7f2b43baa62e98f8fb92b",
-        "dweb:/ipfs/QmQdSb6G9bKWJqjiY8EFonJjuxVexMFU2jN3zANrJVprCG"
+        "bzz-raw://50de30609a65368aaf6791f6df4e33ed02542b971c88279ad21e847263ea5ee9",
+        "dweb:/ipfs/QmbTvCBhbP7wJHYvrvzT6YoA6K4dZkjybCNj7SFX1SkB9c"
+      ]
+    },
+    "test/MockInbox.sol": {
+      "keccak256": "0xab4cdebf1b041fe5440b637c14332488b5d017f3b989e61db7a33c95296d7438",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://4323521a114b3aa7653f84203af4eaae78fd79d94a8297577ca4013e4f7cc5dc",
+        "dweb:/ipfs/QmTsMvwykFjmcnacP9ZEkhbAWGrTUCDuTkVAoCoeMcVuxY"
+      ]
+    },
+    "test/MockOutbox.sol": {
+      "keccak256": "0xd03dbf467b80543fea03d7727fbfe2fab0a8c4c9d3583cee8f20ff3b0a3646a0",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://c9c5c3125e90335021349f9a3cf406b6724c868750b40ee6e4a634f15b41c612",
+        "dweb:/ipfs/QmRUVpWyp2N8v4NHg6X4keWs8nDPFWNV43aWob5pungKiZ"
       ]
     }
   },

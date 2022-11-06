@@ -4,6 +4,8 @@ pragma solidity 0.8.11;
 
 import "../../lib/hyperlane-monorepo/solidity/interfaces/IOutbox.sol";
 import "./xCO2.sol";
+import "forge-std/Test.sol";
+import "forge-std/console.sol";
 
 abstract contract xERC20 is xCO2 {
     ERC20Upgradeable public asset;

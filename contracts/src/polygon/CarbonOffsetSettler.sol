@@ -84,24 +84,24 @@ contract CarbonOffsetSettler is OwnableUpgradeable, IERC721Receiver {
         uint256 tokenId,
         bytes calldata data
     ) external returns (bytes4) {
-        console.log("tokenID", tokenId);
-        address beneficiary = RetirementCertificates(CERT)
-            .getData(tokenId)
-            .beneficiary;
-        uint256 tonsOffset = RetirementCertificates(CERT)
-            .getRetiredAmountInTonnes(tokenId);
+        // console.log("tokenID", tokenId);
+        // address beneficiary = RetirementCertificates(CERT)
+        //     .getData(tokenId)
+        //     .beneficiary;
+        // uint256 tonsOffset = RetirementCertificates(CERT)
+        //     .getRetiredAmountInTonnes(tokenId);
 
-        console.log(
-            "amountOffset",
-            RetirementCertificates(CERT).getRetiredAmount(tokenId)
-        );
-        console.log(
-            "kilosOffset",
-            RetirementCertificates(CERT).getRetiredAmountInKilos(tokenId)
-        );
-        console.log("tonsOffset", tonsOffset);
+        // console.log(
+        //     "amountOffset",
+        //     RetirementCertificates(CERT).getRetiredAmount(tokenId)
+        // );
+        // console.log(
+        //     "kilosOffset",
+        //     RetirementCertificates(CERT).getRetiredAmountInKilos(tokenId)
+        // );
+        // console.log("tonsOffset", tonsOffset);
 
-        tonsOffsetByAddress[beneficiary] = tonsOffset;
+        // tonsOffsetByAddress[beneficiary] = tonsOffset;
         return IERC721Receiver.onERC721Received.selector;
     }
 

@@ -32,8 +32,6 @@ contract CarbonOffsetTest is Test {
         payment.setOffsetTerminal(address(settler));
     }
 
-    function test_setup() public {}
-
     function test_success() public {
         address tCO2Target = 0x463de2a5c6E8Bb0c87F4Aa80a02689e6680F72C7;
         uint256 amount = 1e6 * 100;
