@@ -26,17 +26,23 @@ contract CarbonOffsetTest is Test {
             "xUSDC",
             USDC
         );
-        // settler = new CarbonOffsetSettler();
-        // settler.initialize(address(payment));
+        settler = new CarbonOffsetSettler();
+        settler.initialize(address(payment));
 
-        payment.setOffsetTerminal(0x06f5b0b01D175970B7207eBAA146d5ea22175637);
+        payment.setOffsetTerminal(address(settler));
+    }
+
+    function test_query() public {
+        uint256 usdcNeeded = settler.getUSDCNeeded(
+            0x463de2a5c6E8Bb0c87F4Aa80a02689e6680F72C7,
+            1000
+        );
+        console.log(usdcNeeded);
     }
 
     function test_success() public {
         address tCO2Target = 0x463de2a5c6E8Bb0c87F4Aa80a02689e6680F72C7;
         uint256 amount = 1e6 * 100;
-
-        console.log("tons offset", settler.tonsOffsetByAddress(owner));
 
         console.log(
             "tco2 pre ",
@@ -52,8 +58,6 @@ contract CarbonOffsetTest is Test {
             "tco2 post",
             IToucanPoolToken(settler.NCT()).tokenBalances(tCO2Target)
         );
-
-        console.log("tons offset", settler.tonsOffsetByAddress(owner));
     }
 
     function test_deployed() public {

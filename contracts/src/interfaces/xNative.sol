@@ -12,10 +12,12 @@ abstract contract xNative is xCO2 {
         address _beneficiary
     ) public payable override {
         require(toUSD(msg.value) >= _amountXCO2, "Not enough for xCO2");
+
         IOutbox(outbox).dispatch(
             OFFSET_X_DEST_DOMAIN,
             bytes32(uint256(uint160(xUSDC))),
-            abi.encode(_tCO2, _amountXCO2, _beneficiary)
+            // All native tokens are 18 decimals, USDC is 6
+            abi.encode(_tCO2, _amountXCO2 / 1e12, _beneficiary)
         );
         emit OffsetRemote(
             _tCO2,

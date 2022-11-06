@@ -30,11 +30,15 @@ abstract contract xERC20 is xCO2 {
         uint256 _amountXCO2,
         address _beneficiary
     ) public payable virtual override {
-        asset.transferFrom(msg.sender, address(this), fromUSD(_amountXCO2));
+        uint256 amountAssetNeeded = fromUSD(_amountXCO2);
+        asset.transferFrom(msg.sender, address(this), amountAssetNeeded);
+
+        uint256 _amountUSDC = (_amountXCO2 * 1e6) / 10**asset.decimals();
+
         IOutbox(outbox).dispatch(
             OFFSET_X_DEST_DOMAIN,
             bytes32(uint256(uint160(xUSDC))),
-            abi.encode(_tCO2, _amountXCO2, _beneficiary)
+            abi.encode(_tCO2, _amountUSDC, _beneficiary)
         );
         emit OffsetRemote(
             _tCO2,

@@ -14,19 +14,16 @@ contract xUSDC is xERC20 {
         bytes32,
         bytes memory _message
     ) external {
-        // console.log("A");
         (address tCO2, uint256 amountXCO2, address beneficiary) = abi.decode(
             _message,
             (address, uint256, address)
         );
-        // console.log("B");
         asset.transfer(offsetTerminal, amountXCO2);
         CarbonOffsetSettler(offsetTerminal).retire(
             tCO2,
             amountXCO2,
             beneficiary
         );
-        // console.log("D");
 
         emit Offset(tCO2, amountXCO2, beneficiary);
     }

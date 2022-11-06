@@ -27,8 +27,6 @@ contract CarbonOffsetSettler is OwnableUpgradeable, IERC721Receiver {
         0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506;
     address public xUSDC;
 
-    mapping(address => uint256) public tonsOffsetByAddress;
-
     function initialize(address _xUSDC) external initializer {
         xUSDC = _xUSDC;
         _transferOwnership(msg.sender);
@@ -52,12 +50,7 @@ contract CarbonOffsetSettler is OwnableUpgradeable, IERC721Receiver {
         address _beneficiary
     ) public onlyXUSDC {
         // 1. Swap USDC on contract into NCT.
-        console.log(
-            "USDC balance",
-            IERC20Upgradeable(USDC).balanceOf(address(this))
-        );
         uint256 amountOffset = swap(_amountUSDC);
-        console.log("swapped");
 
         address[] memory tco2s = new address[](1);
         tco2s[0] = _tco2;
@@ -69,7 +62,6 @@ contract CarbonOffsetSettler is OwnableUpgradeable, IERC721Receiver {
             address(this)
         );
         IToucanPoolToken(NCT).redeemMany(tco2s, amounts);
-        console.log("redeemed");
 
         uint256 tco2Redeemed = IToucanCarbonOffsets(_tco2).balanceOf(
             address(this)
@@ -83,7 +75,6 @@ contract CarbonOffsetSettler is OwnableUpgradeable, IERC721Receiver {
             "Healing the world @ ETH SF", // retirement message
             tco2Redeemed
         );
-        console.log("retireAndMint");
     }
 
     /*
@@ -95,24 +86,6 @@ contract CarbonOffsetSettler is OwnableUpgradeable, IERC721Receiver {
         uint256 tokenId,
         bytes calldata data
     ) external returns (bytes4) {
-        // console.log("tokenID", tokenId);
-        // address beneficiary = RetirementCertificates(CERT)
-        //     .getData(tokenId)
-        //     .beneficiary;
-        // uint256 tonsOffset = RetirementCertificates(CERT)
-        //     .getRetiredAmountInTonnes(tokenId);
-
-        // console.log(
-        //     "amountOffset",
-        //     RetirementCertificates(CERT).getRetiredAmount(tokenId)
-        // );
-        // console.log(
-        //     "kilosOffset",
-        //     RetirementCertificates(CERT).getRetiredAmountInKilos(tokenId)
-        // );
-        // console.log("tonsOffset", tonsOffset);
-
-        // tonsOffsetByAddress[beneficiary] = tonsOffset;
         return IERC721Receiver.onERC721Received.selector;
     }
 
@@ -135,10 +108,13 @@ contract CarbonOffsetSettler is OwnableUpgradeable, IERC721Receiver {
             amounts
         );
 
-        address[] memory reversePath = generatePath(NCT, USDC);
+        console.log("totalFee", totalFee);
+
+        address[] memory path = generatePath(NCT, USDC);
         uint256[] memory expectedAmountsIn = IUniswapV2Router02(SUSHI_ROUTER)
-            .getAmountsIn(totalFee + _amountToOffset, reversePath);
-        return expectedAmountsIn[0];
+            .getAmountsIn(totalFee + _amountToOffset, path);
+
+        return expectedAmountsIn[0] / 1e12;
     }
 
     /*
