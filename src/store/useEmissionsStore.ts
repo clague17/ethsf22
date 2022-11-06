@@ -13,9 +13,10 @@ interface EmissionsState {
   setEmissions: (emission: Emissions) => void;
 }
 
-const useGlobeStore = create<EmissionsState>((set) => ({
+const useEmissionsStore = create<EmissionsState>((set) => ({
   emissions: { done: false } as Emissions,
-  setEmissions: (newEmissions: Emissions) => set(() => ({ emissions: newEmissions })),
+  setEmissions: (newEmissions: Emissions) =>
+    set(() => ({ emissions: newEmissions })),
 }));
 
-export default useGlobeStore;
+export default useEmissionsStore;

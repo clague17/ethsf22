@@ -34,6 +34,7 @@ const FootprintModal = () => {
       etherscanAPIKey: "P2KWECEJGIRTHCINS7UWITA8THH1GKA4YW",
     })
       .then((res) => {
+        console.log("DONEEEE");
         setEmissions({ ...res, tCO2: res.kgCO2 / 1000 });
       })
       .catch((err) => console.log("Houston we have a problem", err));
@@ -77,7 +78,9 @@ const FootprintModal = () => {
       {emissions.done && (
         <>
           <Center flex="1" flexDirection={"column"}>
-            <Heading color="red.300">{emissions?.kgCO2 / 1000} Tons of CO2</Heading>
+            <Heading color="red.300">
+              {emissions?.kgCO2 / 1000} Tons of CO2
+            </Heading>
             <Text py={6} fontSize="lg">
               This address initiated{" "}
               <Text as="span" fontWeight={"bold"}>
@@ -87,8 +90,8 @@ const FootprintModal = () => {
               <Text as="span" fontWeight={"bold"}>
                 {emissions?.gasUsed} gas
               </Text>
-              . In total, this address is responsible for {emissions?.kgCO2} kilograms (
-              {emissions?.kgCO2 / 1000} tons) of CO₂ emissions.
+              . In total, this address is responsible for {emissions?.kgCO2}{" "}
+              kilograms ({emissions?.kgCO2 / 1000} tons) of CO₂ emissions.
             </Text>
           </Center>
         </>

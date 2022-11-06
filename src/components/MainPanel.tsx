@@ -26,7 +26,7 @@ const StepMap = new Map<number, JSX.Element>([
 export const MainPanel = () => {
   const [currentStep, { setStep }] = useStep({
     maxStep: steps.length,
-    initialStep: 2,
+    initialStep: 0,
   });
   const { emissions } = useEmissionsStore();
   return (
