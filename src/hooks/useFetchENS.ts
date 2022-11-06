@@ -7,7 +7,6 @@ const useFetchENS = (address?: string): any => {
   );
   const [ens, setEns] = useState<string | null>(null);
 
-  console.log("provider", provider);
   const fetchENS = async (address: string) => {
     const ens = await provider.resolveName(address);
     setEns(ens);

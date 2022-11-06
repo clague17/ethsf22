@@ -11,7 +11,6 @@ import {
 } from "@chakra-ui/react";
 import { calculateEmissions } from "ethereum-emissions-calculator";
 import { useCallback, useState } from "react";
-import { useEnsAddress } from "wagmi";
 import useFetchENS from "../hooks/useFetchENS";
 import useEmissionsStore from "../store/useEmissionsStore";
 
@@ -20,10 +19,11 @@ const FootprintModal = () => {
   const [nameEntry, setNameEntry] = useState<string | undefined>(undefined);
 
   const { ens } = useFetchENS(nameEntry);
+  console.log("ens", ens);
   const fetchEmissions = useCallback(async () => {
-    if (!ens) return;
+    if (!ens || !nameEntry) return;
     await calculateEmissions({
-      address: ens,
+      address: ens ?? nameEntry,
       etherscanAPIKey: "P2KWECEJGIRTHCINS7UWITA8THH1GKA4YW",
     })
       .then((res) => {
@@ -70,9 +70,7 @@ const FootprintModal = () => {
       {emissions.done && (
         <>
           <Center flex="1" flexDirection={"column"}>
-            <Heading color="red.300">
-              {emissions?.kgCO2 / 1000} Tons of CO2
-            </Heading>
+            <Heading color="red.300">{emissions?.kgCO2 / 1000} Tons of CO2</Heading>
             <Text py={6} fontSize="lg">
               This address initiated{" "}
               <Text as="span" fontWeight={"bold"}>
@@ -82,8 +80,8 @@ const FootprintModal = () => {
               <Text as="span" fontWeight={"bold"}>
                 {emissions?.gasUsed} gas
               </Text>
-              . In total, this address is responsible for {emissions?.kgCO2}{" "}
-              kilograms ({emissions?.kgCO2 / 1000} tons) of CO₂ emissions.
+              . In total, this address is responsible for {emissions?.kgCO2} kilograms (
+              {emissions?.kgCO2 / 1000} tons) of CO₂ emissions.
             </Text>
           </Center>
         </>

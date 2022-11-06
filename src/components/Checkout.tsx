@@ -55,38 +55,10 @@ const Checkout = () => {
   );
 
   const amountTCO2Total = emissions.tCO2 * 1.1; // 10% fee for Toucan
-  console.log("amountTCO2Total", amountTCO2Total);
-  const amountUSDCNeeded = ethers.utils.parseEther(
-    (amountTCO2Total * 1.9).toString()
-  ); // estimate
-
-  // const fetchUSDCRequired = async () => {
-  //   console.log("B");
-  //   const provider = new ethers.providers.AlchemyProvider(
-  //     "matic",
-  //     process.env.ALCHEMY_POLYGON_KEY
-  //   );
-  //   const contract = new ethers.Contract(
-  //     "0x0E14Ac5B2B25867BF08328746c04Adadd6dB6425",
-  //     [
-  //       "function getUSDCNeeded(address,uint256) external view returns (uint256)",
-  //     ],
-  //     provider
-  //   );
-  //   const usdNeeded = await contract.getUSDCNeeded(
-  //     TCO2,
-  //     ethers.utils.parseEther(emissions.tCO2.toString())
-  //   );
-  //   setAmountUSDCNeeded(usdNeeded);
-  // };
-
-  // useEffect(() => {
-  //   console.log("A");
-  //   fetchUSDCRequired();
-  // }, []);
+  const amountUSDCNeeded = ethers.utils.parseEther((amountTCO2Total * 1.9).toString()); // estimate
 
   const { data: amountNativeTokenNeeded, error: readError } = useContractRead({
-    addressOrName: supportedTokens[selectedTokenIndex]?.vault.address!,
+    addressOrName: supportedTokens[selectedTokenIndex]?.vault.address ?? "",
     contractInterface: xCO2ABI.abi,
     functionName: "fromUSD",
     args: [
@@ -103,7 +75,7 @@ const Checkout = () => {
     isLoading: prepareConfigLoading,
     error: prepareConfigError,
   } = usePrepareContractWrite({
-    addressOrName: supportedTokens[selectedTokenIndex]?.vault.address!,
+    addressOrName: supportedTokens[selectedTokenIndex]?.vault.address ?? "",
     contractInterface: xCO2ABI.abi,
     functionName: "offsetX",
     args: [
@@ -124,7 +96,7 @@ const Checkout = () => {
     },
   });
 
-  var toastOptions: UseToastOptions;
+  let toastOptions: UseToastOptions;
 
   const { write: offset } = useContractWrite({
     ...config,
@@ -134,8 +106,7 @@ const Checkout = () => {
       if (res.status === 1) {
         toastOptions = {
           title: "Success!",
-          description:
-            "You did it! Offset 100% of your on-chain carbon footprint!",
+          description: "You did it! Offset 100% of your on-chain carbon footprint!",
         };
         toastOptions.status = "success";
         toastOptions.position = "top";
@@ -155,8 +126,7 @@ const Checkout = () => {
     onError: (error) => {
       toastOptions = {
         title: "Wallet prompt rejected",
-        description:
-          "If you didn't mean to reject the wallet prompt, please try again",
+        description: "If you didn't mean to reject the wallet prompt, please try again",
       };
       toastOptions.status = "warning";
       toastOptions.position = "top";
