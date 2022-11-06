@@ -45,6 +45,14 @@ abstract contract xCO2 is ERC20Upgradeable, OwnableUpgradeable {
         __ERC20_init(_name, _symbol);
     }
 
+    function setXUSDC(address _xUSDC) external onlyOwner {
+        xUSDC = _xUSDC;
+    }
+
+    function setOutbox(address _outbox) external onlyOwner {
+        outbox = _outbox;
+    }
+
     /**
      * @notice Offset cross-chain using amount xCO2.
      * @param _tCO2 Address of TCO2 token to redeem into.

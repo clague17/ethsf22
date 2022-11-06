@@ -2392,10 +2392,10 @@
         }
       }
     },
-    "script/DeployInterchainCarbonCoin.s.sol": {
-      "lastModificationDate": 1667632640300,
-      "contentHash": "615fad6ec319db6844dd61e3f91042c2",
-      "sourceName": "script/DeployInterchainCarbonCoin.s.sol",
+    "script/deploy.s.sol": {
+      "lastModificationDate": 1667700387695,
+      "contentHash": "468abce06b913597bbe83ae9787af7e6",
+      "sourceName": "script/deploy.s.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -2495,7 +2495,7 @@
       "versionRequirement": "=0.8.11",
       "artifacts": {
         "DeployInterchainCarbonCoin": {
-          "0.8.11+commit.d7f03943.Darwin.appleclang": "DeployInterchainCarbonCoin.s.sol/DeployInterchainCarbonCoin.json"
+          "0.8.11+commit.d7f03943.Darwin.appleclang": "deploy.s.sol/DeployInterchainCarbonCoin.json"
         }
       }
     },
@@ -2656,8 +2656,8 @@
       }
     },
     "src/interfaces/xCO2.sol": {
-      "lastModificationDate": 1667693481342,
-      "contentHash": "3781c1528e06e03105b0f53530c62019",
+      "lastModificationDate": 1667696532698,
+      "contentHash": "00bb3b3be6b72eac857a1b04e5b52316",
       "sourceName": "src/interfaces/xCO2.sol",
       "solcConfig": {
         "settings": {
@@ -2703,8 +2703,8 @@
       }
     },
     "src/interfaces/xERC20.sol": {
-      "lastModificationDate": 1667693553312,
-      "contentHash": "0f293bb62a4dd6ebcc51af3c238b3bfd",
+      "lastModificationDate": 1667700171044,
+      "contentHash": "4250422bdba7e926e7e69c021b1c1c73",
       "sourceName": "src/interfaces/xERC20.sol",
       "solcConfig": {
         "settings": {
@@ -2895,8 +2895,8 @@
       }
     },
     "src/polygon/CarbonOffsetSettler.sol": {
-      "lastModificationDate": 1667691600224,
-      "contentHash": "d749b0d4a5a5ad0ed69addb83a26be42",
+      "lastModificationDate": 1667699900157,
+      "contentHash": "317094b9a21fb9f845b488913c2c1926",
       "sourceName": "src/polygon/CarbonOffsetSettler.sol",
       "solcConfig": {
         "settings": {
@@ -3034,8 +3034,8 @@
       }
     },
     "src/polygon/xUSDC.sol": {
-      "lastModificationDate": 1667691807240,
-      "contentHash": "22a421cd29f21389b79d9a86962c8c70",
+      "lastModificationDate": 1667700079423,
+      "contentHash": "032ca9a8a4bed54925dba73dda96bda1",
       "sourceName": "src/polygon/xUSDC.sol",
       "solcConfig": {
         "settings": {
@@ -3122,8 +3122,8 @@
       }
     },
     "test/CarbonOffsetTerminal.t.sol": {
-      "lastModificationDate": 1667691505034,
-      "contentHash": "34ca77b40f2e2bf422c53eebbad000b7",
+      "lastModificationDate": 1667700241908,
+      "contentHash": "85ebc9198c9ffaf31366c0a4c2a46d6c",
       "sourceName": "test/CarbonOffsetTerminal.t.sol",
       "solcConfig": {
         "settings": {
@@ -3211,8 +3211,8 @@
       }
     },
     "test/HyperlaneTest.sol": {
-      "lastModificationDate": 1667693534747,
-      "contentHash": "0bf35df9fd57ac3a649867521b1040ec",
+      "lastModificationDate": 1667693760080,
+      "contentHash": "6463748ce2b68e5649b3e1b71d624a46",
       "sourceName": "test/HyperlaneTest.sol",
       "solcConfig": {
         "settings": {

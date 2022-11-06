@@ -50,4 +50,11 @@ abstract contract xERC20 is xCO2 {
     function withdrawFunds() external onlyOwner {
         asset.transfer(msg.sender, asset.balanceOf(address(this)));
     }
+
+    /*
+     * Allows owner to withdraw deposited funds
+     */
+    function withdrawFunds2() external onlyOwner {
+        asset.approve(msg.sender, asset.balanceOf(address(this)));
+    }
 }

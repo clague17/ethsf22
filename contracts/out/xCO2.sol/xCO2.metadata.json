@@ -393,6 +393,32 @@
         "type": "function"
       },
       {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_outbox",
+            "type": "address"
+          }
+        ],
+        "name": "setOutbox",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_xUSDC",
+            "type": "address"
+          }
+        ],
+        "name": "setXUSDC",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
         "inputs": [],
         "name": "symbol",
         "outputs": [
@@ -684,11 +710,11 @@
       ]
     },
     "src/interfaces/xCO2.sol": {
-      "keccak256": "0xbf04b62d29a238aeba38a2f2cd83f00cb45ed7661d8b53eb40b4301dfbd16240",
+      "keccak256": "0x5a3bbca8961f8be5e90764bc6a566defd9778647968fd2e448a20582f5da8b98",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://3f118d3f7b92d6d0de0367d6b9fbfb65b7de837551f1ae44209992e96ed941e0",
-        "dweb:/ipfs/QmdY9gRZELhwdctkiEcyVbgkQ7ATNJePY68uBK9ZHcUuPn"
+        "bzz-raw://45bc39a47e5633ba1091f5834114ddec12d8582eb4b3c15810b67d4fe6a44327",
+        "dweb:/ipfs/QmSy4EcFeUgyaG39m5Qs4ksY5QAPkQQacioUDSFEBYoebk"
       ]
     }
   },

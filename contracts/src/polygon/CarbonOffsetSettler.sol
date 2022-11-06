@@ -39,6 +39,10 @@ contract CarbonOffsetSettler is OwnableUpgradeable, IERC721Receiver {
         _;
     }
 
+    function setXUSDC(address _xUSDC) external onlyOwner {
+        xUSDC = _xUSDC;
+    }
+
     /*
      * Called by other chain contracts that want to retire TCO2.
      */
@@ -48,7 +52,12 @@ contract CarbonOffsetSettler is OwnableUpgradeable, IERC721Receiver {
         address _beneficiary
     ) public onlyXUSDC {
         // 1. Swap USDC on contract into NCT.
+        console.log(
+            "USDC balance",
+            IERC20Upgradeable(USDC).balanceOf(address(this))
+        );
         uint256 amountOffset = swap(_amountUSDC);
+        console.log("swapped");
 
         address[] memory tco2s = new address[](1);
         tco2s[0] = _tco2;
@@ -60,6 +69,7 @@ contract CarbonOffsetSettler is OwnableUpgradeable, IERC721Receiver {
             address(this)
         );
         IToucanPoolToken(NCT).redeemMany(tco2s, amounts);
+        console.log("redeemed");
 
         uint256 tco2Redeemed = IToucanCarbonOffsets(_tco2).balanceOf(
             address(this)
@@ -73,6 +83,7 @@ contract CarbonOffsetSettler is OwnableUpgradeable, IERC721Receiver {
             "Healing the world @ ETH SF", // retirement message
             tco2Redeemed
         );
+        console.log("retireAndMint");
     }
 
     /*

@@ -26,10 +26,10 @@ contract CarbonOffsetTest is Test {
             "xUSDC",
             USDC
         );
-        settler = new CarbonOffsetSettler();
-        settler.initialize(address(payment));
+        // settler = new CarbonOffsetSettler();
+        // settler.initialize(address(payment));
 
-        payment.setOffsetTerminal(address(settler));
+        payment.setOffsetTerminal(0x06f5b0b01D175970B7207eBAA146d5ea22175637);
     }
 
     function test_success() public {
@@ -54,5 +54,31 @@ contract CarbonOffsetTest is Test {
         );
 
         console.log("tons offset", settler.tonsOffsetByAddress(owner));
+    }
+
+    function test_deployed() public {
+        xUSDC cc = xUSDC(0x960B7a547962e3A508c3C8b815CF19a910B7A05E);
+        console.log(cc.offsetTerminal());
+        return;
+        uint32 origin;
+        bytes32 msg;
+        cc.handle(
+            origin,
+            msg,
+            abi.encode(0x463de2a5c6E8Bb0c87F4Aa80a02689e6680F72C7, 1e6, owner)
+        );
+    }
+
+    function test_mix() public {
+        return;
+
+        deal(USDC, address(payment), 5e6);
+        uint32 origin;
+        bytes32 msg;
+        payment.handle(
+            origin,
+            msg,
+            abi.encode(0x463de2a5c6E8Bb0c87F4Aa80a02689e6680F72C7, 1e6, owner)
+        );
     }
 }

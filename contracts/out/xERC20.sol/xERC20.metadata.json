@@ -439,6 +439,32 @@
         "type": "function"
       },
       {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_outbox",
+            "type": "address"
+          }
+        ],
+        "name": "setOutbox",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_xUSDC",
+            "type": "address"
+          }
+        ],
+        "name": "setXUSDC",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
         "inputs": [],
         "name": "symbol",
         "outputs": [
@@ -552,6 +578,13 @@
       {
         "inputs": [],
         "name": "withdrawFunds",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "withdrawFunds2",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -865,19 +898,19 @@
       ]
     },
     "src/interfaces/xCO2.sol": {
-      "keccak256": "0xbf04b62d29a238aeba38a2f2cd83f00cb45ed7661d8b53eb40b4301dfbd16240",
+      "keccak256": "0x5a3bbca8961f8be5e90764bc6a566defd9778647968fd2e448a20582f5da8b98",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://3f118d3f7b92d6d0de0367d6b9fbfb65b7de837551f1ae44209992e96ed941e0",
-        "dweb:/ipfs/QmdY9gRZELhwdctkiEcyVbgkQ7ATNJePY68uBK9ZHcUuPn"
+        "bzz-raw://45bc39a47e5633ba1091f5834114ddec12d8582eb4b3c15810b67d4fe6a44327",
+        "dweb:/ipfs/QmSy4EcFeUgyaG39m5Qs4ksY5QAPkQQacioUDSFEBYoebk"
       ]
     },
     "src/interfaces/xERC20.sol": {
-      "keccak256": "0x5afd34cd59d83686bea2140971b52d56fe443cea682be59b3a79c0446ea84249",
+      "keccak256": "0xd7759a9f606fb6e7fce66668593ff9f33ab9a8716a8df4415fa6688d2bbfb1fe",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://b8fcc35771dff612d8c652e5fe4ab4603104be280aa995e5b3cbdd548eae2903",
-        "dweb:/ipfs/QmYKEfLmu4sMgz1me2NrDUeqkHrdGmgytBSRg83TdDVQJY"
+        "bzz-raw://4d5e6724c683bce2056172a2b37c9bb94d6f0a97a6a74d37907f902346c92b62",
+        "dweb:/ipfs/QmZ7EKn2R2Sqm5DDAhqvhckZyrSTA1351MD18H4iEEPJNy"
       ]
     }
   },

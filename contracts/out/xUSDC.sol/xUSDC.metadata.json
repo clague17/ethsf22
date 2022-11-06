@@ -287,6 +287,29 @@
       {
         "inputs": [
           {
+            "internalType": "uint32",
+            "name": "",
+            "type": "uint32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes",
+            "name": "_message",
+            "type": "bytes"
+          }
+        ],
+        "name": "handle",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
             "internalType": "address",
             "name": "spender",
             "type": "address"
@@ -488,6 +511,32 @@
         "type": "function"
       },
       {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_outbox",
+            "type": "address"
+          }
+        ],
+        "name": "setOutbox",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_xUSDC",
+            "type": "address"
+          }
+        ],
+        "name": "setXUSDC",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
         "inputs": [],
         "name": "symbol",
         "outputs": [
@@ -601,6 +650,13 @@
       {
         "inputs": [],
         "name": "withdrawFunds",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "withdrawFunds2",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -1090,35 +1146,35 @@
       ]
     },
     "src/interfaces/xCO2.sol": {
-      "keccak256": "0xbf04b62d29a238aeba38a2f2cd83f00cb45ed7661d8b53eb40b4301dfbd16240",
+      "keccak256": "0x5a3bbca8961f8be5e90764bc6a566defd9778647968fd2e448a20582f5da8b98",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://3f118d3f7b92d6d0de0367d6b9fbfb65b7de837551f1ae44209992e96ed941e0",
-        "dweb:/ipfs/QmdY9gRZELhwdctkiEcyVbgkQ7ATNJePY68uBK9ZHcUuPn"
+        "bzz-raw://45bc39a47e5633ba1091f5834114ddec12d8582eb4b3c15810b67d4fe6a44327",
+        "dweb:/ipfs/QmSy4EcFeUgyaG39m5Qs4ksY5QAPkQQacioUDSFEBYoebk"
       ]
     },
     "src/interfaces/xERC20.sol": {
-      "keccak256": "0x5afd34cd59d83686bea2140971b52d56fe443cea682be59b3a79c0446ea84249",
+      "keccak256": "0xd7759a9f606fb6e7fce66668593ff9f33ab9a8716a8df4415fa6688d2bbfb1fe",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://b8fcc35771dff612d8c652e5fe4ab4603104be280aa995e5b3cbdd548eae2903",
-        "dweb:/ipfs/QmYKEfLmu4sMgz1me2NrDUeqkHrdGmgytBSRg83TdDVQJY"
+        "bzz-raw://4d5e6724c683bce2056172a2b37c9bb94d6f0a97a6a74d37907f902346c92b62",
+        "dweb:/ipfs/QmZ7EKn2R2Sqm5DDAhqvhckZyrSTA1351MD18H4iEEPJNy"
       ]
     },
     "src/polygon/CarbonOffsetSettler.sol": {
-      "keccak256": "0x1ca3e67ff6402ab98a0e91ce04b72b12e5b55ff11b3733d225d40398ca80c1a0",
+      "keccak256": "0xa1c7159c5f21fca968215c3a0a84e75e2ae3795779924afbbd82f95d3ede1f68",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://aead0b134444a8b7ea85cf5e4be02b515e80cc922cb3d00005db249c2f841446",
-        "dweb:/ipfs/QmdKoRmY5Rithev5qTrqMnExBkFxgFnfJS13L2XMaeUKE9"
+        "bzz-raw://3b10f2cc6828878b21be65d87f9a082825264dc309dba7a99c93daf0f4b5b42d",
+        "dweb:/ipfs/QmWpQ9y6XAeuKQ5xfFqNMwE4qG9rAF6wnxqDb9uc2Tzfje"
       ]
     },
     "src/polygon/xUSDC.sol": {
-      "keccak256": "0x85c91034be6e0b067feb0802411511db73d309495cd5ecd68bb0bd39e5a6380f",
+      "keccak256": "0x7bf8133aedc0a922020ff51b2eda8fb2dd6133f0aa5266dab3b566d4dd4a295d",
       "license": "Apache-2.0",
       "urls": [
-        "bzz-raw://1532dc8ed04848903afcf37959317a3bdbe75e3a6a916246d63f79c9f75f6924",
-        "dweb:/ipfs/QmRoYDvZv9u7FyAdkpkPBnMYoduBPgrCJKeL7Cct2vNJPc"
+        "bzz-raw://d92c46ad0f7ad1c0c242d7356debe1664f97de6ddca59c0577da64532288c282",
+        "dweb:/ipfs/QmexvZJJ6Fht9DX3iQoWSXFjYsyktkXcoouVRsQhBASTQD"
       ]
     }
   },
