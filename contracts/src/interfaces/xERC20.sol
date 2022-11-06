@@ -18,7 +18,7 @@ abstract contract xERC20 is xCO2 {
         address _asset
     ) external initializer {
         // Set ownable to sender
-        _transferOwnership(msg.sender);
+        __Ownable_init();
         outbox = _outbox;
         xUSDC = _xUSDC;
         __ERC20_init(_name, _symbol);

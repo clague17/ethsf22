@@ -39,7 +39,7 @@ abstract contract xCO2 is ERC20Upgradeable, OwnableUpgradeable {
         string memory _symbol
     ) external initializer {
         // Set ownable to sender
-        transferOwnership(msg.sender);
+        __Ownable_init();
         outbox = _outbox;
         xUSDC = _xUSDC;
         __ERC20_init(_name, _symbol);
