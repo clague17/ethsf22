@@ -1,0 +1,199 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "latestAnswer",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "decimals()": "313ce567",
+    "latestAnswer()": "50d25bcd"
+  },
+  "ast": {
+    "absolutePath": "src/oracles/ETH.sol",
+    "id": 31896,
+    "exportedSymbols": {
+      "IETHOracle": [
+        31895
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:202:64",
+    "nodes": [
+      {
+        "id": 31884,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:64",
+        "literals": [
+          "solidity",
+          "0.8",
+          ".11"
+        ]
+      },
+      {
+        "id": 31895,
+        "nodeType": "ContractDefinition",
+        "src": "91:142:64",
+        "nodes": [
+          {
+            "id": 31889,
+            "nodeType": "FunctionDefinition",
+            "src": "118:55:64",
+            "functionSelector": "50d25bcd",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "latestAnswer",
+            "nameLocation": "127:12:64",
+            "parameters": {
+              "id": 31885,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "139:2:64"
+            },
+            "returnParameters": {
+              "id": 31888,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 31887,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 31889,
+                  "src": "165:6:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 31886,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "165:6:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "164:8:64"
+            },
+            "scope": 31895,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 31894,
+            "nodeType": "FunctionDefinition",
+            "src": "179:52:64",
+            "functionSelector": "313ce567",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decimals",
+            "nameLocation": "188:8:64",
+            "parameters": {
+              "id": 31890,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "196:2:64"
+            },
+            "returnParameters": {
+              "id": 31893,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 31892,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 31894,
+                  "src": "222:7:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 31891,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "222:7:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "221:9:64"
+            },
+            "scope": 31895,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IETHOracle",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          31895
+        ],
+        "name": "IETHOracle",
+        "nameLocation": "101:10:64",
+        "scope": 31896,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 64
+}

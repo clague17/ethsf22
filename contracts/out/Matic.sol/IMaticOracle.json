@@ -1,0 +1,199 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "latestAnswer",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "decimals()": "313ce567",
+    "latestAnswer()": "50d25bcd"
+  },
+  "ast": {
+    "absolutePath": "src/oracles/Matic.sol",
+    "id": 31909,
+    "exportedSymbols": {
+      "IMaticOracle": [
+        31908
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:204:65",
+    "nodes": [
+      {
+        "id": 31897,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:65",
+        "literals": [
+          "solidity",
+          "0.8",
+          ".11"
+        ]
+      },
+      {
+        "id": 31908,
+        "nodeType": "ContractDefinition",
+        "src": "91:144:65",
+        "nodes": [
+          {
+            "id": 31902,
+            "nodeType": "FunctionDefinition",
+            "src": "120:55:65",
+            "functionSelector": "50d25bcd",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "latestAnswer",
+            "nameLocation": "129:12:65",
+            "parameters": {
+              "id": 31898,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "141:2:65"
+            },
+            "returnParameters": {
+              "id": 31901,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 31900,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 31902,
+                  "src": "167:6:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 31899,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "167:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "166:8:65"
+            },
+            "scope": 31908,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 31907,
+            "nodeType": "FunctionDefinition",
+            "src": "181:52:65",
+            "functionSelector": "313ce567",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decimals",
+            "nameLocation": "190:8:65",
+            "parameters": {
+              "id": 31903,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "198:2:65"
+            },
+            "returnParameters": {
+              "id": 31906,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 31905,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 31907,
+                  "src": "224:7:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 31904,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "224:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "223:9:65"
+            },
+            "scope": 31908,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMaticOracle",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          31908
+        ],
+        "name": "IMaticOracle",
+        "nameLocation": "101:12:65",
+        "scope": 31909,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 65
+}

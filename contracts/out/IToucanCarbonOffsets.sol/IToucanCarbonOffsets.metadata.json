@@ -1,0 +1,597 @@
+{
+  "compiler": {
+    "version": "0.8.11+commit.d7f03943"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "Approval",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "Transfer",
+        "type": "event"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "spender",
+            "type": "address"
+          }
+        ],
+        "name": "allowance",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "approve",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "balanceOf",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getAttributes",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "projectId",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "standard",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "methodology",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "region",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "storageMethod",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "method",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "emissionType",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "category",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "uri",
+                "type": "string"
+              },
+              {
+                "internalType": "address",
+                "name": "controller",
+                "type": "address"
+              }
+            ],
+            "internalType": "struct ProjectData",
+            "name": "",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+              },
+              {
+                "internalType": "uint64",
+                "name": "startTime",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "endTime",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint256",
+                "name": "projectTokenId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint64",
+                "name": "totalVintageQuantity",
+                "type": "uint64"
+              },
+              {
+                "internalType": "bool",
+                "name": "isCorsiaCompliant",
+                "type": "bool"
+              },
+              {
+                "internalType": "bool",
+                "name": "isCCPcompliant",
+                "type": "bool"
+              },
+              {
+                "internalType": "string",
+                "name": "coBenefits",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "correspAdjustment",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "additionalCertification",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "uri",
+                "type": "string"
+              }
+            ],
+            "internalType": "struct VintageData",
+            "name": "",
+            "type": "tuple"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getDepositCap",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getGlobalProjectVintageIdentifiers",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getRemaining",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "remaining",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "retiringEntityString",
+            "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "beneficiary",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "beneficiaryString",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "retirementMessage",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "mintCertificateLegacy",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "operator",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes",
+            "name": "data",
+            "type": "bytes"
+          }
+        ],
+        "name": "onERC721Received",
+        "outputs": [
+          {
+            "internalType": "bytes4",
+            "name": "",
+            "type": "bytes4"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "retire",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "retiringEntityString",
+            "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "beneficiary",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "beneficiaryString",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "retirementMessage",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "retireAndMintCertificate",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "retireFrom",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "totalSupply",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "transfer",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "transferFrom",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ],
+    "devdoc": {
+      "kind": "dev",
+      "methods": {
+        "allowance(address,address)": {
+          "details": "Returns the remaining number of tokens that `spender` will be allowed to spend on behalf of `owner` through {transferFrom}. This is zero by default. This value changes when {approve} or {transferFrom} are called."
+        },
+        "approve(address,uint256)": {
+          "details": "Sets `amount` as the allowance of `spender` over the caller's tokens. Returns a boolean value indicating whether the operation succeeded. IMPORTANT: Beware that changing an allowance with this method brings the risk that someone may use both the old and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards: https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729 Emits an {Approval} event."
+        },
+        "balanceOf(address)": {
+          "details": "Returns the amount of tokens owned by `account`."
+        },
+        "onERC721Received(address,address,uint256,bytes)": {
+          "details": "Whenever an {IERC721} `tokenId` token is transferred to this contract via {IERC721-safeTransferFrom} by `operator` from `from`, this function is called. It must return its Solidity selector to confirm the token transfer. If any other value is returned or the interface is not implemented by the recipient, the transfer will be reverted. The selector can be obtained in Solidity with `IERC721Receiver.onERC721Received.selector`."
+        },
+        "totalSupply()": {
+          "details": "Returns the amount of tokens in existence."
+        },
+        "transfer(address,uint256)": {
+          "details": "Moves `amount` tokens from the caller's account to `to`. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."
+        },
+        "transferFrom(address,address,uint256)": {
+          "details": "Moves `amount` tokens from `from` to `to` using the allowance mechanism. `amount` is then deducted from the caller's allowance. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."
+        }
+      },
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {},
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "lib/OffsetHelper/contracts/interfaces/IToucanCarbonOffsets.sol": "IToucanCarbonOffsets"
+    },
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": [
+      ":@hyperlane-monorepo/=lib/hyperlane-monorepo/",
+      ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+      ":@toucan/=lib/contracts/",
+      ":OffsetHelper/=lib/OffsetHelper/contracts/",
+      ":ds-test/=lib/forge-std/lib/ds-test/src/",
+      ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+      ":forge-std/=lib/forge-std/src/",
+      ":hyperlane-monorepo/=lib/hyperlane-monorepo/",
+      ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      ":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/"
+    ]
+  },
+  "sources": {
+    "lib/OffsetHelper/contracts/interfaces/IToucanCarbonOffsets.sol": {
+      "keccak256": "0x46c4ed2acd84764d0dd68c9c475e2c6ec3229a686046db48aca77ccd298d4b48",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://45c5bdeb82205a521d8f44be34773f9dd5b2b2d3a5fed5c3b7a1107b74d44587",
+        "dweb:/ipfs/QmWq1phybjBpwdpt2K7RMRS74jhFZKUKFqxLiRJrBagecV"
+      ]
+    },
+    "lib/OffsetHelper/contracts/types/CarbonProjectTypes.sol": {
+      "keccak256": "0x10d52f79d4bb8dbfe0abbb1662059d6d0193fe5794977b66aacf741451e25401",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://1b64316b89c599bf4ea530715ad57eaeb96f2426c818dc52fbff5aa423a75d5a",
+        "dweb:/ipfs/QmWFVHeBKrh6Zau5hVwhJKFNKWQtkyjePLkbv46d9QG5tq"
+      ]
+    },
+    "lib/OffsetHelper/contracts/types/CarbonProjectVintageTypes.sol": {
+      "keccak256": "0x3a52e88a48b87f1ca3992c201f8b786ccf3aeb74796510893f8e33b33eae251b",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://b6b9a56ad90098fe772e7303ff3d202f9cf0e1b631ec5dc459f55542654a90d6",
+        "dweb:/ipfs/QmdAZ49UaG7iY1rH2Fk3gaLNhtH9EdtsqLiR1X6QVZJ653"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol": {
+      "keccak256": "0x4e733d3164f73f461eaf9d8087a7ad1ea180bdc8ba0d3d61b0e1ae16d8e63dff",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://75b47c3aeca7b66ea6752f8be020ec5c1c502de6ec9065272dae23d3a52196e2",
+        "dweb:/ipfs/QmUebPMHv16tYKFh5BmBQkMfRFb5b8UZ2RgVwdjxCeufVF"
+      ]
+    },
+    "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol": {
+      "keccak256": "0xa82b58eca1ee256be466e536706850163d2ec7821945abd6b4778cfb3bee37da",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://6e75cf83beb757b8855791088546b8337e9d4684e169400c20d44a515353b708",
+        "dweb:/ipfs/QmYvPafLfoquiDMEj7CKHtvbgHu7TJNPSVPSCjrtjV8HjV"
+      ]
+    }
+  },
+  "version": 1
+}
