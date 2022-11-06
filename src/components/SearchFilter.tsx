@@ -83,7 +83,7 @@ const SearchFilter = () => {
             </Center>
           </Box>
           <Box display="flex">
-            <Heading mx="4" mb={7} fontSize="xl">
+            <Heading mb={7} fontSize="xl">
               Select a Project
             </Heading>
             <Center>
