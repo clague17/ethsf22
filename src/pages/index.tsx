@@ -12,7 +12,7 @@ import styles from "./index.module.css";
 const Home: NextPage = () => {
   return (
     <Box>
-      <GlobeComponent />
+      {/* <GlobeComponent /> */}
       <Center>
         <Navbar />
       </Center>
@@ -31,7 +31,11 @@ type TechnologyCardProps = {
   documentation: string;
 };
 
-const TechnologyCard = ({ name, description, documentation }: TechnologyCardProps) => {
+const TechnologyCard = ({
+  name,
+  description,
+  documentation,
+}: TechnologyCardProps) => {
   return (
     <section className={styles.card}>
       <h2 className={styles.cardTitle}>{name}</h2>

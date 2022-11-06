@@ -1,4 +1,12 @@
-import { Box, Button, Center, Container, Heading, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Center,
+  Container,
+  Heading,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import type { AddressEmissionsResult } from "ethereum-emissions-calculator";
 import * as React from "react";
 import useEmissionsStore from "../store/useEmissionsStore";
@@ -16,7 +24,10 @@ const StepMap = new Map<number, JSX.Element>([
 ]);
 
 export const MainPanel = () => {
-  const [currentStep, { setStep }] = useStep({ maxStep: steps.length, initialStep: 0 });
+  const [currentStep, { setStep }] = useStep({
+    maxStep: steps.length,
+    initialStep: 2,
+  });
   const { emissions } = useEmissionsStore();
   return (
     <Box
@@ -56,10 +67,16 @@ export const MainPanel = () => {
               Do something about it
             </Heading>
             <Box margin="0 auto" display="flex" alignItems={"space-between"}>
-              <Button justifySelf="flex-start" onClick={() => setStep(currentStep - 1)}>
+              <Button
+                justifySelf="flex-start"
+                onClick={() => setStep(currentStep - 1)}
+              >
                 Back
               </Button>
-              <Button justifySelf="flex-end" onClick={() => setStep(currentStep + 1)}>
+              <Button
+                justifySelf="flex-end"
+                onClick={() => setStep(currentStep + 1)}
+              >
                 Next
               </Button>
             </Box>
