@@ -9,13 +9,13 @@ import styles from "./index.module.css";
 
 const Home: NextPage = () => {
   return (
-    <>
+    <Box>
       <Center>
         <Navbar />
       </Center>
       <GlobeComponent />
       <SearchFilter />
-    </>
+    </Box>
   );
 };
 

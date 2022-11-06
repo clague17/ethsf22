@@ -35,21 +35,20 @@ const SearchFilter = () => {
   const { setRegion } = useGlobeStore();
   const { data: allProjects } = useGetProjectsQuery();
 
-  console.log("token babey", localToken);
-
   return (
     <Flex
+      flexDirection={"column"}
       color="white"
-      flexDir={"column"}
       maxWidth="30%"
       bgColor="gray.800"
-      mx={8}
-      p={8}
+      boxShadow={"0px 5px 10px 10px rgb(72 187 120 / 43%)"}
       opacity={0.9}
       borderRadius={"xl"}
+      ml={10}
+      p={8}
     >
       <Heading py={6}>Choose a project to retire</Heading>
-      <Box display={"flex"} flexDirection="column">
+      <Box>
         <Box display="flex">
           <Heading mx="4" mb={7} pr={8}>
             Select a Region
@@ -107,20 +106,22 @@ const SearchFilter = () => {
             </Box>
           </Center>
         </Box>
-        <Box display="flex" flexDir="column">
-          <Heading mx="4" mb={7} fontSize="xl">
-            Available credits to retire:{" "}
-            <Text as="span" color="green.400">
-              {ethers.utils.formatEther(localToken?.amount ?? 0)}
-            </Text>
-          </Heading>
-          <Heading mx="4" mb={7} fontSize="xl">
-            Project methodology:{" "}
-            <Text as="span" color="green.400">
-              {localToken?.token.projectVintage.project.methodology}
-            </Text>
-          </Heading>
-        </Box>
+        {localToken && (
+          <Box display="flex" flexDir="column">
+            <Heading mx="4" mb={7} fontSize="xl">
+              Available credits to retire:{" "}
+              <Text as="span" color="green.400">
+                {ethers.utils.formatEther(localToken?.amount ?? 0)}
+              </Text>
+            </Heading>
+            <Heading mx="4" mb={7} fontSize="xl">
+              Project methodology:{" "}
+              <Text as="span" color="green.400">
+                {localToken?.token.projectVintage.project.methodology}
+              </Text>
+            </Heading>
+          </Box>
+        )}
       </Box>
     </Flex>
   );
