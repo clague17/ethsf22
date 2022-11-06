@@ -63,9 +63,9 @@ export const SUPPORTED_CHAINS: Map<number, SpiralsChain> = new Map([
         symbol: "ETH",
         decimals: 18,
       },
-      network: "https://rpc.flashbots.net",
+      network: "https://eth-mainnet.g.alchemy.com/v2/mDGjPNspZwJVBVWK3lTpdolCLczs2IrD",
       rpcUrls: {
-        default: "https://rpc.flashbots.net",
+        default: "https://eth-mainnet.g.alchemy.com/v2/mDGjPNspZwJVBVWK3lTpdolCLczs2IrD",
       },
       blockExplorers: {
         default: {

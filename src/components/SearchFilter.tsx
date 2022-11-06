@@ -39,21 +39,18 @@ const SearchFilter = () => {
     <Flex
       flexDirection={"column"}
       color="white"
-      maxWidth="30%"
       bgColor="gray.800"
-      boxShadow={"0px 5px 10px 10px rgb(72 187 120 / 43%)"}
       opacity={0.9}
-      borderRadius={"xl"}
       ml={10}
       p={8}
     >
-      <Heading py={6}>Choose a project to retire</Heading>
+      <Heading py={6}>Explore projects to retire</Heading>
       <Box>
         <Box display="flex">
-          <Heading mx="4" mb={7} pr={8}>
-            Select a Region
-          </Heading>
           <Center>
+            <Heading mx="4" mb={7} pr={8} fontSize="2xl">
+              Select a Region
+            </Heading>
             <Box>
               <Select
                 placeholder="Select region"
@@ -76,7 +73,7 @@ const SearchFilter = () => {
           </Center>
         </Box>
         <Box display="flex">
-          <Heading mx="4" mb={7}>
+          <Heading mx="4" mb={7} fontSize="2xl">
             Select a Project
           </Heading>
           <Center>

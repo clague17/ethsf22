@@ -1,3 +1,5 @@
+import { ethers } from "ethers";
+
 export enum ChainID {
   ETHEREUM = 1,
   POLYGON = 137,
@@ -65,3 +67,29 @@ export const TOKEN_SYMBOL_TO_COIN_GECKO_ID: Map<TokenSymbol, string> = new Map([
   [DAI, "dai"],
   [ETH, "ethereum"],
 ]);
+
+export interface VaultTokenPair {
+  chainID: number;
+  input: InputToken;
+  vault: VaultToken;
+  tokenID?: number;
+}
+
+export interface VaultToken extends TokenInfo {
+  balance?: TokenBalance;
+  usdPrice: number;
+  blockExplorerUrl: string;
+}
+
+export interface TokenInfo {
+  address?: string; // if empty, assume is native toke
+  symbol: string;
+  name?: string;
+  imgURL?: string;
+}
+
+export interface TokenBalance {
+  value: ethers.BigNumber;
+  decimals: number;
+  refetch(): Promise<void>;
+}
