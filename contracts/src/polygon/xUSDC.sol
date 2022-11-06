@@ -14,15 +14,25 @@ contract xUSDC is xERC20 {
         bytes32,
         bytes memory _message
     ) external {
-        (address tCO2, uint256 amountXCO2, address beneficiary) = abi.decode(
-            _message,
-            (address, uint256, address)
-        );
+        (
+            address tCO2,
+            uint256 amountXCO2,
+            string memory entity,
+            address beneficiary,
+            string memory beneficiaryName,
+            string memory _msg
+        ) = abi.decode(
+                _message,
+                (address, uint256, string, address, string, string)
+            );
         asset.transfer(offsetTerminal, amountXCO2);
         CarbonOffsetSettler(offsetTerminal).retire(
             tCO2,
             amountXCO2,
-            beneficiary
+            entity,
+            beneficiary,
+            beneficiaryName,
+            _msg
         );
 
         emit Offset(tCO2, amountXCO2, beneficiary);
@@ -31,13 +41,19 @@ contract xUSDC is xERC20 {
     function offset(
         address _tCO2,
         uint256 _amountXCO2,
-        address _beneficiary
+        string calldata _entity,
+        address _beneficiary,
+        string calldata _beneficiaryName,
+        string calldata _msg
     ) public {
         asset.transferFrom(msg.sender, offsetTerminal, _amountXCO2);
         CarbonOffsetSettler(offsetTerminal).retire(
             _tCO2,
             _amountXCO2,
-            _beneficiary
+            _entity,
+            _beneficiary,
+            _beneficiaryName,
+            _msg
         );
     }
 
@@ -49,9 +65,19 @@ contract xUSDC is xERC20 {
     function offsetX(
         address _tCO2,
         uint256 _amountXCO2,
-        address _beneficiary
+        string calldata _entity,
+        address _beneficiary,
+        string calldata _beneficiaryName,
+        string calldata _msg
     ) public payable override {
-        offset(_tCO2, _amountXCO2, _beneficiary);
+        offset(
+            _tCO2,
+            _amountXCO2,
+            _entity,
+            _beneficiary,
+            _beneficiaryName,
+            _msg
+        );
     }
 
     function toUSD(uint256 amount) public pure override returns (uint256) {

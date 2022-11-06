@@ -68,7 +68,14 @@ contract CarbonOffsetTest is Test {
         deal(USDC, owner, amount);
         IERC20Upgradeable(USDC).approve(address(sender), amount);
         console.log("offsetX...");
-        sender.offsetX(tCO2Target, amount, owner);
+        sender.offsetX(
+            tCO2Target,
+            amount,
+            "Spirals",
+            owner,
+            "Luis Clague",
+            "Touch grass"
+        );
         console.log("offset done!");
 
         console.log("processing...");

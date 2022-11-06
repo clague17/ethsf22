@@ -47,7 +47,10 @@ contract CarbonOffsetSettler is OwnableUpgradeable, IERC721Receiver {
     function retire(
         address _tco2,
         uint256 _amountUSDC,
-        address _beneficiary
+        string calldata _entity,
+        address _beneficiary,
+        string calldata _beneficiaryName,
+        string calldata _msg
     ) public onlyXUSDC {
         // 1. Swap USDC on contract into NCT.
         uint256 amountOffset = swap(_amountUSDC);
@@ -69,10 +72,10 @@ contract CarbonOffsetSettler is OwnableUpgradeable, IERC721Receiver {
 
         // 3. Retire TCO2 and mint certificate!
         IToucanCarbonOffsets(_tco2).retireAndMintCertificate(
-            "", // retiringEntity
+            _entity, // retiringEntity
             _beneficiary, // beneficiary address
-            "Doug Qian", // benficiary name
-            "Healing the world @ ETH SF", // retirement message
+            _beneficiaryName, // benficiary name
+            _msg, // retirement message
             tco2Redeemed
         );
     }
@@ -107,8 +110,6 @@ contract CarbonOffsetSettler is OwnableUpgradeable, IERC721Receiver {
             tco2s,
             amounts
         );
-
-        console.log("totalFee", totalFee);
 
         address[] memory path = generatePath(NCT, USDC);
         uint256[] memory expectedAmountsIn = IUniswapV2Router02(SUSHI_ROUTER)

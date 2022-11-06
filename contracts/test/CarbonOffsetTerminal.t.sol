@@ -52,7 +52,14 @@ contract CarbonOffsetTest is Test {
         changePrank(owner);
         deal(settler.USDC(), owner, amount);
         IERC20Upgradeable(USDC).approve(address(payment), amount);
-        payment.offset(tCO2Target, amount, owner);
+        payment.offset(
+            tCO2Target,
+            amount,
+            "Spirals",
+            owner,
+            "Doug Qian",
+            "I love the Earth"
+        );
 
         console.log(
             "tco2 post",

@@ -62,7 +62,10 @@ abstract contract xCO2 is ERC20Upgradeable, OwnableUpgradeable {
     function offsetX(
         address _tCO2,
         uint256 _amountXCO2,
-        address _beneficiary
+        string calldata _entity,
+        address _beneficiary,
+        string calldata _beneficiaryName,
+        string calldata _msg
     ) public payable virtual;
 
     /**
