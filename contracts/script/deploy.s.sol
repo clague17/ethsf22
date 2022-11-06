@@ -7,6 +7,7 @@ import "../lib/openzeppelin-contracts/contracts/proxy/transparent/ProxyAdmin.sol
 import "../lib/openzeppelin-contracts/contracts/proxy/transparent/TransparentUpgradeableProxy.sol";
 import "../src/interfaces/xCO2.sol";
 import "../src/celo/xCelo.sol";
+import "../src/xETH.sol";
 import "../src/celo/xcUSD.sol";
 import "../src/polygon/xMatic.sol";
 import "../src/polygon/xUSDC.sol";
@@ -82,6 +83,17 @@ contract DeployInterchainCarbonCoin is Script {
                 0x765DE816845861e75A25fCA122bb6898B8B1282a
             );
             console.log("xCelo deployed!");
+        } else if (block.chainid == 10) {
+            // Optimism
+            xETH opETH = new xETH();
+            opETH.initialize(
+                _outbox,
+                XUSDC_ADDR,
+                "Optimism ETH Payment Terminal",
+                "xETH"
+            );
+            opETH.setDependencies(0x13e3Ee699D1909E989722E753853AE30b17e08c5);
+            console.log("xETH deployed!", address(opETH));
         } else {
             console.log("NOT SUPPORTED");
             return;
