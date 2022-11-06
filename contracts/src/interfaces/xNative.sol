@@ -9,13 +9,25 @@ abstract contract xNative is xCO2 {
     function offsetX(
         address _tCO2,
         uint256 _amountXCO2,
-        address _beneficiary
+        string calldata _entity,
+        address _beneficiary,
+        string calldata _beneficiaryName,
+        string calldata _msg
     ) public payable override {
         require(toUSD(msg.value) >= _amountXCO2, "Not enough for xCO2");
+
         IOutbox(outbox).dispatch(
             OFFSET_X_DEST_DOMAIN,
             bytes32(uint256(uint160(xUSDC))),
-            abi.encode(_tCO2, _amountXCO2, _beneficiary)
+            // All native tokens are 18 decimals, USDC is 6
+            abi.encode(
+                _tCO2,
+                _amountXCO2 / 1e12,
+                _entity,
+                _beneficiary,
+                _beneficiaryName,
+                _msg
+            )
         );
         emit OffsetRemote(
             _tCO2,
@@ -29,6 +41,6 @@ abstract contract xNative is xCO2 {
      * Allows owner to withdraw deposited funds
      */
     function withdrawFunds() external onlyOwner {
-        payable(msg.sender).send(address(this).balance);
+        payable(msg.sender).transfer(address(this).balance);
     }
 }

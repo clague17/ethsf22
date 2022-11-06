@@ -39,10 +39,18 @@ abstract contract xCO2 is ERC20Upgradeable, OwnableUpgradeable {
         string memory _symbol
     ) external initializer {
         // Set ownable to sender
-        transferOwnership(msg.sender);
+        __Ownable_init();
         outbox = _outbox;
         xUSDC = _xUSDC;
         __ERC20_init(_name, _symbol);
+    }
+
+    function setXUSDC(address _xUSDC) external onlyOwner {
+        xUSDC = _xUSDC;
+    }
+
+    function setOutbox(address _outbox) external onlyOwner {
+        outbox = _outbox;
     }
 
     /**
@@ -54,7 +62,10 @@ abstract contract xCO2 is ERC20Upgradeable, OwnableUpgradeable {
     function offsetX(
         address _tCO2,
         uint256 _amountXCO2,
-        address _beneficiary
+        string calldata _entity,
+        address _beneficiary,
+        string calldata _beneficiaryName,
+        string calldata _msg
     ) public payable virtual;
 
     /**

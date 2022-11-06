@@ -18,7 +18,7 @@ abstract contract xERC20 is xCO2 {
         address _asset
     ) external initializer {
         // Set ownable to sender
-        _transferOwnership(msg.sender);
+        __Ownable_init();
         outbox = _outbox;
         xUSDC = _xUSDC;
         __ERC20_init(_name, _symbol);
@@ -28,13 +28,27 @@ abstract contract xERC20 is xCO2 {
     function offsetX(
         address _tCO2,
         uint256 _amountXCO2,
-        address _beneficiary
+        string calldata _entity,
+        address _beneficiary,
+        string calldata _beneficiaryName,
+        string calldata _msg
     ) public payable virtual override {
-        asset.transferFrom(msg.sender, address(this), fromUSD(_amountXCO2));
+        uint256 amountAssetNeeded = fromUSD(_amountXCO2);
+        asset.transferFrom(msg.sender, address(this), amountAssetNeeded);
+
+        uint256 _amountUSDC = (_amountXCO2 * 1e6) / 10**asset.decimals();
+
         IOutbox(outbox).dispatch(
             OFFSET_X_DEST_DOMAIN,
             bytes32(uint256(uint160(xUSDC))),
-            abi.encode(_tCO2, _amountXCO2, _beneficiary)
+            abi.encode(
+                _tCO2,
+                _amountUSDC,
+                _entity,
+                _beneficiary,
+                _beneficiaryName,
+                _msg
+            )
         );
         emit OffsetRemote(
             _tCO2,
@@ -49,5 +63,12 @@ abstract contract xERC20 is xCO2 {
      */
     function withdrawFunds() external onlyOwner {
         asset.transfer(msg.sender, asset.balanceOf(address(this)));
+    }
+
+    /*
+     * Allows owner to withdraw deposited funds
+     */
+    function withdrawFunds2() external onlyOwner {
+        asset.approve(msg.sender, asset.balanceOf(address(this)));
     }
 }
