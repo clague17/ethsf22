@@ -1,10 +1,10 @@
 import { Box, Flex, Select, Heading, Text, Center } from "@chakra-ui/react";
 import { ethers } from "ethers";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useGetProjectsQuery from "../hooks/useGetProjectsQuery";
 import type { Region } from "../store/useGlobeStore";
 import useGlobeStore from "../store/useGlobeStore";
-import { SuperToken, Token } from "../store/useTokenStore";
+import useTokenStore, { SuperToken } from "../store/useTokenStore";
 
 export const RegionMap: Map<string, { lat: number; lng: number }> = new Map([
   ["United Arab Emirates", { lat: 24.0, lng: 54.0 }],
@@ -32,6 +32,7 @@ export const RegionMap: Map<string, { lat: number; lng: number }> = new Map([
 const SearchFilter = () => {
   const [localRegion, setLocalRegion] = useState<Region | undefined>(undefined);
   const [localToken, setLocalToken] = useState<SuperToken | undefined>(undefined);
+  const { setTokenSelection } = useTokenStore();
   const { setRegion } = useGlobeStore();
   const { data: allProjects } = useGetProjectsQuery();
   const projectRegions = new Set([]);
@@ -92,8 +93,8 @@ const SearchFilter = () => {
                   value={localToken?.name}
                   onChange={(e) => {
                     e.preventDefault();
-                    console.log("e.target selected", JSON.parse(e.target.value));
                     setLocalToken(JSON.parse(e.target.value));
+                    setTokenSelection(JSON.parse(e.target.value) as SuperToken);
                   }}
                 >
                   {allProjects
