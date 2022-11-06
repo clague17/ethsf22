@@ -39,8 +39,6 @@ contract DeployInterchainCarbonCoin is Script {
             _outbox = 0x8249cD1275855F2BB20eE71f0B9fA3c9155E5FaB;
 
             xUSDC cc = new xUSDC();
-            // address xUSDCProxy = _deployProxyFor(_proxyAdmin, address(cc));
-            // xUSDC(xUSDCProxy).initialize(
             cc.initialize(
                 _outbox,
                 address(0),
@@ -48,16 +46,14 @@ contract DeployInterchainCarbonCoin is Script {
                 "xUSDC",
                 USDC_ADDR
             );
-            console.log("USDC deployed!", address(cc));
+            console.log("xUSDC deployed!", address(cc));
 
-            // CarbonOffsetSettler settler = new CarbonOffsetSettler();
-            // address settlerProxy = _deployProxyFor(
-            //     _proxyAdmin,
-            //     address(settler)
-            // );
-            // CarbonOffsetSettler(settlerProxy).initialize(address(cc));
+            CarbonOffsetSettler settler = new CarbonOffsetSettler();
+            settler.initialize(address(cc));
 
-            cc.setOffsetTerminal(SETTLER_ADDR);
+            console.log("CarbonOffsetRouter deployed!", address(settler));
+
+            cc.setOffsetTerminal(address(settler));
         } else if (block.chainid == 42220) {
             // Celo
             // _outbox = 0xe042D1fbDf59828dd16b9649Ede7abFc856F7a6c;

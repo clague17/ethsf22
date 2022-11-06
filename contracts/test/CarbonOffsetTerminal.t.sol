@@ -35,7 +35,7 @@ contract CarbonOffsetTest is Test {
     function test_query() public {
         uint256 usdcNeeded = settler.getUSDCNeeded(
             0x463de2a5c6E8Bb0c87F4Aa80a02689e6680F72C7,
-            1000
+            1e18
         );
         console.log(usdcNeeded);
     }

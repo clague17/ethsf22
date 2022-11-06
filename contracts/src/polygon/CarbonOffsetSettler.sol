@@ -110,12 +110,13 @@ contract CarbonOffsetSettler is OwnableUpgradeable, IERC721Receiver {
             tco2s,
             amounts
         );
+        uint256 totalNCTWanted = totalFee + _amountToOffset;
 
-        address[] memory path = generatePath(NCT, USDC);
+        address[] memory path = generatePath(USDC, NCT);
         uint256[] memory expectedAmountsIn = IUniswapV2Router02(SUSHI_ROUTER)
-            .getAmountsIn(totalFee + _amountToOffset, path);
+            .getAmountsIn(totalNCTWanted, path);
 
-        return expectedAmountsIn[0] / 1e12;
+        return expectedAmountsIn[0];
     }
 
     /*
