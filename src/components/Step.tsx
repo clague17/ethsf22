@@ -10,7 +10,6 @@ import * as React from "react";
 import { StepCircle } from "./StepCircle";
 
 interface StepProps extends BoxProps {
-  title: string;
   description: string;
   isCompleted: boolean;
   isActive: boolean;

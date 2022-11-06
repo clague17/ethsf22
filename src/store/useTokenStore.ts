@@ -17,6 +17,7 @@ export type Token = {
 };
 
 export type SuperToken = {
+  name?: string;
   token: Token;
   amount: string;
   lat?: number;

@@ -68,8 +68,8 @@ const SearchFilter = () => {
                 >
                   {allProjects
                     ?.filter((token: any) => {
-                      if (!projectRegions.has(token.regionName)) {
-                        projectRegions.add(token.regionName);
+                      if (!projectRegions.has(token.regionName as never)) {
+                        projectRegions.add(token.regionName as never);
                         return true;
                       }
                       return false;
