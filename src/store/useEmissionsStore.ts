@@ -16,7 +16,8 @@ interface EmissionsState {
 
 const useEmissionsStore = create<EmissionsState>((set) => ({
   emissions: { done: false } as Emissions,
-  setEmissions: (newEmissions: Emissions) => set(() => ({ emissions: newEmissions })),
+  setEmissions: (newEmissions: Emissions) =>
+    set(() => ({ emissions: newEmissions })),
 }));
 
 export default useEmissionsStore;

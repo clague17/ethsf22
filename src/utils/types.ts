@@ -4,13 +4,18 @@ export enum ChainID {
   ETHEREUM = 1,
   POLYGON = 137,
   CELO = 42220,
+  OPTIMISM = 10,
   // Testnets
   GOERLI = 5,
   MUMBAI = 80001,
   ALFAJORES = 44787,
 }
 
-export const TESTNET_CHAIN_IDS = [ChainID.GOERLI, ChainID.MUMBAI, ChainID.ALFAJORES];
+export const TESTNET_CHAIN_IDS = [
+  ChainID.GOERLI,
+  ChainID.MUMBAI,
+  ChainID.ALFAJORES,
+];
 
 export type TokenSymbol = string;
 
@@ -54,7 +59,7 @@ export interface InputToken extends TokenInfo {
 }
 
 export interface TokenInfo {
-  symbol: TokenSymbol;
+  symbol?: TokenSymbol;
   address?: string;
   imgURL?: string;
   name?: string;
@@ -77,15 +82,8 @@ export interface VaultTokenPair {
 
 export interface VaultToken extends TokenInfo {
   balance?: TokenBalance;
-  usdPrice: number;
-  blockExplorerUrl: string;
-}
-
-export interface TokenInfo {
-  address?: string; // if empty, assume is native toke
-  symbol: string;
-  name?: string;
-  imgURL?: string;
+  usdPrice?: number;
+  blockExplorerUrl?: string;
 }
 
 export interface TokenBalance {
@@ -93,3 +91,79 @@ export interface TokenBalance {
   decimals: number;
   refetch(): Promise<void>;
 }
+
+export const SUPPORTED_CHAINS = [
+  {
+    id: ChainID.POLYGON,
+    name: "Polygon",
+    logo: "https://seeklogo.com/images/P/polygon-matic-logo-1DFDA3A3A8-seeklogo.com.png",
+  },
+  {
+    id: ChainID.OPTIMISM,
+    name: "Optimism",
+
+    logo: "https://gateway.optimism.io/static/media/optimism.caeb9392.svg",
+  },
+  {
+    id: ChainID.CELO,
+    name: "Celo",
+    logo: "https://cryptologos.cc/logos/celo-celo-logo.png",
+  },
+];
+
+export const SUPPORTED_TOKENS: VaultTokenPair[] = [
+  {
+    chainID: ChainID.POLYGON,
+    input: {
+      symbol: "USDC",
+      address: "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+      imgURL: "https://cryptologos.cc/logos/usd-coin-usdc-logo.png",
+    },
+    vault: {
+      address: "0xbB9E5D0Ecbf48C5D71FcaFe64906aC5F598eD7DC",
+    },
+  },
+  // {
+  //   chainID: ChainID.POLYGON,
+  //   input: {
+  //     symbol: "MATIC",
+  //     imgURL:
+  //       "https://seeklogo.com/images/P/polygon-matic-logo-1DFDA3A3A8-seeklogo.com.png",
+  //   },
+  //   vault: {
+  //     address: "",
+  //   },
+  // },
+  {
+    chainID: ChainID.CELO,
+    input: {
+      symbol: "CELO",
+      imgURL: "https://cryptologos.cc/logos/celo-celo-logo.png",
+    },
+    vault: {
+      address: "0xFa3F967095a7caf4A94a52538d4Cc471caaef21A",
+    },
+  },
+  {
+    chainID: ChainID.CELO,
+    input: {
+      symbol: "cUSD",
+      address: "0x765DE816845861e75A25fCA122bb6898B8B1282a",
+      imgURL: "https://s2.coinmarketcap.com/static/img/coins/200x200/7236.png",
+    },
+    vault: {
+      address: "0xe42233E95670cb800f3A0cDaBFC7baFEE61668D6",
+    },
+  },
+  {
+    chainID: ChainID.OPTIMISM,
+    input: {
+      symbol: "ETH",
+      imgURL:
+        "https://seeklogo.com/images/E/ethereum-logo-EC6CDBA45B-seeklogo.com.png",
+    },
+    vault: {
+      address: "0x371e17a572d3EF741afDCb7FE5e0Cd5088139F1c",
+    },
+  },
+];

@@ -1,4 +1,12 @@
-import { Box, Button, Center, Container, Heading, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Center,
+  Container,
+  Heading,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import type { AddressEmissionsResult } from "ethereum-emissions-calculator";
 import * as React from "react";
 import useEmissionsStore from "../store/useEmissionsStore";
@@ -17,7 +25,10 @@ const StepMap = new Map<number, JSX.Element>([
 ]);
 
 export const MainPanel = () => {
-  const [currentStep, { setStep }] = useStep({ maxStep: steps.length, initialStep: 0 });
+  const [currentStep, { setStep }] = useStep({
+    maxStep: steps.length,
+    initialStep: 0,
+  });
   const { emissions } = useEmissionsStore();
   return (
     <Box
@@ -48,7 +59,9 @@ export const MainPanel = () => {
           {emissions.done && (
             <Box margin="0 auto" maxWidth="80%" mt={2}>
               <Text color="white" fontSize="md">
-                Wallet: <Text as="span">{ellipseAddress(emissions.wallet)}</Text> {" || "}
+                Wallet:{" "}
+                <Text as="span">{ellipseAddress(emissions.wallet)}</Text>{" "}
+                {" || "}
                 Emissions:{" "}
                 <Text as="span" color="red.400">
                   {emissions.tCO2}
@@ -67,7 +80,9 @@ export const MainPanel = () => {
             <Button
               display={currentStep > 0 ? "flex" : "hidden"}
               justifySelf="flex-start"
-              onClick={() => (currentStep > 0 ? setStep(currentStep - 1) : null)}
+              onClick={() =>
+                currentStep > 0 ? setStep(currentStep - 1) : null
+              }
             >
               Back
             </Button>
