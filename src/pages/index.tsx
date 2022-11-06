@@ -1,7 +1,6 @@
 import { Center, Box } from "@chakra-ui/react";
 import { type NextPage } from "next";
 import Link from "next/link";
-import BetterGlobe from "../components/BetterGlobe";
 import GlobeComponent from "../components/GlobeComponent";
 import Navbar from "../components/nav/Navbar";
 import SearchFilter from "../components/SearchFilter";
@@ -13,9 +12,8 @@ const Home: NextPage = () => {
     <Box>
       <Center>
         <Navbar />
-        <GlobeComponent />
-        {/* <BetterGlobe /> */}
       </Center>
+      <GlobeComponent />
       <SearchFilter />
     </Box>
   );

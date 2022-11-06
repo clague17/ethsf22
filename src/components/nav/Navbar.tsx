@@ -8,7 +8,6 @@ const Navbar: React.FC = () => {
       my={{ base: 8 }}
       py={{ base: 2 }}
       px={{ base: 4 }}
-      justify={{ base: "space-between" }}
       boxShadow={"0px 5px 10px 10px rgb(72 187 120 / 43%)"}
       backgroundColor="gray.800"
       borderRadius={"xl"}
