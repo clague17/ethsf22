@@ -1,6 +1,7 @@
 import create from "zustand";
 
 export type Emissions = {
+  wallet: string;
   tCO2: number;
   kgCO2: number;
   transactionsCount: number;

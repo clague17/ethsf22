@@ -29,7 +29,6 @@
     "react-globe": "^5.0.2",
     "react-globe.gl": "^2.22.5",
     "react-icons": "^4.6.0",
-    "three.interaction": "^0.2.3",
     "wagmi": "^0.6.8",
     "zod": "^3.18.0",
     "zustand": "^4.1.4"

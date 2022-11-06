@@ -34,8 +34,7 @@ const FootprintModal = () => {
       etherscanAPIKey: "P2KWECEJGIRTHCINS7UWITA8THH1GKA4YW",
     })
       .then((res) => {
-        console.log("DONEEEE");
-        setEmissions({ ...res, tCO2: res.kgCO2 / 1000 });
+        setEmissions({ ...res, tCO2: res.kgCO2 / 1000, wallet: nameEntry });
       })
       .catch((err) => console.log("Houston we have a problem", err));
   }, [nameEntry]);
@@ -45,12 +44,14 @@ const FootprintModal = () => {
       flexDirection={"column"}
       color="white"
       m="0 auto"
-      maxWidth="70%"
+      maxWidth="85%"
       bgColor="gray.800"
       opacity={0.9}
       borderRadius={"xl"}
     >
-      <Heading py={6}>Your onchain footprint</Heading>
+      <Heading py={2} fontSize="2xl">
+        Measure your onchain footprint
+      </Heading>
       <InputGroup pb={6}>
         <InputLeftElement pointerEvents="none">
           <PhoneIcon color="gray.300" />

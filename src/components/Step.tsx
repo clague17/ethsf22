@@ -10,7 +10,6 @@ import * as React from "react";
 import { StepCircle } from "./StepCircle";
 
 interface StepProps extends BoxProps {
-  title: string;
   description: string;
   isCompleted: boolean;
   isActive: boolean;
@@ -19,15 +18,8 @@ interface StepProps extends BoxProps {
 }
 
 export const Step = (props: StepProps) => {
-  const {
-    isActive,
-    isCompleted,
-    isLastStep,
-    isFirstStep,
-    title,
-    description,
-    ...stackProps
-  } = props;
+  const { isActive, isCompleted, isLastStep, isFirstStep, description, ...stackProps } =
+    props;
 
   const orientation = useBreakpointValue<"horizontal" | "vertical">({
     base: "vertical",
@@ -58,9 +50,6 @@ export const Step = (props: StepProps) => {
         />
       </Stack>
       <Stack spacing="0.5" align={{ base: "start", md: "center" }}>
-        <Text color="emphasized" fontWeight="medium">
-          {title}
-        </Text>
         <Text color="muted">{description}</Text>
       </Stack>
     </Stack>

@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       <Center>
         <Navbar />
       </Center>
-      <Box display="flex" justifyContent={"space-between"}>
+      <Box display="flex" bgColor="black" justifyContent={"space-between"}>
         <MainPanel />
       </Box>
     </Box>

@@ -17,6 +17,7 @@ export type Token = {
 };
 
 export type SuperToken = {
+  name?: string;
   token: Token;
   amount: string;
   lat?: number;
@@ -26,12 +27,17 @@ export type SuperToken = {
 
 interface TokenState {
   tokens: Token[];
+  tokenSelection: SuperToken | null;
   setTokens: (tokens: Token[]) => void;
+  setTokenSelection: (token: SuperToken) => void;
 }
 
 const useTokenStore = create<TokenState>((set) => ({
   tokens: [] as Token[],
+  tokenSelection: null,
   setTokens: (newTokens: Token[]) => set(() => ({ tokens: newTokens })),
+  setTokenSelection: (tokenSelection: SuperToken) =>
+    set(() => ({ tokenSelection: tokenSelection })),
 }));
 
 export default useTokenStore;

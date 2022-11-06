@@ -31,6 +31,7 @@ import useEmissionsStore from "../store/useEmissionsStore";
 import { MutableRefObject, useRef } from "react";
 import { ethers } from "ethers";
 import xCO2ABI from "../../contracts/out/xCO2.sol/xCO2.json";
+import useTokenStore from "../store/useTokenStore";
 
 const Checkout = () => {
   const [selectedTokenIndex, setSelectedTokenIndex] = useState(0);
@@ -42,6 +43,10 @@ const Checkout = () => {
   const toast = useToast();
   const toastIdRef = useRef() as MutableRefObject<ToastId>;
   const [isTxnLoading, setIsTxnLoading] = useState(false);
+  const { tokenSelection } = useTokenStore();
+  const str = JSON.stringify(tokenSelection, null, 2);
+
+  console.log("tokenSelection", tokenSelection);
 
   const TCO2 = "0x463de2a5c6E8Bb0c87F4Aa80a02689e6680F72C7";
 
