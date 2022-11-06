@@ -1,8 +1,10 @@
 import { Box, Flex, Select, Heading, Text, Center } from "@chakra-ui/react";
-import { useState } from "react";
+import { ethers } from "ethers";
+import { useEffect, useState } from "react";
 import useGetProjectsQuery from "../hooks/useGetProjectsQuery";
 import type { Region } from "../store/useGlobeStore";
 import useGlobeStore from "../store/useGlobeStore";
+import { SuperToken, Token } from "../store/useTokenStore";
 
 export const RegionMap: Map<string, { lat: number; lng: number }> = new Map([
   ["United Arab Emirates", { lat: 24.0, lng: 54.0 }],
@@ -28,52 +30,97 @@ export const RegionMap: Map<string, { lat: number; lng: number }> = new Map([
 ]);
 
 const SearchFilter = () => {
-  const [region] = useState<Region | undefined>(undefined);
+  const [localRegion, setLocalRegion] = useState<Region | undefined>(undefined);
+  const [localToken, setLocalToken] = useState<SuperToken | undefined>(undefined);
   const { setRegion } = useGlobeStore();
-  const { data, isLoading, error } = useGetProjectsQuery();
+  const { data: allProjects } = useGetProjectsQuery();
 
-  console.log("data", data);
-  console.log("isLoading", isLoading);
-  console.log("error", JSON.stringify(error));
+  console.log("token babey", localToken);
 
   return (
     <Flex
       color="white"
-      maxWidth="25%"
-      py={{ base: 2 }}
-      mx={{ base: 4 }}
-      justify={{ base: "space-between" }}
-      backgroundColor="gray.800"
+      flexDir={"column"}
+      maxWidth="30%"
+      bgColor="gray.800"
+      mx={8}
+      p={8}
+      opacity={0.9}
       borderRadius={"xl"}
     >
+      <Heading py={6}>Choose a project to retire</Heading>
       <Box display={"flex"} flexDirection="column">
-        <Heading mx="4" mb={7}>
-          Select a project
-        </Heading>
-        <Center>
-          <Box>
-            <Select
-              placeholder="Select region"
-              value={region?.name}
-              onChange={(e) => {
-                const regionName = e.target.value;
-                const region = RegionMap.get(regionName);
-                if (region) {
-                  setRegion({ name: regionName, ...region });
-                }
-              }}
-            >
-              <option>United Arab Emirates</option>
-              <option>Nigeria</option>
-              <option>China</option>
-              <option>United States</option>
-            </Select>
-          </Box>
-        </Center>
-      </Box>
-      <Box>
-        <Heading>Project Info</Heading>
-        <Text>Vintage:</Text>
+        <Box display="flex">
+          <Heading mx="4" mb={7} pr={8}>
+            Select a Region
+          </Heading>
+          <Center>
+            <Box>
+              <Select
+                placeholder="Select region"
+                value={localRegion?.name}
+                onChange={(e) => {
+                  e.preventDefault();
+                  const regionName = e.target.value;
+                  const region = RegionMap.get(regionName);
+                  if (region) {
+                    setLocalRegion({ name: regionName, ...region });
+                    setRegion({ name: regionName, ...region });
+                  }
+                }}
+              >
+                {allProjects?.map((token: any, idx: number) => {
+                  return <option key={idx}>{token.regionName}</option>;
+                })}
+              </Select>
+            </Box>
+          </Center>
+        </Box>
+        <Box display="flex">
+          <Heading mx="4" mb={7}>
+            Select a Project
+          </Heading>
+          <Center>
+            <Box>
+              <Select
+                placeholder="Select project"
+                value={localToken?.name}
+                onChange={(e) => {
+                  e.preventDefault();
+                  console.log("e.target selected", JSON.parse(e.target.value));
+                  setLocalToken(JSON.parse(e.target.value));
+                }}
+              >
+                {allProjects
+                  ?.filter(
+                    (t: any) =>
+                      t.token.projectVintage.project.region === localRegion?.name
+                  )
+                  .map((t: any, idx: number) => {
+                    return (
+                      <option key={idx} value={JSON.stringify(t)}>
+                        {t.token.name}
+                      </option>
+                    );
+                  })}
+              </Select>
+            </Box>
+          </Center>
+        </Box>
+        <Box display="flex" flexDir="column">
+          <Heading mx="4" mb={7} fontSize="xl">
+            Available credits to retire:{" "}
+            <Text as="span" color="green.400">
+              {ethers.utils.formatEther(localToken?.amount ?? 0)}
+            </Text>
+          </Heading>
+          <Heading mx="4" mb={7} fontSize="xl">
+            Project methodology:{" "}
+            <Text as="span" color="green.400">
+              {localToken?.token.projectVintage.project.methodology}
+            </Text>
+          </Heading>
+        </Box>
       </Box>
     </Flex>
   );

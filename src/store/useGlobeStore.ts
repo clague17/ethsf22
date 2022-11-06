@@ -1,5 +1,4 @@
 import create from "zustand";
-import { RegionMap } from "../components/SearchFilter";
 
 export type Region = {
   name: string;
@@ -13,7 +12,7 @@ interface GlobeState {
 }
 
 const useGlobeStore = create<GlobeState>((set) => ({
-  region: { name: "United States", ...RegionMap.get("United States")! },
+  region: {} as Region,
   setRegion: (newRegion: Region) => set(() => ({ region: newRegion })),
 }));
 
