@@ -30,12 +30,12 @@ function GlobeComponent() {
         width={windowSize.width}
         height={windowSize.height}
         globeImageUrl="globe-texture.jpeg"
-        ringsData={[region]}
-        ringLat={(region) => (region as Region).lat}
-        ringLng={(region) => (region as Region).lng}
-        ringPropagationSpeed={4}
-        ringColor={() => "green"}
-        ringMaxRadius={10}
+        pointsData={[region]}
+        pointLabel={(point) => (point as Region).name}
+        pointLat={(point) => (point as Region).lat}
+        pointLng={(point) => (point as Region).lng}
+        pointAltitude={() => 0.1}
+        pointsTransitionDuration={5000}
         backgroundImageUrl="bg.png"
       />
     </Box>

@@ -2,6 +2,7 @@ import { Box, Button, Center, Container, Heading, Stack, Text } from "@chakra-ui
 import type { AddressEmissionsResult } from "ethereum-emissions-calculator";
 import * as React from "react";
 import useEmissionsStore from "../store/useEmissionsStore";
+import { ellipseAddress } from "../utils/web3";
 import Checkout from "./Checkout";
 import { steps } from "./data";
 import FootprintModal from "./FootprintModal";
@@ -21,7 +22,7 @@ export const MainPanel = () => {
   return (
     <Box
       position="absolute"
-      top="60vh"
+      top="50vh"
       left="20%"
       bgColor="gray.800"
       boxShadow={"0px 5px 10px 10px rgb(72 187 120 / 43%)"}
@@ -29,14 +30,13 @@ export const MainPanel = () => {
       borderRadius={"xl"}
       width="60%"
     >
-      <Container py={{ base: "4", md: "8" }} minWidth="100%" maxHeight="20%">
+      <Container py={{ base: "4", md: "8" }} minWidth="100%" maxHeight="10%">
         <>
           <Stack spacing="0" direction={{ base: "column", md: "row" }}>
             {steps.map((step, id) => (
               <Step
                 key={id}
                 cursor="pointer"
-                title={step.title}
                 description={step.description}
                 isActive={currentStep === id}
                 isCompleted={currentStep > id}
@@ -46,23 +46,41 @@ export const MainPanel = () => {
             ))}
           </Stack>
           {emissions.done && (
-            <Text color="white" fontSize="lg">
-              Your emissions {emissions.tCO2}
-            </Text>
+            <Box margin="0 auto" maxWidth="80%" mt={2}>
+              <Text color="white" fontSize="md">
+                Wallet: <Text as="span">{ellipseAddress(emissions.wallet)}</Text> {" || "}
+                Emissions:{" "}
+                <Text as="span" color="red.400">
+                  {emissions.tCO2}
+                </Text>{" "}
+                (tCO2)
+              </Text>
+            </Box>
           )}
           <Box minWidth="100%">{StepMap.get(currentStep)}</Box>
-          <Box display="flex" flexDir={"column"} maxWidth="20%" margin="0 auto">
-            <Heading color="white" fontSize="xl">
-              Do something about it
+          <Box
+            display="flex"
+            maxWidth="80%"
+            margin="0 auto"
+            justifyContent="space-between"
+          >
+            <Button
+              display={currentStep > 0 ? "flex" : "hidden"}
+              justifySelf="flex-start"
+              onClick={() => (currentStep > 0 ? setStep(currentStep - 1) : null)}
+            >
+              Back
+            </Button>
+            <Heading color="white" fontSize="xl" pb={4}>
+              Let&apos;s fix it together 🌱
             </Heading>
-            <Box margin="0 auto" display="flex" alignItems={"space-between"}>
-              <Button justifySelf="flex-start" onClick={() => setStep(currentStep - 1)}>
-                Back
-              </Button>
-              <Button justifySelf="flex-end" onClick={() => setStep(currentStep + 1)}>
-                Next
-              </Button>
-            </Box>
+            <Button
+              bg="green.400"
+              justifySelf="flex-end"
+              onClick={() => setStep(currentStep + 1)}
+            >
+              Next
+            </Button>
           </Box>
         </>
       </Container>

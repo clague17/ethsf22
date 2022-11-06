@@ -34,84 +34,94 @@ const SearchFilter = () => {
   const [localToken, setLocalToken] = useState<SuperToken | undefined>(undefined);
   const { setRegion } = useGlobeStore();
   const { data: allProjects } = useGetProjectsQuery();
+  const projectRegions = new Set([]);
 
   return (
     <Flex
       flexDirection={"column"}
       color="white"
+      marginLeft="20"
+      maxWidth="80%"
       bgColor="gray.800"
       opacity={0.9}
-      ml={10}
-      p={8}
+      borderRadius={"xl"}
     >
-      <Heading py={6}>Explore projects to retire</Heading>
-      <Box>
-        <Box display="flex">
-          <Center>
-            <Heading mx="4" mb={7} pr={8} fontSize="2xl">
-              Select a Region
+      <Heading fontSize="2xl">Explore projects to retire</Heading>
+      <Box display="flex" justifyContent={"space-between"}>
+        <Box display="flex" flexDir={"column"} maxWidth="50%">
+          <Box display="flex" flexDir={"column"}>
+            <Center justifyContent={"space-between"}>
+              <Heading fontSize="xl">Select a Region</Heading>
+              <Box>
+                <Select
+                  placeholder="Select region"
+                  value={localRegion?.name}
+                  onChange={(e) => {
+                    e.preventDefault();
+                    const regionName = e.target.value;
+                    const region = RegionMap.get(regionName);
+                    if (region) {
+                      setLocalRegion({ name: regionName, ...region });
+                      setRegion({ name: regionName, ...region });
+                    }
+                  }}
+                >
+                  {allProjects
+                    ?.filter((token: any) => {
+                      if (!projectRegions.has(token.regionName)) {
+                        projectRegions.add(token.regionName);
+                        return true;
+                      }
+                      return false;
+                    })
+                    .map((token: any, idx: number) => {
+                      return <option key={idx}>{token.regionName}</option>;
+                    })}
+                </Select>
+              </Box>
+            </Center>
+          </Box>
+          <Box display="flex">
+            <Heading mx="4" mb={7} fontSize="xl">
+              Select a Project
             </Heading>
-            <Box>
-              <Select
-                placeholder="Select region"
-                value={localRegion?.name}
-                onChange={(e) => {
-                  e.preventDefault();
-                  const regionName = e.target.value;
-                  const region = RegionMap.get(regionName);
-                  if (region) {
-                    setLocalRegion({ name: regionName, ...region });
-                    setRegion({ name: regionName, ...region });
-                  }
-                }}
-              >
-                {allProjects?.map((token: any, idx: number) => {
-                  return <option key={idx}>{token.regionName}</option>;
-                })}
-              </Select>
-            </Box>
-          </Center>
-        </Box>
-        <Box display="flex">
-          <Heading mx="4" mb={7} fontSize="2xl">
-            Select a Project
-          </Heading>
-          <Center>
-            <Box>
-              <Select
-                placeholder="Select project"
-                value={localToken?.name}
-                onChange={(e) => {
-                  e.preventDefault();
-                  console.log("e.target selected", JSON.parse(e.target.value));
-                  setLocalToken(JSON.parse(e.target.value));
-                }}
-              >
-                {allProjects
-                  ?.filter(
-                    (t: any) =>
-                      t.token.projectVintage.project.region === localRegion?.name
-                  )
-                  .map((t: any, idx: number) => {
-                    return (
-                      <option key={idx} value={JSON.stringify(t)}>
-                        {t.token.name}
-                      </option>
-                    );
-                  })}
-              </Select>
-            </Box>
-          </Center>
+            <Center>
+              <Box>
+                <Select
+                  placeholder="Select project"
+                  value={localToken?.name}
+                  onChange={(e) => {
+                    e.preventDefault();
+                    console.log("e.target selected", JSON.parse(e.target.value));
+                    setLocalToken(JSON.parse(e.target.value));
+                  }}
+                >
+                  {allProjects
+                    ?.filter(
+                      (t: any) =>
+                        t.token.projectVintage.project.region === localRegion?.name
+                    )
+                    .map((t: any, idx: number) => {
+                      return (
+                        <option key={idx} value={JSON.stringify(t)}>
+                          {t.token.name}
+                        </option>
+                      );
+                    })}
+                </Select>
+              </Box>
+            </Center>
+          </Box>
         </Box>
         {localToken && (
           <Box display="flex" flexDir="column">
-            <Heading mx="4" mb={7} fontSize="xl">
+            <Heading fontSize="xl">
               Available credits to retire:{" "}
               <Text as="span" color="green.400">
                 {ethers.utils.formatEther(localToken?.amount ?? 0)}
               </Text>
             </Heading>
-            <Heading mx="4" mb={7} fontSize="xl">
+            <Heading fontSize="xl">
               Project methodology:{" "}
               <Text as="span" color="green.400">
                 {localToken?.token.projectVintage.project.methodology}
